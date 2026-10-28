@@ -47,6 +47,9 @@
             {% for p in site.data.products %}
             <a href="{{ site.baseurl }}/produk/{{ p.slug }}.html">{{ p.name }}</a>
             {% endfor %}
+            {% for e in item.extra %}
+            <a href="{{ site.baseurl }}{{ e.link }}">{{ e.name }}</a>
+            {% endfor %}
             <a class="nav__dd-all" href="{{ site.baseurl }}{{ item.link }}">Lihat Semua Produk →</a>
           </div>
         </div>

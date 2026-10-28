@@ -12,16 +12,14 @@
       link: /galeri.html
     - name: Merek & Logo Produksi
       link: /tentang.html#merek
-- name: Produk
-  link: /produk.html
-  dropdown: true
-- name: Informasi
-  link: /keunggulan.html
-  children:
     - name: Keunggulan & Standar Mutu
       link: /keunggulan.html
     - name: Aplikasi & Panduan
       link: /aplikasi.html
+- name: Produk
+  link: /produk.html
+  dropdown: true
+  extra:
     - name: Cara Pemesanan
       link: /#proses
 - name: Kontak
