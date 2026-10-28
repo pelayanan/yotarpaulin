@@ -900,6 +900,13 @@ p { margin: 0 0 1em; }
 
 .banner-wide--tight { margin: 0; }
 
+/* Sarkas: ghost di atas latar terang */
+.btn--ghost--light {
+  color: var(--blue-800);
+  border-color: rgba(10, 47, 99, 0.45);
+}
+.btn--ghost--light:hover { background: var(--sky-100); color: var(--blue-800); }
+
 /* grid varian portrait (contoh: kerapatan paranet) */
 .apps--tall { grid-template-columns: repeat(3, 1fr); }
 .apps--tall .app img { aspect-ratio: 3 / 4; }
