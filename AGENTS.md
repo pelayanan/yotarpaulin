@@ -56,6 +56,10 @@ Website SUDAH jadi dan live. Struktur folder saat ini:
   - `AGENTS.md` — file ini.
   - Catatan: file token GitHub TIDAK di dalam repo. Token tetap di `F:/pelayanan-token.txt` (di luar repo, jangan pernah disalin ke dalam repo).
 
+- Sambutan Owner (30 Okt 2026): seksi "Sambutan Owner — Salam Hangat dari Pendiri Kami" di tentang.html (setelah Profil Perusahaan, sebelum Nilai Kami): foto `assets/images/owner-yoke-albertin.webp` (820×1231, konversi dari resources/owner/yoke-albertin-owner.png, q82) + 3 paragraf sambutan + signature "Yoke Albertin — Owner — CV. Yo Terpal Nusantara Raya". CSS `.owner__*` dekat blok `.brand-grid` di styles.scss. Nav topbar kini teks **YO TERPAL NUSANTARA RAYA** (commit `427f71a`) — nama panjang: `.site-header .brand__text strong` nowrap + media ≤1250px mengecilkan brand/ font/ pengenturan nav__link agar muat.
+- Seksi "Merek Kami" jadi include `_includes/merek.html` (commit `765e5a9`), dipakai beranda (index.html, sebelum banner client) + tentang.html; tombol "Kenali Profil Pabrik Kami" menuju tentang.html.
+- Footer kontak: dua baris "WhatsApp 1 / WhatsApp 2" klik ke wa.me (commit `f47d055`); baris tel: dihapus dari footer (tel masih di topbar & kontak.html).
+
 ## Status website
 
 - Live URL: https://yoterpal.com/ (domain kustom atas keputusan pemilik, 28 Okt 2026; CNAME file di root repo, `url: https://yoterpal.com`, `baseurl: ""`). URL lama https://pelayanan.github.io/yotarpaulin/ otomatis redirect ke domain baru.
