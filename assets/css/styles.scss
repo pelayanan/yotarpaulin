@@ -1190,7 +1190,10 @@ body.has-lightbox { overflow: hidden; }
   .lightbox__next { right: 8px; }
 }
 
+/* Nama brand panjang: jangan melipat di topbar; kecilkan saat sempit */
+.site-header .brand__text strong { white-space: nowrap; }
 @media (max-width: 1150px) {
+  .site-header .brand__text strong { font-size: 1.08rem; }
   .nav__link { padding: 9px 9px; }
 }
 @media (min-width: 951px) and (max-width: 1150px) {
