@@ -1,0 +1,103 @@
+---
+layout: default
+title: "Keunggulan Terpal Yo Tarpaulin — Tahan Air, Kuat, Harga Pabrik"
+description: "6 keunggulan terpal Yo Tarpaulin: 100% tahan air, anti robek, tahan UV & panas, harga langsung pabrik, ukuran custom, dan layanan responsif 24/7 untuk tambang dan proyek infrastruktur."
+permalink: /keunggulan.html
+---
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow eyebrow--light">Keunggulan Kami</span>
+    <h1>Kenapa Terpal <span class="hl">Yo Tarpaulin?</span></h1>
+    <p>Enam alasan utama tambang, kontraktor, dan distributor mempercayakan kebutuhan terpal &amp; sarung tangan mereka kepada kami.</p>
+    <div class="hero__actions">
+      <a class="btn btn--yellow" href="{{ site.whatsapp }}" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Tanya Stok &amp; Harga</a>
+      <a class="btn btn--ghost" href="{{ site.baseurl }}/produk.html">Lihat Katalog Produk</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="split__body reveal" style="max-width: 860px; margin: 0 auto 10px;">
+      <span class="eyebrow">Tentang Merek Kami</span>
+      <h2>Produksi Sendiri, Mutu Kami Pegang</h2>
+      <p>Yo Tarpaulin adalah merek milik <strong>{{ site.company }}</strong> — produsen terpal dan sarung tangan kerja yang fokus melayani industri pertambangan serta proyek infrastruktur skala besar di seluruh Indonesia. Karena kami memproduksi sendiri dari benang HDPE hingga laminasi, setiap klaim di halaman ini bisa kami pertanggungjawabkan langsung di lantai produksi — bukan sekadar jargon pedagang.</p>
+    </div>
+
+    <div class="cards cards--3">
+      {% for item in site.data.advantages %}
+      <article class="card reveal">
+        <img class="card__icon" src="{{ site.baseurl }}/assets/images/{{ item.image }}" alt="" loading="lazy" width="84" height="84">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Di Balik Layar</span>
+      <h2>Yang Kami Kerjakan Berbeda</h2>
+      <p>Standar kerja yang membuat mutu konsisten dari order pertama hingga yang kesekian kali.</p>
+    </div>
+    <div class="note-grid">
+      <div class="note reveal">
+        <h3>QC per Batch Produksi</h3>
+        <p>Ketebalan (GSM), kerapatan tenunan, dan hasil laminasi diperiksa setiap batch sebelum barang keluar gudang. Keluhan di lapangan menjadi masukan perbaikan batch berikutnya.</p>
+      </div>
+      <div class="note reveal">
+        <h3>Stok Rutin Siap Kirim</h3>
+        <p>Semua varian populer tersimpan di gudang kami sehingga order mendesak bisa dikemas dan dikirim hari yang sama atau H+1 ke seluruh Indonesia.</p>
+      </div>
+      <div class="note reveal">
+        <h3>Dokumen &amp; Sample untuk Pengadaan</h3>
+        <p>Order besar atau tender? Sample bahan dan dokumen mutu kami siapkan mengikuti kebutuhan proses pengadaan perusahaan Anda.</p>
+      </div>
+      <div class="note reveal">
+        <h3>Garansi Penggantian</h3>
+        <p>Produk yang tidak sesuai spesifikasi yang disepakati akan kami ganti. Klaim dibicarakan langsung dengan tim agar cepat tuntas.</p>
+      </div>
+      <div class="note reveal">
+        <h3>Harga Kontrak</h3>
+        <p>Untuk order rutin bulanan tambang dan proyek, kami sediakan harga kontrak agar belanja industri Anda bisa dihitung dari awal.</p>
+      </div>
+      <div class="note reveal">
+        <h3>Pengiriman Darurat 24/7</h3>
+        <p>Operasional terganggu hujan? Tim dan armada kami siap melayani pengiriman mendesak 24/7 sampai barang tiba di lokasi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>Pertanyaan Seputar Mutu</h2>
+    </div>
+    <div class="faq">
+      <details class="reveal">
+        <summary>Terpal Yo Tarpaulin benar-benar tahan hujan deras?</summary>
+        <p>Ya. Permukaan terpal kami dilaminasi ganda sehingga air hujan langsung mengalir ke tepi tanpa menembus — inilah alasan terpal kami jadi andalan penutup material di lokasi tambang yang curah hujannya tinggi.</p>
+      </details>
+      <details class="reveal">
+        <summary>Apa arti GSM pada terpal?</summary>
+        <p>GSM (gram per meter persegi) adalah satuan ketebalan/berat bahan. Semakin tinggi GSM, semakin tebal dan kuat terpalnya. Tim kami akan membantu memilih yang paling ekonomis sesuai pemakaian Anda.</p>
+      </details>
+      <details class="reveal">
+        <summary>Bisa pesan dengan logo perusahaan kami?</summary>
+        <p>Bisa. Selain ukuran dan warna custom, pencetakan logo tersedia untuk kebutuhan proyek dan tender — cocok juga untuk merchandise atau batas wilayah kerja yang butuh identitas jelas.</p>
+      </details>
+      <details class="reveal">
+        <summary>Apakah ada garansi produk?</summary>
+        <p>Ada. Produk yang tidak sesuai spesifikasi yang disepakati akan kami ganti. Kondisi klaim dibicarakan langsung dengan tim kami agar penyelesaiannya cepat.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+{% include cta.html %}

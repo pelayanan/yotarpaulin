@@ -8,8 +8,8 @@
 - name: Produk
   link: /produk.html
 - name: Keunggulan
-  link: /#keunggulan
+  link: /keunggulan.html
 - name: Aplikasi
-  link: /#aplikasi
+  link: /aplikasi.html
 - name: Kontak
   link: /kontak.html

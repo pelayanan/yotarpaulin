@@ -1,0 +1,70 @@
+---
+layout: default
+title: "Aplikasi & Penggunaan Terpal — Tambang hingga Tenda | YO Tarpaulin"
+description: "Penggunaan terpal Yo Tarpaulin di lapangan: penutup armada & truk, semen & material, scaffolding, alat berat & tambang, kolam, perkapalan, pertanian, atap, tenda kanopi, dan outdoor camping."
+permalink: /aplikasi.html
+---
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow eyebrow--light">Aplikasi</span>
+    <h1>Terpal untuk Setiap <span class="hl">Kebutuhan Lapangan</span></h1>
+    <p>Dari tambang hingga perikanan — terpal Yo Tarpaulin sudah teruji di lapangan, dalam cuaca cerah maupun ekstrem.</p>
+    <div class="hero__actions">
+      <a class="btn btn--yellow" href="{{ site.whatsapp }}" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Ceritakan Kebutuhan Anda</a>
+      <a class="btn btn--ghost" href="{{ site.baseurl }}/galeri.html">Lihat Foto Pabrik</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="split__body reveal" style="max-width: 860px; margin: 0 auto 10px;">
+      <span class="eyebrow">Teruji di Lapangan</span>
+      <h2>Satu Bahan, Banyak Peran</h2>
+      <p>Tenunan HDPE dengan laminasi ganda membuat terpal Yo Tarpaulin lentur namun kuat — bisa dibentang di atas stockpile tambang, dilipat jadi tenda pasar, dipotong jadi selubung scaffolding, atau dipasang sebagai peneduh bibit. Pelanggan kami mencakup perusahaan tambang, kontraktor infrastruktur, distributor terpal, hingga petani dan pelaku perikanan — semua mendapat keteguhan mutu yang sama.</p>
+    </div>
+
+    <div class="apps">
+      {% for item in site.data.applications %}
+      <figure class="app reveal">
+        <img src="{{ site.baseurl }}/assets/images/{{ item.image }}" alt="Terpal untuk {{ item.title }} — Yo Tarpaulin" loading="lazy" width="1200" height="669">
+        <figcaption>
+          <strong>{{ item.title }}</strong>
+          <span>{{ item.text }}</span>
+        </figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Rekomendasi Tim</span>
+      <h2>Pilih Sesuai Pemakaian</h2>
+      <p>Tiga pertimbangan utama sebelum order — atau langsung tanya tim kami, gratis.</p>
+    </div>
+    <div class="note-grid">
+      <div class="note reveal">
+        <h3>Sesuaikan Ketebalan (GSM)</h3>
+        <p>Penutup dagangan cukup 80–140 GSM; kanopi dan truk 120–200 GSM; alat berat dan stockpile tambang lebih aman 150–250 GSM. Ketebalan tepat = harga ekonomis + usia pakai maksimal.</p>
+      </div>
+      <div class="note reveal">
+        <h3>Pikirkan Cara Pemasangan</h3>
+        <p>Butuh anting tiap 1 meter? Ring kawat? Selubung tanpa sambung? Sampaikan kondisi lapangan — kami produksi sesuai cara barang Anda dipasang.</p>
+      </div>
+      <div class="note reveal">
+        <h3>Hitung Ukuran Area</h3>
+        <p>Ukur panjang dan lebar area yang ditutup, tambahkan toleransi tepi. Untuk area luas, format roll lebar 2–6 meter mempercepat pemasangan dan meminimalkan titik rembes.</p>
+      </div>
+    </div>
+
+    <div class="center">
+      <a class="btn btn--blue" href="{{ site.baseurl }}/kontak.html">Kirim Kebutuhan Anda <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+{% include cta.html %}
