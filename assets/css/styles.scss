@@ -573,7 +573,7 @@ p { margin: 0 0 1em; }
 .contact { display: grid; gap: 26px; }
 .contact__cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 22px;
 }
 .contact-legal { margin: 0; color: var(--muted); }
