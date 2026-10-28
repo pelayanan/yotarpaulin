@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Kwitansi DP 50% — Website YO Tarpaulin</title>
+<style>
+  @page { size: 210mm 148.5mm; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    width: 210mm; height: 148.5mm;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #7a1230;
+    background: #fff;
+  }
+  .kwitansi {
+    width: 100%; height: 100%;
+    padding: 8mm 10mm 7mm;
+    border: 1.1mm solid #800020;
+    display: flex; flex-direction: column;
+    position: relative;
+  }
+  .stempel {
+    position: absolute;
+    left: 62mm; top: 56mm;
+    transform: rotate(-11deg);
+    border: .8mm double rgba(128, 0, 32, 0.5);
+    color: rgba(128, 0, 32, 0.55);
+    border-radius: 2.5mm;
+    padding: 2.2mm 5mm;
+    font-size: 15pt; font-weight: 800;
+    letter-spacing: .12em; text-transform: uppercase;
+    text-align: center; line-height: 1.25;
+  }
+  .stempel small { display: block; font-size: 9pt; font-weight: 700; letter-spacing: .2em; }
+
+  /* header */
+  .head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8mm; }
+  .brand h1 { font-size: 15pt; color: #800020; letter-spacing: .06em; }
+  .brand p  { font-size: 8pt; color: #8a6a72; font-style: italic; margin-top: 1pt; }
+  .brand .web { font-style: normal; font-weight: 600; color: #800020; margin-top: 2pt; font-size: 8.5pt; }
+  .judul { text-align: right; }
+  .judul h2 { font-size: 20pt; letter-spacing: .35em; color: #800020; font-weight: 800; text-indent: .35em; }
+  .judul .no { font-size: 9.5pt; font-weight: 700; margin-top: 2pt; }
+
+  /* rows */
+  .rows { margin-top: 4mm; flex: 1; }
+  .row { display: flex; font-size: 10pt; margin-bottom: 2.4mm; color: #7a1230; }
+  .row .lbl { width: 34mm; flex: 0 0 auto; font-weight: 600; color: #9a4630; }
+  .row .sep { width: 3mm; }
+  .row .val { flex: 1; }
+  .row .val .ref { color: #8a6a72; font-size: 8.5pt; display: block; margin-top: .6mm; }
+  .row.jumlah .val { font-size: 15pt; font-weight: 800; color: #800020; letter-spacing: .02em; }
+
+  /* terbilang */
+  .terbilang {
+    margin-top: 1mm;
+    border: .3mm solid #800020;
+    background: #f9eef1;
+    padding: 1.8mm 3mm;
+    font-size: 10pt;
+    color: #7a1230;
+  }
+  .terbilang b { text-transform: capitalize; }
+
+  /* footer */
+  .foot { display: flex; justify-content: space-between; align-items: flex-end; gap: 8mm; }
+  .sisa { font-size: 8pt; color: #8a6a72; max-width: 92mm; }
+  .sisa b { color: #7a1230; }
+  .ttd { text-align: center; font-size: 9.5pt; width: 62mm; position: relative; }
+  .ttd .kota { font-weight: 600; }
+  .ttd .role { margin-top: 1pt; }
+  .ttd .spasi { height: 13mm; position: relative; }
+  .ttd .stempel-logo {
+    position: absolute;
+    left: 50%; top: 42%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    opacity: .3;
+    pointer-events: none;
+  }
+  .ttd .stempel-logo img {
+    width: 34mm; height: auto;
+    display: block;
+  }
+  .ttd .nama { font-weight: 800; color: #800020; border-top: .25mm solid #7a1230; padding-top: 1.2mm; letter-spacing: .04em; }
+
+  .legal {
+    margin-top: 2.4mm;
+    border-top: .2mm solid #e3c9d1;
+    padding-top: 1.4mm;
+    text-align: center;
+    font-size: 7.2pt;
+    color: #8a6a72;
+    letter-spacing: .02em;
+  }
+</style>
+</head>
+<body>
+  <div class="kwitansi">
+    <div class="stempel">Lunas<small>DP 50%</small></div>
+    <div class="head">
+      <div class="brand">
+        <h1>AKSISOFT MEDIA</h1>
+        <p>Idea &bull; Build &bull; Solution</p>
+        <div class="web">🌐 aksisoft.web.id</div>
+      </div>
+      <div class="judul">
+        <h2>KWITANSI</h2>
+        <div class="no">No. 001/KWT/AKS/X/2026</div>
+      </div>
+    </div>
+
+    <div class="rows">
+      <div class="row">
+        <div class="lbl">Diterima dari</div><div class="sep"></div>
+        <div class="val"><b>YO TARPAULIN</b> &mdash; CV. Yo Terpal Nusantara Raya</div>
+      </div>
+      <div class="row">
+        <div class="lbl">Untuk pembayaran</div><div class="sep"></div>
+        <div class="val">
+          <b>DP 50% (Down Payment)</b> &mdash; jasa pembuatan website company profile <b>https://yoterpal.com</b>
+          <span class="ref">Referensi: Proposal No. 010/AKS-SOFT/X/2026 &bull; Metode: Transfer Bank</span>
+        </div>
+      </div>
+      <div class="row jumlah">
+        <div class="lbl">Jumlah</div><div class="sep"></div>
+        <div class="val">Rp 2.500.000,-</div>
+      </div>
+    </div>
+
+    <div class="terbilang">
+      Terbilang: <b>Dua Juta Lima Ratus Ribu Rupiah</b>
+    </div>
+
+    <div class="foot">
+      <div class="sisa">
+        <b>Sisa pembayaran Rp 2.500.000</b> dilunasi saat serah terima.
+        Kwitansi ini sebagai tanda terima pembayaran yang sah.
+      </div>
+      <div class="ttd">
+        <div class="kota">Surabaya, 28 Oktober 2026</div>
+        <div class="role">Hormat kami,</div>
+        <div class="spasi">
+          <span class="stempel-logo"><img src="assets/images/logo.webp" alt=""></span>
+        </div>
+        <div class="nama">AKSISOFT MEDIA</div>
+      </div>
+    </div>
+
+    <div class="legal">
+      AKSISOFT MEDIA &bull; aksisoft.web.id &bull; WA 0813-3520-6389 &bull; lynk.id/aksisoft &mdash; _Teknologi untuk kehidupan yang lebih baik_
+    </div>
+  </div>
+</body>
+</html>

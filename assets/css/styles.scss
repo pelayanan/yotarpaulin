@@ -1016,6 +1016,154 @@ p { margin: 0 0 1em; }
 }
 .footer__social a:hover { background: var(--yellow); color: var(--blue-950); transform: translateY(-2px); }
 .footer__social .ico { width: 18px; height: 18px; }
+/* ==========================================================================
+   Dropdown menu Produk di navigasi
+   ========================================================================== */
+.nav__dd { position: relative; }
+.nav__link--dd { display: inline-flex; align-items: center; gap: 5px; }
+.nav__caret {
+  width: 0; height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  transition: transform 0.18s ease;
+}
+.nav__dd:hover .nav__caret { transform: translateY(1px) rotate(-180deg); }
+.nav__dd-panel {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  min-width: 250px;
+  max-height: 68vh;
+  overflow-y: auto;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: var(--shadow-2);
+  padding: 8px;
+  display: none;
+  z-index: 70;
+}
+.nav__dd:hover .nav__dd-panel,
+.nav__dd:focus-within .nav__dd-panel { display: block; }
+.nav__dd:hover > .nav__link--dd,
+.nav__dd:focus-within > .nav__link--dd { color: var(--blue-700); background: var(--sky-100); }
+.nav__dd-panel a {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.nav__dd-panel a:hover { background: var(--sky-100); color: var(--blue-700); }
+
+@media (max-width: 860px) {
+  .nav__dd-panel {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    min-width: 0;
+    max-height: none;
+    overflow: visible;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0 0 6px 16px;
+  }
+  .nav__dd-panel a { padding: 8px 10px; white-space: normal; font-size: 0.88rem; }
+  .nav__dd:hover .nav__dd-panel,
+  .nav__dd:focus-within .nav__dd-panel { display: grid; }
+}
+
+/* ==========================================================================
+   Lightbox galeri — klik gambar, zoom, navigasi kiri/kanan
+   ========================================================================== */
+.app img, .split__media img, .banner-wide img { cursor: zoom-in; }
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+}
+.lightbox.is-open { display: flex; align-items: center; justify-content: center; }
+.lightbox__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 16, 34, 0.93);
+  cursor: zoom-out;
+}
+.lightbox__stage {
+  position: relative;
+  z-index: 1;
+  width: min(88vw, 1100px);
+  height: min(76vh, 780px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.lightbox__img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-drag: none;
+  transition: transform 0.18s ease;
+  transform-origin: center;
+}
+.lightbox__img.is-zoomed { cursor: move; }
+.lightbox__cap {
+  position: absolute;
+  bottom: 16px;
+  left: 60px;
+  right: 60px;
+  z-index: 2;
+  text-align: center;
+  color: #cfe1f7;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.lightbox__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.18s ease, color 0.18s ease;
+}
+.lightbox__btn:hover { background: var(--yellow); color: var(--blue-950); }
+.lightbox__prev { left: 18px; }
+.lightbox__next { right: 18px; }
+.lightbox__close {
+  top: 14px;
+  right: 14px;
+  transform: none;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+}
+body.has-lightbox { overflow: hidden; }
+@media (max-width: 560px) {
+  .lightbox__cap { left: 16px; right: 16px; font-size: 0.8rem; bottom: 10px; }
+  .lightbox__btn { width: 40px; height: 40px; font-size: 19px; }
+  .lightbox__prev { left: 8px; }
+  .lightbox__next { right: 8px; }
+}
+
 @media (max-width: 1150px) {
   .nav__link { padding: 9px 9px; }
 }
