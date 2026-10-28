@@ -930,8 +930,36 @@ p { margin: 0 0 1em; }
   color: var(--ink);
   font-size: 1.02rem;
   line-height: 1.7;
+}.owner__quote p+p { margin-top: 12px; }
+.owner__quote h3 {
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue-700);
+  margin: 20px 0 8px;
 }
-.owner__quote p + p { margin-top: 12px; }
+.owner__list { list-style: none; padding: 0; margin: 0; }
+.owner__list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 7px;
+  color: var(--ink);
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+.owner__list li strong { color: var(--blue-900); }
+.owner__list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.62em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--yellow);
+}
 .owner__sign { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line); }
 .owner__name {
   display: block;
