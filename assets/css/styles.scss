@@ -998,6 +998,13 @@ p { margin: 0 0 1em; }
 }
 .brand-card figcaption strong { display: block; color: var(--ink); font-size: 1.02rem; }
 .brand-card figcaption span { display: block; margin-top: 5px; color: var(--muted); font-size: .9rem; }
+.brand-grid--4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1024px) {
+  .brand-grid--4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .brand-grid--4 { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
+}
 @media (max-width: 860px) {
   .brand-grid { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; }
 }

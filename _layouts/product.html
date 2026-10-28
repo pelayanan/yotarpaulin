@@ -60,7 +60,7 @@ layout: default
     <div class="section-head reveal">
       <span class="eyebrow">Varian & Foto</span>
       <h2>Pilihan Varian yang Tersedia</h2>
-      <p>Label pada foto diambil langsung dari stok kami — kerapatan, ukuran, dan berat per bentang asli.</p>
+      <p>{{ item.gallery_note | default: "Label pada foto diambil langsung dari stok kami — kerapatan, ukuran, dan berat per bentang asli." }}</p>
     </div>
     <div class="apps apps--tall">
       {% for g in item.gallery %}
@@ -69,6 +69,51 @@ layout: default
         <figcaption><strong>{{ g.caption }}</strong><span>{{ g.text }}</span></figcaption>
       </figure>
       {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if item.category contains 'Terpal' or item.category contains 'Paranet' %}
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Merek Produksi</span>
+      <h2>Logo yang Tercetak di Produk Ini</h2>
+      <p>Baris keluar dari pabrik kami dengan salah satu merek berikut — tuliskan pilihan merek Anda saat order, gratis setiap pembelian.</p>
+    </div>
+    <div class="brand-grid{% if item.slug == 'paranet-bangunan' %} brand-grid--4{% endif %}">
+      {% if item.category contains 'Terpal' %}
+      <figure class="brand-card reveal">
+        <img src="{{ site.baseurl }}/assets/images/brand-yo-terpaulin.png" alt="Logo YO Terpaulin" loading="lazy">
+        <figcaption><strong>YO Terpaulin</strong><span>Terpal &amp; Paranet — Super Korean PE + UV</span></figcaption>
+      </figure>
+      <figure class="brand-card reveal">
+        <img src="{{ site.baseurl }}/assets/images/brand-saffron-a20.png" alt="Logo Saffron A20" loading="lazy">
+        <figcaption><strong>Saffron A20</strong><span>Tech by Korea + UV</span></figcaption>
+      </figure>
+      <figure class="brand-card reveal">
+        <img src="{{ site.baseurl }}/assets/images/brand-perkasa-terpal.png" alt="Logo Perkasa Terpal" loading="lazy">
+        <figcaption><strong>Perkasa Terpal</strong><span>Terpal lembar — ukuran 2x3 s/d 30x30 m</span></figcaption>
+      </figure>
+      {% else %}
+      <figure class="brand-card reveal">
+        <img src="{{ site.baseurl }}/assets/images/brand-yo-terpaulin.png" alt="Logo YO Terpaulin" loading="lazy">
+        <figcaption><strong>YO Terpaulin</strong><span>Terpal &amp; Paranet — Super Korean PE + UV</span></figcaption>
+      </figure>
+      <figure class="brand-card reveal">
+        <img src="{{ site.baseurl }}/assets/images/brand-surya-paranet.png" alt="Logo Surya Paranet" loading="lazy">
+        <figcaption><strong>Surya Paranet</strong><span>Paranet — kualitas premium + UV</span></figcaption>
+      </figure>
+      <figure class="brand-card reveal">
+        <img src="{{ site.baseurl }}/assets/images/brand-nusantara-net.png" alt="Logo Nusantara-Net" loading="lazy">
+        <figcaption><strong>Nusantara-Net</strong><span>Paranet roll — ukuran 3x100 m</span></figcaption>
+      </figure>
+      <figure class="brand-card reveal">
+        <img src="{{ site.baseurl }}/assets/images/brand-perkasa-paranet.png" alt="Logo Perkasa Paranet" loading="lazy">
+        <figcaption><strong>Perkasa Paranet</strong><span>Paranet — kerapatan 60–100%</span></figcaption>
+      </figure>
+      {% endif %}
     </div>
   </div>
 </section>
