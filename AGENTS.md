@@ -60,7 +60,7 @@ Website SUDAH jadi dan live. Struktur folder saat ini:
 
 - Live URL: https://yoterpal.com/ (domain kustom atas keputusan pemilik, 28 Okt 2026; CNAME file di root repo, `url: https://yoterpal.com`, `baseurl: ""`). URL lama https://pelayanan.github.io/yotarpaulin/ otomatis redirect ke domain baru.
 - Catatan domain (28 Okt 2026): DNS apex via Cloudflare PROXY (orange). HTTPS pengunjung memakai sertifikat Cloudflare — sudah berfungsi. Sertifikat GitHub untuk yoterpal.com belum ter-terbit (proxy Cloudflare menghalangi validasi LE; normal jika proxy dipakai). `https_enforced` di GitHub tetap False — OK, jangan dipaksa. **http://yoterpal.com/ masih 200 (belum redirect ke https)** → aktifkan "Always Use HTTPS" di dashboard Cloudflare. Subdomain `www.yoterpal.com` BELUM ada DNS record — tambahkan CNAME `www` → `pelayanan.github.io` (atau → yoterpal.com) agar www juga jalan.
-- Halaman live: `/` (beranda), `/produk.html`, `/tentang.html`, `/kontak.html`, `/404.html`, `/sitemap.xml`, `/robots.txt`
+- Halaman live: `/` (beranda), `/produk.html`, `/tentang.html`, `/kontak.html`, `/404.html`, `/sitemap.xml`, `/robots.txt` + **halaman detail per produk `/produk/<slug>.html` (10 halaman)**.
 - Kode sumber: https://github.com/pelayanan/yotarpaulin (public)
 - Kontak brand di website: hotline/WhatsApp +62 812-2133-2929 (wa.me/6281221332929)
 
@@ -69,3 +69,12 @@ Website SUDAH jadi dan live. Struktur folder saat ini:
 - Edit di `/mnt/f/buildapk/website-yotarpaulin/` (FOLDER INI) → commit → push ke `main` → GitHub Pages build otomatis (cek status: `GET /repos/pelayanan/yotarpaulin/pages/builds/latest` dengan token di atas).
 - Jangan build lokal (tidak ada Ruby/Jekyll di mesin ini). Untuk preview/screenshot pakai `chromium --headless=new --screenshot=... --window-size=1440,<tinggi>` terhadap URL live.
 - Ketersediaan domain dicek via RDAP: Verisign `https://rdap.verisign.com/com/v1/domain/<domain>` untuk .com/.net, PANDI `https://rdap.pandi.id/rdap/domain/<domain>` untuk .id/.co.id/.web.id. 404 = tersedia, 200 = terdaftar. Per 28 Okt 2026 semua varian yotarpaulin (.com/.net/.co/.id/.co.id/.web.id/.biz/.store) masih tersedia.
+
+## Produk & halaman detail (28 Okt 2026)
+
+- Katalog = `_data/products.yml` (10 produk; tiap entri punya `slug`, `detail`, `uses`; paranet punya `banner` + `gallery`).
+- Halaman detail: layout `_layouts/product.html` + stub `produk/<slug>.html` (front matter: layout/slug/permalink/title/description). Data-driven — konten produk cukup diedit di products.yml.
+- Foto paranet: `assets/images/prod-paranet.webp` (kartu 640), `paranet-loom.webp` (banner), `paranet-tenun.webp`, `paranet-k100..k50.webp` (varian kerapatan 50–100% dengan label ukuran/berat asli dari foto stok). Sumber: `resources/product-paranet/`.
+- Hati-hati: sebagian foto WhatsApp punya **bar hitam sisi tertanam** — selalu trim bar hitam (cek kecerahan kolom < 22) sebelum crop.
+- CSS: kartu produk berlink detail (`.product__links`), breadcrumb `.crumb`, grid varian portrait `.apps--tall` (rasio 3/4), tombol ghost untuk latar terang `.btn--ghost--light`. `.apps--3` WAJIB ditulis SETELAH `.apps` (urutan cascade) agar grid 3 kolom tidak tertimpa 5 kolom.
+- Anti-cache CDN: `<link>` CSS & `<script>` JS memakai `?v={{ site.time | date: '%Y%m%d%H%M' }}` — berubah tiap build, update tak tertahan cache Cloudflare. Gambar tak pakai version query (cache CF expired sendiri ±10 menit).
