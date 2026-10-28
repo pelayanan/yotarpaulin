@@ -1,0 +1,31 @@
+<section class="section" id="produk">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Produk Kami</span>
+      <h2>Berbagai Pilihan Terpal &amp; Sarung Tangan Berkualitas</h2>
+      <p>Tersedia beragam warna, ketebalan, dan ukuran — termasuk order custom untuk kebutuhan khusus proyek Anda.</p>
+    </div>
+
+    <div class="cards cards--4">
+      {% for item in site.data.products limit:8 %}
+      <article class="product reveal">
+        <div class="product__thumb">
+          <img src="{{ site.baseurl }}/assets/images/{{ item.image }}" alt="{{ item.name }} Yo Tarpaulin" loading="lazy" width="640" height="640">
+          <span class="product__cat">{{ item.category }}</span>
+        </div>
+        <div class="product__body">
+          <h3>{{ item.name }}</h3>
+          <p>{{ item.desc }}</p>
+          <ul class="chips">
+            {% for s in item.specs %}<li>{{ s }}</li>{% endfor %}
+          </ul>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div class="center reveal">
+      <a class="btn btn--blue" href="{{ site.baseurl }}/produk.html">Lihat Semua Produk <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>

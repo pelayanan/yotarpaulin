@@ -1,0 +1,13 @@
+# Navigasi utama
+- name: Beranda
+  link: /
+- name: Tentang
+  link: /tentang.html
+- name: Produk
+  link: /produk.html
+- name: Keunggulan
+  link: /#keunggulan
+- name: Aplikasi
+  link: /#aplikasi
+- name: Kontak
+  link: /kontak.html

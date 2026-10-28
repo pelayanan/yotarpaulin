@@ -1,0 +1,46 @@
+# Katalog produk (foto produk di assets/images)
+- image: prod-biru-premium.webp
+  name: "Terpal Biru Premium"
+  category: "Terpal PE Laminasi"
+  desc: "Terpal PE lapis ganda warna biru, pilihan utama untuk penutup material di tambang dan proyek konstruksi."
+  specs: ["120–200 GSM", "Tahan UV", "Anti Robek"]
+- image: prod-navy.webp
+  name: "Terpal Navy"
+  category: "Terpal PE Laminasi"
+  desc: "Warna navy elegan dan tahan kotor, cocok untuk kanopi, tenda event, dan penutup armada logistik."
+  specs: ["150–250 GSM", "Warna Tahan Lama", "Tahan Air"]
+- image: prod-kuning.webp
+  name: "Terpal Kuning Gold"
+  category: "Terpal PE Laminasi"
+  desc: "Warna kuning mencolok untuk area kerja yang butuh visibilitas tinggi serta penutup gabah dan hasil panen."
+  specs: ["100–180 GSM", "High Visibility", "Tahan Air"]
+- image: prod-hijau.webp
+  name: "Terpal Hijau"
+  category: "Terpal PE Laminasi"
+  desc: "Terpal hijau multifungsi untuk perkebunan, kolam, peneduh, dan kebutuhan pertanian lainnya."
+  specs: ["90–150 GSM", "Multifungsi", "Ekonomis"]
+- image: prod-oranye.webp
+  name: "Terpal Oranye"
+  category: "Terpal PE Safety"
+  desc: "Oranye safety untuk penandaan area berbahaya, penutup scaffolding, dan kebutuhan keselamatan kerja."
+  specs: ["120–200 GSM", "Safety Color", "Tahan Air"]
+- image: prod-biru-muda.webp
+  name: "Terpal Biru Muda"
+  category: "Terpal PE Laminasi"
+  desc: "Versi ekonomis yang tetap kuat, banyak dipakai untuk penutup barang dagangan dan gudang."
+  specs: ["80–140 GSM", "Ekonomis", "Ringan"]
+- image: prod-pvc.webp
+  name: "Terpal PVC Transparan"
+  category: "Terpal PVC Premium"
+  desc: "PVC bening anti jamur untuk kanopi, greenhouse, dan partisi — cahaya masuk, air dan debu tertahan."
+  specs: ["250–450 GSM", "Transparan", "Premium Grade"]
+- image: rolls-colorful.webp
+  name: "Terpal Roll"
+  category: "Terpal Roll Industri"
+  desc: "Terpal gulungan lebar 2–6 m panjang hingga 50 m, efisien untuk penutup area luas di lokasi tambang."
+  specs: ["Lebar 2–6 m", "Panjang 50 m", "Custom Cut"]
+- image: ic-guarantee.webp
+  name: "Sarung Tangan Industri"
+  category: "Sarung Tangan Kerja"
+  desc: "Sarung tangan kerja untuk menunjang keselamatan operasional tambang dan proyek. Hubungi kami untuk katalog lengkap."
+  specs: ["Full Grip", "Standar SNI", "Order Partai"]

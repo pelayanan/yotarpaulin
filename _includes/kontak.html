@@ -1,0 +1,64 @@
+<section class="section" id="kontak">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Hubungi Kami</span>
+      <h2>Siap Melayani Kebutuhan Anda</h2>
+      <p>Kirimkan pertanyaan atau kebutuhan Anda — kami respons cepat, 24/7.</p>
+    </div>
+
+    <div class="contact">
+      <div class="contact__cards">
+        <a class="contact-card reveal" href="{{ site.whatsapp }}" target="_blank" rel="noopener">
+          <img src="{{ site.baseurl }}/assets/images/ic-support.webp" alt="" loading="lazy" width="72" height="72">
+          <h3>WhatsApp Hotline</h3>
+          <p>{{ site.phone_display }}</p>
+          <span class="contact-card__cta">Chat sekarang <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a class="contact-card reveal" href="tel:{{ site.phone_raw }}">
+          <img src="{{ site.baseurl }}/assets/images/ic-247.webp" alt="" loading="lazy" width="72" height="72">
+          <h3>Telepon / Voice</h3>
+          <p>{{ site.phone_display }}</p>
+          <span class="contact-card__cta">Telepon langsung <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </a>
+        <div class="contact-card contact-card--static reveal">
+          <img src="{{ site.baseurl }}/assets/images/ic-location.webp" alt="" loading="lazy" width="72" height="72">
+          <h3>Jangkauan</h3>
+          <p>Kirim ke 34+ provinsi di seluruh Indonesia — darat, laut, dan udara.</p>
+          <span class="contact-card__cta">24/7 untuk kebutuhan darurat</span>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="wa-form" autocomplete="off">
+        <h3>Kirim Kebutuhan Anda via WhatsApp</h3>
+        <p>Isi form berikut — pesan akan otomatis tersusun rapi di WhatsApp kami.</p>
+        <div class="form-grid">
+          <label>Nama
+            <input type="text" name="nama" placeholder="Nama Anda / perusahaan" required>
+          </label>
+          <label>Kebutuhan
+            <select name="kebutuhan">
+              <option>Terpal Premium</option>
+              <option>Terpal Standar</option>
+              <option>Terpal Roll</option>
+              <option>Terpal PVC Transparan</option>
+              <option>Sarung Tangan Industri</option>
+              <option>Lainnya / Konsultasi</option>
+            </select>
+          </label>
+          <label>Perkiraan Jumlah
+            <input type="text" name="jumlah" placeholder="mis. 50 roll / 200 lembar">
+          </label>
+          <label>Lokasi Kirim
+            <input type="text" name="lokasi" placeholder="Kota / lokasi proyek">
+          </label>
+          <label class="span2">Detail Kebutuhan
+            <textarea name="pesan" rows="4" placeholder="Spesifikasi, ukuran, warna, ketebalan (GSM), dll."></textarea>
+          </label>
+        </div>
+        <button class="btn btn--yellow btn--lg" type="submit">
+          <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Kirim via WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

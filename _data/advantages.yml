@@ -1,0 +1,19 @@
+# Keunggulan produk & layanan (ikon 3D di assets/images)
+- image: ic-waterproof.webp
+  title: "100% Tahan Air"
+  text: "Permukaan dilaminasi ganda sehingga hujan deras dan genangan air tidak menembus — barang di bawahnya tetap kering dan aman."
+- image: ic-tear.webp
+  title: "Kuat & Anti Robek"
+  text: "Tenunan HDPE rapat dengan tepian lipat ganda, tidak mudah sobek meski sering dipasang, dilepas, dan dipindah."
+- image: ic-uv.webp
+  title: "Tahan UV & Panas"
+  text: "Diformulasi dengan UV stabilizer agar tidak cepat rapuh atau pudar meski dipasang di area terbuka yang terik."
+- image: ic-price.webp
+  title: "Harga Pabrik"
+  text: "Diproduksi langsung oleh pabrik kami — harga lebih kompetitif untuk order partai besar tanpa menurunkan mutu."
+- image: ic-custom.webp
+  title: "Ukuran Custom"
+  text: "Bisa dipesan sesuai kebutuhan: ukuran, warna, ketebalan (GSM), hingga pencetakan logo untuk proyek Anda."
+- image: ic-247.webp
+  title: "Layanan Responsif"
+  text: "Tim kami siap melayani konsultasi dan pengiriman mendesak 24/7 — siap mendukung operasional tambang & proyek."

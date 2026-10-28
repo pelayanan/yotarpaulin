@@ -1,0 +1,72 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__col footer__col--wide">
+        <a class="brand brand--footer" href="{{ site.baseurl }}/">
+          <img src="{{ site.baseurl }}/assets/images/logo.webp" alt="Logo Yo Tarpaulin" width="64" height="48">
+          <span class="brand__text">
+            <strong>YO TARPAULIN</strong>
+            <small>{{ site.brand_slogan }}</small>
+          </span>
+        </a>
+        <p>YO Tarpaulin merupakan perusahaan yang bergerak di bidang Produksi &amp; Penyediaan Terpal dan Sarung Tangan berkualitas tinggi untuk kebutuhan industri pertambangan dan proyek infrastruktur skala besar.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Perusahaan</h4>
+        <ul>
+          <li><a href="{{ site.baseurl }}/">Beranda</a></li>
+          <li><a href="{{ site.baseurl }}/tentang.html">Tentang Kami</a></li>
+          <li><a href="{{ site.baseurl }}/#keunggulan">Keunggulan</a></li>
+          <li><a href="{{ site.baseurl }}/#aplikasi">Aplikasi</a></li>
+          <li><a href="{{ site.baseurl }}/kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Produk</h4>
+        <ul>
+          <li><a href="{{ site.baseurl }}/produk.html">Terpal Premium</a></li>
+          <li><a href="{{ site.baseurl }}/produk.html">Terpal Roll</a></li>
+          <li><a href="{{ site.baseurl }}/produk.html">Terpal PVC Transparan</a></li>
+          <li><a href="{{ site.baseurl }}/produk.html">Sarung Tangan Industri</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Kontak</h4>
+        <ul class="footer__contact">
+          <li>
+            <svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>
+            <a href="tel:{{ site.phone_raw }}">{{ site.phone_display }}</a>
+          </li>
+          <li>
+            <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+            <a href="{{ site.whatsapp }}" target="_blank" rel="noopener">WhatsApp Kami</a>
+          </li>
+          <li>
+            <svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>
+            <span>Layanan &amp; Pengiriman 24/7</span>
+          </li>
+          <li>
+            <svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>
+            <span>Kirim ke seluruh Indonesia</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__payment">
+      <img src="{{ site.baseurl }}/assets/images/banner-payment.webp" alt="Metode pembayaran: transfer bank, QRIS, kartu kredit, dan e-wallet" loading="lazy">
+    </div>
+
+    <div class="footer__bottom">
+      <span>&copy; {{ site.time | date: "%Y" }} YO TARPAULIN. All Rights Reserved.</span>
+      <span>{{ site.brand_slogan }}</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="{{ site.whatsapp }}" target="_blank" rel="noopener" aria-label="Chat WhatsApp Yo Tarpaulin">
+  <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+</a>

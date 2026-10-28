@@ -1,0 +1,21 @@
+<section class="section section--alt" id="aplikasi">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Aplikasi</span>
+      <h2>Cocok untuk Berbagai Kebutuhan</h2>
+      <p>Dari tambang hingga perikanan — terpal Yo Tarpaulin sudah teruji di lapangan.</p>
+    </div>
+
+    <div class="apps">
+      {% for item in site.data.applications %}
+      <figure class="app reveal">
+        <img src="{{ site.baseurl }}/assets/images/{{ item.image }}" alt="Terpal untuk {{ item.title }}" loading="lazy" width="1200" height="669">
+        <figcaption>
+          <strong>{{ item.title }}</strong>
+          <span>{{ item.text }}</span>
+        </figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,115 @@
+---
+layout: default
+title: "Kontak — Yo Tarpaulin"
+description: "Hubungi Yo Tarpaulin via WhatsApp atau telepon di +62 812-2133-2929. Layanan dan pengiriman 24/7 ke seluruh Indonesia."
+permalink: /kontak.html
+---
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow eyebrow--light">Kontak</span>
+    <h1>Siap Melayani, <span class="hl">24/7</span></h1>
+    <p>Hotline, WhatsApp, dan form pemesanan cepat — semua jalur aktif setiap hari.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="contact">
+      <div class="contact__cards">
+        <a class="contact-card reveal" href="{{ site.whatsapp }}" target="_blank" rel="noopener">
+          <img src="{{ site.baseurl }}/assets/images/ic-support.webp" alt="" loading="lazy" width="72" height="72">
+          <h3>WhatsApp Hotline</h3>
+          <p>{{ site.phone_display }}</p>
+          <span class="contact-card__cta">Chat sekarang <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a class="contact-card reveal" href="tel:{{ site.phone_raw }}">
+          <img src="{{ site.baseurl }}/assets/images/ic-247.webp" alt="" loading="lazy" width="72" height="72">
+          <h3>Telepon / Voice</h3>
+          <p>{{ site.phone_display }}</p>
+          <span class="contact-card__cta">Telepon langsung <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </a>
+        <div class="contact-card contact-card--static reveal">
+          <img src="{{ site.baseurl }}/assets/images/ic-location.webp" alt="" loading="lazy" width="72" height="72">
+          <h3>Jangkauan</h3>
+          <p>Kirim ke 34+ provinsi di seluruh Indonesia — darat, laut, dan udara.</p>
+          <span class="contact-card__cta">24/7 untuk kebutuhan darurat</span>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="wa-form" autocomplete="off">
+        <h3>Kirim Kebutuhan Anda via WhatsApp</h3>
+        <p>Isi form berikut — pesan akan otomatis tersusun rapi di WhatsApp kami.</p>
+        <div class="form-grid">
+          <label>Nama
+            <input type="text" name="nama" placeholder="Nama Anda / perusahaan" required>
+          </label>
+          <label>Kebutuhan
+            <select name="kebutuhan">
+              <option>Terpal Premium</option>
+              <option>Terpal Standar</option>
+              <option>Terpal Roll</option>
+              <option>Terpal PVC Transparan</option>
+              <option>Sarung Tangan Industri</option>
+              <option>Lainnya / Konsultasi</option>
+            </select>
+          </label>
+          <label>Perkiraan Jumlah
+            <input type="text" name="jumlah" placeholder="mis. 50 roll / 200 lembar">
+          </label>
+          <label>Lokasi Kirim
+            <input type="text" name="lokasi" placeholder="Kota / lokasi proyek">
+          </label>
+          <label class="span2">Detail Kebutuhan
+            <textarea name="pesan" rows="4" placeholder="Spesifikasi, ukuran, warna, ketebalan (GSM), dll."></textarea>
+          </label>
+        </div>
+        <button class="btn btn--yellow btn--lg" type="submit">
+          <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Kirim via WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>Pertanyaan yang Sering Diajukan</h2>
+    </div>
+
+    <div class="faq">
+      <details class="reveal">
+        <summary>Berapa minimum order untuk harga pabrik?</summary>
+        <p>Harga pabrik berlaku mulai order partai (mis. 1 roll penuh ke atas). Untuk jumlah ritel, harga tetap kompetitif — silakan tanya via WhatsApp untuk penawaran terbaru.</p>
+      </details>
+      <details class="reveal">
+        <summary>Bisa pesan ukuran dan warna custom?</summary>
+        <p>Bisa. Ukuran, warna, ketebalan (GSM), bahkan pencetakan logo bisa disesuaikan. Tim kami akan memandu spesifikasi yang paling ekonomis untuk kebutuhan Anda.</p>
+      </details>
+      <details class="reveal">
+        <summary>Berapa lama pengiriman ke luar Jawa?</summary>
+        <p>Stok yang ready umumnya dikirim hari yang sama atau H+1. Estimasi tiba tergantung tujuan dan moda (darat/laut/udara) — kami sampaikan estimasinya sejak penawaran.</p>
+      </details>
+      <details class="reveal">
+        <summary>Apakah ada garansi produk?</summary>
+        <p>Ya. Produk yang tidak sesuai spesifikasi yang disepakati akan kami ganti. Kondisi klaim dibicarakan langsung dengan tim kami agar cepat diselesaikan.</p>
+      </details>
+      <details class="reveal">
+        <summary>Bisa kirim langsung ke lokasi tambang?</summary>
+        <p>Bisa. Kami rutin mengirim ke lokasi proyek dan tambang, termasuk pengiriman darurat 24/7 bila operasional Anda terganggu cuaca atau kebutuhan mendesak lainnya.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <figure class="banner-wide reveal">
+      <img src="{{ site.baseurl }}/assets/images/banner-client.webp" alt="Apa kata mereka tentang terpal Yo Tarpaulin" loading="lazy" width="1200" height="669">
+    </figure>
+  </div>
+</section>
+
+{% include cta.html %}

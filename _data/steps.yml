@@ -1,0 +1,13 @@
+# Alur pemesanan
+- image: ic-konsultasi.webp
+  title: "Konsultasi"
+  text: "Ceritakan kebutuhan Anda via WhatsApp atau telepon — tim kami bantu memilih spesifikasi yang tepat."
+- image: ic-custom.webp
+  title: "Spesifikasi & Sample"
+  text: "Tentukan ukuran, warna, dan ketebalan. Sample tersedia untuk order partai besar."
+- image: ic-truck.webp
+  title: "Produksi & QC"
+  text: "Pesanan diproduksi dan melewati quality control ketat sebelum dikemas dan disiapkan kirim."
+- image: ic-guarantee.webp
+  title: "Kirim & Garansi"
+  text: "Pengiriman aman ke seluruh Indonesia, disertai garansi kualitas produk sesuai spesifikasi."

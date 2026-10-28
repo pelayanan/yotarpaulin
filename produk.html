@@ -1,0 +1,90 @@
+---
+layout: default
+title: "Katalog Produk — Terpal & Sarung Tangan | Yo Tarpaulin"
+description: "Katalog lengkap terpal Yo Tarpaulin: terpal PE premium, terpal roll, terpal PVC transparan, dan sarung tangan industri. Tersedia custom ukuran, warna, dan ketebalan (GSM)."
+permalink: /produk.html
+---
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow eyebrow--light">Katalog Produk</span>
+    <h1>Terpal &amp; Sarung Tangan <span class="hl">Berkualitas Tinggi</span></h1>
+    <p>Semua produk diproduksi langsung oleh pabrik kami dengan quality control ketat — tersedia order custom untuk kebutuhan spesifik proyek Anda.</p>
+    <div class="hero__actions">
+      <a class="btn btn--yellow" href="{{ site.whatsapp }}" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Tanya Stok &amp; Harga</a>
+      <a class="btn btn--ghost" href="{{ site.baseurl }}/kontak.html">Kirim Kebutuhan</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cards cards--3">
+      {% for item in site.data.products %}
+      <article class="product reveal">
+        <div class="product__thumb">
+          <img src="{{ site.baseurl }}/assets/images/{{ item.image }}" alt="{{ item.name }} Yo Tarpaulin" loading="lazy" width="640" height="640">
+          <span class="product__cat">{{ item.category }}</span>
+        </div>
+        <div class="product__body">
+          <h3>{{ item.name }}</h3>
+          <p>{{ item.desc }}</p>
+          <ul class="chips">
+            {% for s in item.specs %}<li>{{ s }}</li>{% endfor %}
+          </ul>
+          <a class="product__cta" href="{{ site.whatsapp }}" target="_blank" rel="noopener">Minta penawaran <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="spesifikasi">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Spesifikasi Umum</span>
+      <h2>Panduan Memilih Terpal</h2>
+      <p>Tabel berikut membantu Anda memilih ketebalan yang tepat. Butuh bantuan? Hubungi tim kami.</p>
+    </div>
+
+    <div class="table-wrap reveal">
+      <table class="spec-table">
+        <thead>
+          <tr><th>Produk</th><th>Bahan</th><th>Ketebalan (GSM)</th><th>Ukuran Roll</th><th>Cocok Untuk</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Terpal Biru Muda</td><td>PE laminasi</td><td>80–140</td><td>2×50 m</td><td>Penutup dagangan, gudang</td></tr>
+          <tr><td>Terpal Hijau</td><td>PE laminasi</td><td>90–150</td><td>2×50 m</td><td>Perkebunan, kolam, peneduh</td></tr>
+          <tr><td>Terpal Kuning Gold</td><td>PE laminasi</td><td>100–180</td><td>2×50 m</td><td>Panen, area high-visibility</td></tr>
+          <tr><td>Terpal Biru Premium</td><td>PE laminasi ganda</td><td>120–200</td><td>2–6×50 m</td><td>Tambang, konstruksi, truk</td></tr>
+          <tr><td>Terpal Oranye</td><td>PE safety</td><td>120–200</td><td>2–6×50 m</td><td>Scaffolding, area safety</td></tr>
+          <tr><td>Terpal Navy</td><td>PE laminasi</td><td>150–250</td><td>2–6×50 m</td><td>Kanopi, event, logistik</td></tr>
+          <tr><td>Terpal PVC Transparan</td><td>PVC premium</td><td>250–450</td><td>Custom</td><td>Kanopi, greenhouse, partisi</td></tr>
+          <tr><td>Sarung Tangan Industri</td><td>Kain / knit</td><td>—</td><td>—</td><td>Keselamatan kerja tambang</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <figure class="banner-wide reveal">
+      <img src="{{ site.baseurl }}/assets/images/banner-hero.webp" alt="Terpal Yo Tarpaulin premium & extra kuat — bahan kuat, tahan panas & UV, anti UV, 100% tahan air" loading="lazy" width="1200" height="669">
+    </figure>
+
+    <div class="note-grid">
+      <div class="note reveal">
+        <h3>Warna &amp; Ukuran Custom</h3>
+        <p>Seluruh varian bisa dipesan dengan ukuran dan warna custom, termasuk pencetakan logo perusahaan untuk kebutuhan proyek dan tender.</p>
+      </div>
+      <div class="note reveal">
+        <h3>Order Partai Besar</h3>
+        <p>Untuk kebutuhan tambang dan proyek infrastruktur dalam jumlah besar, hubungi kami untuk harga kontrak dan jadwal pengiriman berkala.</p>
+      </div>
+      <div class="note reveal">
+        <h3>Sample &amp; Sertifikat</h3>
+        <p>Sample bahan tersedia untuk order besar. Dokumen mutu dapat kami sediakan mengikuti kebutuhan pengadaan Anda.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include cta.html %}

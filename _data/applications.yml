@@ -1,0 +1,31 @@
+# Aplikasi / penggunaan terpal (foto di assets/images)
+- image: app-pickup.webp
+  title: "Armada & Truk"
+  text: "Penutup muatan pickup hingga truk trailer yang rapi dan aman selama perjalanan jauh."
+- image: app-cement.webp
+  title: "Semen & Material"
+  text: "Melindungi sak semen, pasir, dan material bangunan dari hujan dan lembap di area proyek."
+- image: app-scaffolding.webp
+  title: "Konstruksi & Scaffolding"
+  text: "Selubung scaffolding dan penutup gedung saat renovasi — aman dari debu dan cipratan."
+- image: app-equipment.webp
+  title: "Alat Berat & Tambang"
+  text: "Penutup alat berat, stockpile, dan area kerja tambang dalam kondisi cuaca ekstrem."
+- image: app-fishpond.webp
+  title: "Kolam & Perikanan"
+  text: "Lapisan kolam budidaya dan penutup keramba yang aman untuk bahan pakan ikan."
+- image: app-speedboat.webp
+  title: "Perkapalan & Speedboat"
+  text: "Penutup hull dan deck kapal saat sandar — melindungi dari air laut dan sinar matahari."
+- image: app-hay.webp
+  title: "Pertanian & Perkebunan"
+  text: "Penutup hay, gabah, dan hasil panen agar tetap kering saat musim hujan."
+- image: app-roof.webp
+  title: "Atap & Perumahan"
+  text: "Penutup atap sementara saat renovasi dan pelindung rumah dari bocor."
+- image: app-canopy.webp
+  title: "Tenda & Kanopi"
+  text: "Tenda serbaguna untuk event, gudang lapangan, dan pos koordinasi proyek."
+- image: app-camping.webp
+  title: "Outdoor & Camping"
+  text: "Flysheet dan shelter outdoor yang ringan, kuat, dan cepat dipasang."
