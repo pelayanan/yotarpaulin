@@ -52,16 +52,12 @@
         <h4>Kontak</h4>
         <ul class="footer__contact">
           <li>
-            <svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>
-            <a href="tel:{{ site.phone_raw }}">{{ site.phone_display }}</a>
-          </li>
-          <li>
-            <svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>
-            <a href="tel:{{ site.phone2_raw }}">{{ site.phone2_display }}</a>
+            <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+            <a href="{{ site.whatsapp }}" target="_blank" rel="noopener">WhatsApp 1 — {{ site.phone_display }}</a>
           </li>
           <li>
             <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
-            <a href="{{ site.whatsapp }}" target="_blank" rel="noopener">WhatsApp Kami</a>
+            <a href="{{ site.whatsapp2 }}" target="_blank" rel="noopener">WhatsApp 2 — {{ site.phone2_display }}</a>
           </li>
           <li>
             <svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>
