@@ -3,6 +3,8 @@
   link: /
 - name: Tentang
   link: /tentang.html
+- name: Galeri
+  link: /galeri.html
 - name: Produk
   link: /produk.html
 - name: Keunggulan
