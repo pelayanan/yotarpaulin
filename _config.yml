@@ -25,6 +25,12 @@ phone2_raw: "+62822138889"
 whatsapp2: "https://wa.me/62822138889"
 instagram: "https://www.instagram.com/pabrik_plastik_termurah"
 threads: "https://www.threads.com/@pabrik_plastik_termurah"
+
+# Profile sosial -> jekyll-seo-tag (sameAs di JSON-LD)
+social:
+  links:
+    - "https://www.instagram.com/pabrik_plastik_termurah"
+    - "https://www.threads.com/@pabrik_plastik_termurah"
 email: "yonusantararaya@gmail.com"
 company: "CV. Yo Terpal Nusantara Raya"
 address: "Amesta Living, Jalan Gn Anyar Tambak, Kelurahan Gunung Anyar Tambak (Cluster Loka CD - 25), Gunung Anyar, Kota Surabaya, Jawa Timur 60294"
