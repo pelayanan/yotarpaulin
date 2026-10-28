@@ -474,7 +474,6 @@ p { margin: 0 0 1em; }
 
 /* ---------- galeri foto pabrik ---------- */
 .site-gallery { margin: 44px 0 0; }
-.apps--3 { grid-template-columns: repeat(3, 1fr); }
 
 /* ---------- applications ---------- */
 .apps {
@@ -482,6 +481,8 @@ p { margin: 0 0 1em; }
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
 }
+/* varian 3 kolom — harus di bawah .apps agar tidak tertimpa grid 5 kolom */
+.apps--3 { grid-template-columns: repeat(3, 1fr); }
 .app {
   position: relative;
   margin: 0;
@@ -882,4 +883,29 @@ p { margin: 0 0 1em; }
   .footer__grid { grid-template-columns: 1fr; gap: 26px; }
   .cta__inner { flex-direction: column; align-items: flex-start; }
   .hero__actions .btn { width: 100%; justify-content: center; }
+}
+
+/* ==========================================================================
+   Halaman detail produk (/produk/<slug>.html)
+   ========================================================================== */
+.crumb { font-size: 0.85rem; color: #cfe1f7; margin-bottom: 12px; }
+.crumb a { color: var(--white); }
+.crumb a:hover { text-decoration: underline; }
+.crumb span { opacity: 0.55; margin: 0 6px; }
+
+.product__body h3 a { color: inherit; text-decoration: none; }
+.product__body h3 a:hover { color: var(--blue-600); text-decoration: underline; }
+
+.product__links { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 2px; }
+
+.banner-wide--tight { margin: 0; }
+
+/* grid varian portrait (contoh: kerapatan paranet) */
+.apps--tall { grid-template-columns: repeat(3, 1fr); }
+.apps--tall .app img { aspect-ratio: 3 / 4; }
+@media (max-width: 860px) {
+  .apps--tall { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .apps--tall { grid-template-columns: 1fr; }
 }

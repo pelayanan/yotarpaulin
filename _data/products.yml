@@ -1,46 +1,129 @@
 # Katalog produk (foto produk di assets/images)
+# slug dipakai untuk halaman detail /produk/<slug>.html
+# detail = paragraf deskripsi; uses = kegunaan utama (checklist)
+# banner/gallery = foto tambahan khusus produk tertentu
 - image: prod-biru-premium.webp
+  slug: terpal-biru-premium
   name: "Terpal Biru Premium"
   category: "Terpal PE Laminasi"
   desc: "Terpal PE lapis ganda warna biru, pilihan utama untuk penutup material di tambang dan proyek konstruksi."
   specs: ["120–200 GSM", "Tahan UV", "Anti Robek"]
+  detail:
+    - "Terpal PE dua lapis laminasi warna biru yang kami produksi langsung dengan pemeriksaan per batch: tenunan, lapisan laminasi, dan kekuatan tepi. Ketebalan 120–200 GSM memberi usia pakai panjang untuk pemakaian berat di lokasi tambang dan proyek."
+    - "Warna biru netral tidak cepat terlihat kotor, dan permukaan laminasinya mengalirkan air hujan dengan lancar. Tersedia bentuk lembar, roll, serta ukuran custom sesuai kebutuhan proyek."
+  uses: ["Penutup material tambang, pasir, dan split", "Penutup truk & armada logistik", "Kanopi dan penutup area konstruksi"]
 - image: prod-navy.webp
+  slug: terpal-navy
   name: "Terpal Navy"
   category: "Terpal PE Laminasi"
   desc: "Warna navy elegan dan tahan kotor, cocok untuk kanopi, tenda event, dan penutup armada logistik."
   specs: ["150–250 GSM", "Warna Tahan Lama", "Tahan Air"]
+  detail:
+    - "Terpal navy kami memakai pewarnaan yang tahan terik sehingga tidak cepat pudar walau terpasang berbulan-bulan di luar ruangan. Ketebalan 150–250 GSM menjadikannya kuat untuk kanopi permanen maupun semi permanen."
+    - "Tepi diberi anting lengkap dengan ring sehingga pemasangan di rangka kanopi maupun taut di armada logistik rapi dan cepat."
+  uses: ["Kanopi & tenda event", "Penutup armada logistik", "Penutup material halaman pabrik"]
 - image: prod-kuning.webp
+  slug: terpal-kuning-gold
   name: "Terpal Kuning Gold"
   category: "Terpal PE Laminasi"
   desc: "Warna kuning mencolok untuk area kerja yang butuh visibilitas tinggi serta penutup gabah dan hasil panen."
   specs: ["100–180 GSM", "High Visibility", "Tahan Air"]
+  detail:
+    - "Kuning gold memantulkan cahaya dengan baik sehingga pembatas area kerja jelas terlihat — pas untuk zona berbahaya, jalur kendaraan berat, dan sisi jalan proyek."
+    - "Petani juga menyukai terpal kuning untuk penutup gabah dan hasil panen karena memantulkan panas serta mudah dikenali dari jauh."
+  uses: ["Penandaan area kerja & zona bahaya", "Penutup gabah dan hasil panen", "Pembatas jalan proyek"]
 - image: prod-hijau.webp
+  slug: terpal-hijau
   name: "Terpal Hijau"
   category: "Terpal PE Laminasi"
   desc: "Terpal hijau multifungsi untuk perkebunan, kolam, peneduh, dan kebutuhan pertanian lainnya."
   specs: ["90–150 GSM", "Multifungsi", "Ekonomis"]
+  detail:
+    - "Terpal hijau adalah andalan petani dan pekebun: peneduh bibit, penutup rumah tanaman, lapis dasar kolam, hingga penutup silase. Warna hijau menyatu dengan area tanam."
+    - "Ketebalan 90–150 GSM tersedia bertahap — cukup mulai dari varian ekonomis, naik ke ketebalan lebih tebal untuk pemakaian usaha jangka lama."
+  uses: ["Peneduh bibit & rumah tanaman", "Lapis dasar kolam", "Penutup silase & pakan"]
 - image: prod-oranye.webp
+  slug: terpal-oranye
   name: "Terpal Oranye"
   category: "Terpal PE Safety"
   desc: "Oranye safety untuk penandaan area berbahaya, penutup scaffolding, dan kebutuhan keselamatan kerja."
   specs: ["120–200 GSM", "Safety Color", "Tahan Air"]
-- image: prod-biru-muda.webp
-  name: "Terpal Biru Muda"
-  category: "Terpal PE Laminasi"
-  desc: "Versi ekonomis yang tetap kuat, banyak dipakai untuk penutup barang dagangan dan gudang."
-  specs: ["80–140 GSM", "Ekonomis", "Ringan"]
+  detail:
+    - "Terpal oranye safety banyak dipakai tim HSE kontraktor untuk penutup scaffolding, pembatas area terlarang, dan pengamanan tepi gedung di proyek skala besar."
+    - "Warnanya tetap terbaca kuat saat tersorot lampu kerja — faktor penting bagi keselamatan operasional tambang dan konstruksi."
+  uses: ["Penutup scaffolding & bangunan", "Pembatas area berbahaya", "Penutup alat berat"]
 - image: prod-pvc.webp
+  slug: terpal-pvc-transparan
   name: "Terpal PVC Transparan"
   category: "Terpal PVC Premium"
   desc: "PVC bening anti jamur untuk kanopi, greenhouse, dan partisi — cahaya masuk, air dan debu tertahan."
   specs: ["250–450 GSM", "Transparan", "Premium Grade"]
+  detail:
+    - "Terpal PVC transparan kami memakai bahan premium anti jamur: bening namun kuat, tidak cepat kaku pada suhu rendah, dan tahan cuaca lebih lama dibanding PE."
+    - "Umumnya dipakai untuk kanopi kafe, rumah kaca hidroponik, partisi area kerja, dan tirai industri yang butuh tetap terang."
+  uses: ["Kanopi transparan (kafe & showroom)", "Greenhouse hidroponik", "Tirai/partisi area kerja"]
 - image: rolls-colorful.webp
+  slug: terpal-roll
   name: "Terpal Roll"
   category: "Terpal Roll Industri"
   desc: "Terpal gulungan lebar 2–6 m panjang hingga 50 m, efisien untuk penutup area luas di lokasi tambang."
   specs: ["Lebar 2–6 m", "Panjang 50 m", "Custom Cut"]
+  detail:
+    - "Format roll menghemat waktu pemasangan untuk area luas: cukup dibentang dan diikat — sambungan minim berarti titik rembes lebih sedikit."
+    - "Tersedia lebar 2, 3, 4, dan 6 meter dengan panjang 50 meter per roll; bisa juga dipotong sesuai lebar area Anda di gudang kami."
+  uses: ["Penutup stockpile tambang", "Penahan debu di lapangan", "Lapis dasar area kerja"]
+- image: prod-paranet.webp
+  slug: paranet-bangunan
+  name: "Paranet Bangunan"
+  category: "Paranet & Net Kerja"
+  desc: "Jaring penggelap cahaya untuk penutup sloof/sproet, pelindung area kerja, dan peneduh tanaman — HDPE dengan kerapatan 50–100%."
+  specs: ["Kerapatan 50–100%", "2×100 m & 3×100 m", "Sambung Kuat"]
+  detail:
+    - "Paranet kami ditenun langsung di pabrik dari benang HDPE dengan stabilizer UV: kuat menahan terik, tidak mudah rapuh, dan jahitan tepinya rapi."
+    - "Tersedia kerapatan 50%, 60%, 70%, 80%, 90%, dan 100% dalam ukuran 2 x 100 meter serta 3 x 100 meter — berat 11–28 kg per lembar sesuai kerapatan (lihat tabel foto varian di bawah)."
+  uses: ["Penutup scaffolding & net proyek", "Pelindung matahari area kerja", "Peneduh tanaman & car park"]
+  banner:
+    image: paranet-loom.webp
+    caption: "Ditenun langsung di mesin jaring industri"
+  gallery:
+    - image: paranet-tenun.webp
+      caption: "Proses tenun industri"
+      text: "Benang HDPE ditenun rapat oleh mesin jaring besar di pabrik."
+    - image: paranet-k100.webp
+      caption: "Kerapatan 100%"
+      text: "Ukuran 2 x 100 m, berat per lembar 28 kg."
+    - image: paranet-k90.webp
+      caption: "Kerapatan 90%"
+      text: "Ukuran 3 x 100 m, berat per lembar 25 kg."
+    - image: paranet-k80.webp
+      caption: "Kerapatan 80%"
+      text: "Ukuran 3 x 100 m, berat per lembar 20 kg."
+    - image: paranet-k70.webp
+      caption: "Kerapatan 70%"
+      text: "Ukuran 3 x 100 m, berat per lembar 16 kg."
+    - image: paranet-k60.webp
+      caption: "Kerapatan 60%"
+      text: "Ukuran 3 x 100 m, berat per lembar 14 kg."
+    - image: paranet-k50.webp
+      caption: "Kerapatan 50%"
+      text: "Ukuran 3 x 100 m, berat per lembar 11 kg."
+- image: prod-biru-muda.webp
+  slug: terpal-biru-muda
+  name: "Terpal Biru Muda"
+  category: "Terpal PE Laminasi"
+  desc: "Versi ekonomis yang tetap kuat, banyak dipakai untuk penutup barang dagangan dan gudang."
+  specs: ["80–140 GSM", "Ekonomis", "Ringan"]
+  detail:
+    - "Terpal biru muda adalah pilihan hemat untuk pemakaian harian: menutup dagangan, menahan debu gudang, dan melindungi barang saat diangkut."
+    - "Ringan dan mudah digulung sehingga cepat dipasang dan disingkirkan, sementara laminasinya tetap tahan rembes."
+  uses: ["Penutup barang dagangan", "Penahan debu gudang", "Pelindung angkutan jarak dekat"]
 - image: ic-guarantee.webp
+  slug: sarung-tangan-industri
   name: "Sarung Tangan Industri"
   category: "Sarung Tangan Kerja"
   desc: "Sarung tangan kerja untuk menunjang keselamatan operasional tambang dan proyek. Hubungi kami untuk katalog lengkap."
   specs: ["Full Grip", "Standar SNI", "Order Partai"]
+  detail:
+    - "Sarung tangan kerja kami menyediakan beberapa tipe untuk beragam aktivitas operasional: menangani material kasar, alat mesin, dan pengemasan barang."
+    - "Tersedia order partai lengkap dengan harga kontrak — hubungi tim kami untuk katalog tipe dan kebutuhan rutin bulanan proyek Anda."
+  uses: ["Pengamanan tangan operator", "Penanganan material & log", "Order rutin bulanan proyek"]
