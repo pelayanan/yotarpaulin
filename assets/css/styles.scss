@@ -472,6 +472,10 @@ p { margin: 0 0 1em; }
 .banner-wide img { width: 100%; }
 .banner-wide a { display: block; }
 
+/* ---------- galeri foto pabrik ---------- */
+.site-gallery { margin: 44px 0 0; }
+.apps--3 { grid-template-columns: repeat(3, 1fr); }
+
 /* ---------- applications ---------- */
 .apps {
   display: grid;
@@ -866,6 +870,7 @@ p { margin: 0 0 1em; }
   .section { padding: 56px 0; }
   .cards--3, .cards--4 { grid-template-columns: 1fr; }
   .apps { grid-template-columns: repeat(2, 1fr); }
+  .apps--3 { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; }
   .form-grid { grid-template-columns: 1fr; }
   .form-grid .span2 { grid-column: span 1; }
