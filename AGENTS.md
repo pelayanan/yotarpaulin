@@ -58,7 +58,8 @@ Website SUDAH jadi dan live. Struktur folder saat ini:
 
 ## Status website
 
-- Live URL: https://yoterpal.com/ (domain kustom atas keputusan pemilik, 28 Okt 2026; CNAME file di root repo, `url: https://yoterpal.com`, `baseurl: ""`). DNS via Cloudflare (apex). URL lama https://pelayanan.github.io/yotarpaulin/ otomatis redirect ke domain baru.
+- Live URL: https://yoterpal.com/ (domain kustom atas keputusan pemilik, 28 Okt 2026; CNAME file di root repo, `url: https://yoterpal.com`, `baseurl: ""`). URL lama https://pelayanan.github.io/yotarpaulin/ otomatis redirect ke domain baru.
+- Catatan domain (28 Okt 2026): DNS apex via Cloudflare PROXY (orange). HTTPS pengunjung memakai sertifikat Cloudflare — sudah berfungsi. Sertifikat GitHub untuk yoterpal.com belum ter-terbit (proxy Cloudflare menghalangi validasi LE; normal jika proxy dipakai). `https_enforced` di GitHub tetap False — OK, jangan dipaksa. **http://yoterpal.com/ masih 200 (belum redirect ke https)** → aktifkan "Always Use HTTPS" di dashboard Cloudflare (bisa dari GitHub). Subdomain `www.yoterpal.com` BELUM ada DNS record — tambahkan CNAME `www` → `pelayanan.github.io` (atau → yoterpal.com) agar www juga jalan.
 - Halaman live: `/` (beranda), `/produk.html`, `/tentang.html`, `/kontak.html`, `/404.html`, `/sitemap.xml`, `/robots.txt`
 - Kode sumber: https://github.com/pelayanan/yotarpaulin (public)
 - Kontak brand di website: hotline/WhatsApp +62 812-2133-2929 (wa.me/6281221332929)
