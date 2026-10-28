@@ -9,7 +9,7 @@
             <small>{{ site.brand_slogan }}</small>
           </span>
         </a>
-        <p>YO Tarpaulin merupakan perusahaan yang bergerak di bidang Produksi &amp; Penyediaan Terpal dan Sarung Tangan berkualitas tinggi untuk kebutuhan industri pertambangan dan proyek infrastruktur skala besar.</p>
+        <p>YO Tarpaulin merupakan perusahaan yang bergerak di bidang Produksi &amp; Penyediaan Terpal dan Sarung Tangan berkualitas tinggi untuk kebutuhan industri pertambangan dan proyek infrastruktur skala besar. Dioperasikan oleh <strong>{{ site.company }}</strong>.</p>
       </div>
 
       <div class="footer__col">
@@ -45,6 +45,10 @@
             <a href="{{ site.whatsapp }}" target="_blank" rel="noopener">WhatsApp Kami</a>
           </li>
           <li>
+            <svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>
+            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+          </li>
+          <li>
             <svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>
             <span>Layanan &amp; Pengiriman 24/7</span>
           </li>
@@ -61,7 +65,7 @@
     </div>
 
     <div class="footer__bottom">
-      <span>&copy; {{ site.time | date: "%Y" }} YO TARPAULIN. All Rights Reserved.</span>
+      <span>&copy; {{ site.time | date: "%Y" }} {{ site.company }} — merek YO TARPAULIN. All Rights Reserved.</span>
       <span>{{ site.brand_slogan }}</span>
     </div>
   </div>

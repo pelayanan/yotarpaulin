@@ -573,9 +573,11 @@ p { margin: 0 0 1em; }
 .contact { display: grid; gap: 26px; }
 .contact__cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 22px;
 }
+.contact-legal { margin: 0; color: var(--muted); }
+.contact-legal strong { color: var(--ink); }
 .contact-card {
   background: var(--white);
   border: 1px solid var(--line);
@@ -838,7 +840,7 @@ p { margin: 0 0 1em; }
   .hero__badge--b { right: 6px; }
   .split { grid-template-columns: 1fr; gap: 30px; }
   .cards--3 { grid-template-columns: repeat(2, 1fr); }
-  .contact__cards { grid-template-columns: 1fr; }
+  .contact__cards { grid-template-columns: repeat(2, 1fr); }
   .stats__grid { grid-template-columns: repeat(2, 1fr); }
   .stat:nth-child(2) { border-right: 0; }
   .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
@@ -874,6 +876,7 @@ p { margin: 0 0 1em; }
   .steps { grid-template-columns: 1fr; }
   .form-grid { grid-template-columns: 1fr; }
   .form-grid .span2 { grid-column: span 1; }
+  .contact__cards { grid-template-columns: 1fr; }
   .stats__grid { grid-template-columns: 1fr 1fr; }
   .stat__num { font-size: 2.1rem; }
   .footer__grid { grid-template-columns: 1fr; gap: 26px; }

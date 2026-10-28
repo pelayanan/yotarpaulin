@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Kontak"
-description: "Hubungi Yo Tarpaulin via WhatsApp atau telepon di +62 812-2133-2929. Layanan dan pengiriman 24/7 ke seluruh Indonesia."
+description: "Hubungi CV. Yo Terpal Nusantara Raya (YO Tarpaulin) via WhatsApp/telepon +62 812-2133-2929 atau email yonusantararaya@gmail.com. Layanan dan pengiriman 24/7."
 permalink: /kontak.html
 ---
 
@@ -9,13 +9,14 @@ permalink: /kontak.html
   <div class="container">
     <span class="eyebrow eyebrow--light">Kontak</span>
     <h1>Siap Melayani, <span class="hl">24/7</span></h1>
-    <p>Hotline, WhatsApp, dan form pemesanan cepat — semua jalur aktif setiap hari.</p>
+    <p>Hotline, WhatsApp, email, dan form pemesanan cepat — semua jalur aktif setiap hari.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
     <div class="contact">
+      <p class="contact-legal reveal">Dikelola oleh <strong>{{ site.company }}</strong> — merek dagang YO TARPAULIN.</p>
       <div class="contact__cards">
         <a class="contact-card reveal" href="{{ site.whatsapp }}" target="_blank" rel="noopener">
           <img src="{{ site.baseurl }}/assets/images/ic-support.webp" alt="" loading="lazy" width="72" height="72">
@@ -35,6 +36,12 @@ permalink: /kontak.html
           <p>Kirim ke 34+ provinsi di seluruh Indonesia — darat, laut, dan udara.</p>
           <span class="contact-card__cta">24/7 untuk kebutuhan darurat</span>
         </div>
+        <a class="contact-card reveal" href="mailto:{{ site.email }}">
+          <img src="{{ site.baseurl }}/assets/images/ic-mail.webp" alt="" loading="lazy" width="72" height="72">
+          <h3>Email Resmi</h3>
+          <p>{{ site.email }}</p>
+          <span class="contact-card__cta">Kirim email <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </a>
       </div>
 
       <form class="contact-form reveal" id="wa-form" autocomplete="off">
