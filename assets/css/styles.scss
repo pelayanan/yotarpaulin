@@ -1019,6 +1019,9 @@ p { margin: 0 0 1em; }
 @media (max-width: 1150px) {
   .nav__link { padding: 9px 9px; }
 }
+@media (min-width: 951px) and (max-width: 1150px) {
+  .nav__cta { white-space: nowrap; }
+}
 @media (max-width: 860px) {
   .nav__socs { display: flex; gap: 10px; margin: 10px 0 2px; }
   .nav__soc { width: 42px; height: 42px; }
