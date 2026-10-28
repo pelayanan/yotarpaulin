@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Proposal Penawaran Website YO Tarpaulin — Aksisoft Media (Rev. 2)</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { width: 210mm; font-family: "Segoe UI", Arial, sans-serif; color: #7a1230; background: #fff; }
+  .page { padding: 12mm 14mm 14mm; border: 1.1mm solid #800020; margin: 0 auto; page-break-after: always; position: relative; min-height: 296mm; }
+  .page:last-child { page-break-after: auto; }
+
+  /* header shared */
+  .head { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: .5mm solid #800020; padding-bottom: 3mm; }
+  .brand h1 { font-size: 14pt; color: #800020; letter-spacing: .06em; }
+  .brand p { font-size: 8pt; color: #8a6a72; font-style: italic; margin-top: 1pt; }
+  .brand .web { font-style: normal; font-weight: 600; color: #800020; margin-top: 2pt; font-size: 8.5pt; }
+  .judul { text-align: right; }
+  .judul h2 { font-size: 15pt; color: #800020; font-weight: 800; letter-spacing: .08em; }
+  .judul .no { font-size: 8.5pt; font-weight: 700; margin-top: 2pt; }
+  .judul .rev { font-size: 8.5pt; color: #8a6a72; }
+
+  h3.sec { margin-top: 6mm; margin-bottom: 2.5mm; background: #800020; color: #fff; font-size: 11pt; letter-spacing: .08em; padding: 1.6mm 3mm; border-radius: 1mm; }
+  p.lead { font-size: 10pt; margin-bottom: 2mm; }
+  p.lead b { color: #800020; }
+  .cta-box {
+    margin: 5mm 0 3mm; padding: 4mm 6mm; text-align: center;
+    background: #f9eef1; border: .3mm double #800020; border-radius: 2mm;
+  }
+  .cta-box .u { font-size: 15pt; font-weight: 800; color: #800020; letter-spacing: .02em; }
+  .cta-box .t { font-size: 9pt; color: #8a6a72; margin-top: 1mm; }
+
+  /* url table */
+  table.urls { width: 100%; border-collapse: collapse; font-size: 9pt; }
+  table.urls td { padding: 1.5mm 2mm; border-bottom: .2mm solid #e3c9d1; color: #7a1230; }
+  table.urls td.n { width: 7mm; color: #9a4630; font-weight: 700; text-align: center; }
+  table.urls td.name { width: 62mm; font-weight: 600; }
+  table.urls td.u { word-break: break-all; }
+  table.urls tr.grp td { background: #f9eef1; font-weight: 800; color: #800020; letter-spacing: .05em; font-size: 8.5pt; border-bottom: .3mm solid #800020; }
+  .total-note { margin-top: 2.5mm; font-size: 9.5pt; font-weight: 700; color: #800020; }
+
+  /* features */
+  ul.feats { list-style: none; font-size: 10pt; line-height: 1.65; }
+  ul.feats li { padding-left: 5.5mm; position: relative; }
+  ul.feats li::before { content: "•"; color: #800020; font-weight: 800; position: absolute; left: 1mm; }
+
+  /* invest table */
+  table.inv { width: 100%; border-collapse: collapse; font-size: 10pt; margin-top: 1mm; }
+  table.inv td { padding: 2mm 2mm; border-bottom: .2mm solid #e3c9d1; color: #7a1230; }
+  table.inv td.amt { text-align: right; font-weight: 700; white-space: nowrap; }
+  table.inv tr.sum td { border-top: .35mm solid #800020; border-bottom: .35mm solid #800020; font-weight: 800; color: #800020; font-size: 11pt; }
+  .nego { margin-top: 2mm; font-size: 8.5pt; color: #8a6a72; font-style: italic; }
+
+  /* tahunan highlight */
+  .tahunan {
+    margin-top: 4mm; border: .5mm solid #800020; border-radius: 2mm; background: #fdf6f7;
+    padding: 4mm 5mm;
+  }
+  .tahunan h4 { font-size: 11.5pt; color: #800020; letter-spacing: .06em; margin-bottom: 2mm; }
+  .tahunan ul { list-style: none; font-size: 10pt; line-height: 1.7; }
+  .tahunan li { padding-left: 5.5mm; position: relative; }
+  .tahunan li::before { content: "•"; color: #800020; font-weight: 800; position: absolute; left: 1mm; }
+  .tahunan li b { color: #800020; }
+
+  /* syndicate / terms two-col */
+  .cols { display: flex; gap: 6mm; margin-top: 4mm; }
+  .cols .col { flex: 1; }
+
+  /* footer ttd */
+  .foot { margin-top: 8mm; display: flex; justify-content: space-between; align-items: flex-end; }
+  .legal-mini { font-size: 8pt; color: #8a6a72; max-width: 90mm; line-height: 1.5; }
+  .ttd { text-align: center; font-size: 9.5pt; width: 62mm; position: relative; }
+  .ttd .kota { font-weight: 600; }
+  .ttd .role { margin-top: 1pt; }
+  .ttd .spasi { height: 13mm; position: relative; }
+  .ttd .stempel-logo {
+    position: absolute; left: 50%; top: 36%; opacity: .3; pointer-events: none;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .ttd .stempel-logo img { width: 34mm; height: auto; display: block; }
+  .ttd .nama { font-weight: 800; color: #800020; border-top: .25mm solid #7a1230; padding-top: 1.2mm; letter-spacing: .04em; }
+
+  .legal {
+    margin-top: 3mm; border-top: .2mm solid #e3c9d1; padding-top: 1.6mm;
+    text-align: center; font-size: 7.5pt; color: #8a6a72; letter-spacing: .02em;
+  }
+
+  .cover { text-align: center; padding-top: 40mm; }
+  .cover .mark { font-size: 26pt; font-weight: 800; color: #800020; letter-spacing: .1em; }
+  .cover .tag { font-size: 10pt; color: #8a6a72; font-style: italic; margin-top: 1mm; }
+  .cover .pdoc { margin-top: 30mm; font-size: 20pt; font-weight: 800; color: #800020; letter-spacing: .15em; }
+  .cover .psub { font-size: 12pt; margin-top: 2mm; }
+  .cover .for { margin-top: 24mm; font-size: 10pt; color: #8a6a72; }
+  .cover .for b { font-size: 15pt; color: #800020; letter-spacing: .08em; }
+  .cover .meta { margin-top: 30mm; font-size: 9.5pt; color: #7a1230; }
+</style>
+</head>
+<body>
+
+  <!-- PAGE 1 : COVER -->
+  <div class="page">
+    <div class="cover">
+      <div class="mark">AKSISOFT MEDIA</div>
+      <div class="tag">Idea • Build • Solution — aksisoft.web.id</div>
+      <div class="pdoc">PROPOSAL PENAWARAN</div>
+      <div class="psub">Jasa Pembuatan Website Company Profile</div>
+      <div class="for">Disiapkan untuk:<br><br><b>YO TARPAULIN</b><br><i>— Solusi Terpal Anda —</i></div>
+      <div class="meta">
+        No. 010/AKS-SOFT/X/2026 — Rev. 2 (30 Oktober 2026)<br>
+        Surabaya, 28 Oktober 2026
+      </div>
+    </div>
+    <div class="legal">
+      AKSISOFT MEDIA • aksisoft.web.id • WA 0813-3520-6389 • lynk.id/aksisoft — <i>Teknologi untuk kehidupan yang lebih baik</i>
+    </div>
+  </div>
+
+  <!-- PAGE 2 : LIVE URL -->
+  <div class="page">
+    <div class="head">
+      <div class="brand">
+        <h1>AKSISOFT MEDIA</h1>
+        <p>Idea &bull; Build &bull; Solution</p>
+        <div class="web">🌐 aksisoft.web.id</div>
+      </div>
+      <div class="judul">
+        <h2>WEBSITE LIVE</h2>
+        <div class="no">Proposal No. 010/AKS-SOFT/X/2026 — Rev. 2</div>
+        <div class="rev">Semua URL sudah aktif per 30 Oktober 2026</div>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <div class="u">https://yoterpal.com</div>
+      <div class="t">Bukan mockup, bukan janji — website company profile YO TARPAULIN sudah live &amp; ber-SSL.</div>
+    </div>
+
+    <h3 class="sec">DAFTAR HALAMAN LIVE — 20 HALAMAN</h3>
+    <table class="urls">
+      <tr class="grp"><td colspan="3">HALAMAN UTAMA</td></tr>
+      <tr><td class="n">1</td><td class="name">Beranda (landing lengkap)</td><td class="u">https://yoterpal.com/</td></tr>
+      <tr><td class="n">2</td><td class="name">Produk (katalog 11 produk)</td><td class="u">https://yoterpal.com/produk.html</td></tr>
+      <tr><td class="n">3</td><td class="name">Tentang Kami (Profil + Sambutan Owner + Merek)</td><td class="u">https://yoterpal.com/tentang.html</td></tr>
+      <tr><td class="n">4</td><td class="name">Galeri Pabrik</td><td class="u">https://yoterpal.com/galeri.html</td></tr>
+      <tr><td class="n">5</td><td class="name">Keunggulan &amp; Standar Mutu</td><td class="u">https://yoterpal.com/keunggulan.html</td></tr>
+      <tr><td class="n">6</td><td class="name">Aplikasi &amp; Panduan Pemakaian</td><td class="u">https://yoterpal.com/aplikasi.html</td></tr>
+      <tr><td class="n">7</td><td class="name">Kontak + FAQ + Peta Lokasi</td><td class="u">https://yoterpal.com/kontak.html</td></tr>
+      <tr><td class="n">8</td><td class="name">Halaman 404 kustom</td><td class="u">https://yoterpal.com/404.html</td></tr>
+      <tr class="grp"><td colspan="3">HALAMAN DETAIL PRODUK</td></tr>
+      <tr><td class="n">9</td><td class="name">Terpal Biru Premium</td><td class="u">https://yoterpal.com/produk/terpal-biru-premium.html</td></tr>
+      <tr><td class="n">10</td><td class="name">Terpal Navy</td><td class="u">https://yoterpal.com/produk/terpal-navy.html</td></tr>
+      <tr><td class="n">11</td><td class="name">Terpal Kuning Gold</td><td class="u">https://yoterpal.com/produk/terpal-kuning-gold.html</td></tr>
+      <tr><td class="n">12</td><td class="name">Terpal Hijau</td><td class="u">https://yoterpal.com/produk/terpal-hijau.html</td></tr>
+      <tr><td class="n">13</td><td class="name">Terpal Oranye</td><td class="u">https://yoterpal.com/produk/terpal-oranye.html</td></tr>
+      <tr><td class="n">14</td><td class="name">Terpal PVC Transparan</td><td class="u">https://yoterpal.com/produk/terpal-pvc-transparan.html</td></tr>
+      <tr><td class="n">15</td><td class="name">Terpal Roll</td><td class="u">https://yoterpal.com/produk/terpal-roll.html</td></tr>
+      <tr><td class="n">16</td><td class="name">Terpal Biru Muda</td><td class="u">https://yoterpal.com/produk/terpal-biru-muda.html</td></tr>
+      <tr><td class="n">17</td><td class="name">Paranet Bangunan</td><td class="u">https://yoterpal.com/produk/paranet-bangunan.html</td></tr>
+      <tr><td class="n">18</td><td class="name">Sarung Tangan Industri</td><td class="u">https://yoterpal.com/produk/sarung-tangan-industri.html</td></tr>
+      <tr class="grp"><td colspan="3">PENDUKUNG SEO</td></tr>
+      <tr><td class="n">19</td><td class="name">Sitemap SEO</td><td class="u">https://yoterpal.com/sitemap.xml</td></tr>
+      <tr><td class="n">20</td><td class="name">Robots</td><td class="u">https://yoterpal.com/robots.txt</td></tr>
+    </table>
+    <div class="total-note">Total: 20 halaman live • Kode sumber terbuka: github.com/pelayanan/yotarpaulin</div>
+
+    <div class="legal">
+      AKSISOFT MEDIA &bull; aksisoft.web.id &bull; WA 0813-3520-6389 &bull; lynk.id/aksisoft — <i>Teknologi untuk kehidupan yang lebih baik</i>
+    </div>
+  </div>
+
+  <!-- PAGE 3 : FITUR + DOMAIN -->
+  <div class="page">
+    <div class="head">
+      <div class="brand">
+        <h1>AKSISOFT MEDIA</h1>
+        <p>Idea &bull; Build &bull; Solution</p>
+        <div class="web">🌐 aksisoft.web.id</div>
+      </div>
+      <div class="judul">
+        <h2>FITUR &amp; DOMAIN</h2>
+        <div class="no">Proposal No. 010/AKS-SOFT/X/2026 — Rev. 2</div>
+      </div>
+    </div>
+
+    <h3 class="sec">FITUR TERMASUK</h3>
+    <ul class="feats">
+      <li>Responsif penuh (HP, tablet, desktop)</li>
+      <li>Menu navigasi dengan submenu dropdown produk &amp; informasi</li>
+      <li>Galeri foto &amp; halaman detail tiap produk (banner + varian)</li>
+      <li>Gambar dioptimasi WebP — loading cepat</li>
+      <li>SEO dasar: meta, Open Graph, JSON-LD, sitemap</li>
+      <li>Tombol &amp; form pemesanan via WhatsApp (2 saluran)</li>
+      <li>Sambutan Owner, logo merek produksi &amp; peta lokasi (Google Maps)</li>
+      <li>Animasi halus + header menempel</li>
+      <li>Hosting ber-SSL tanpa biaya sewa tahun pertama</li>
+    </ul>
+
+    <h3 class="sec">REKOMENDASI DOMAIN</h3>
+    <p class="lead">Sudah dicek via RDAP resmi (Verisign &amp; PANDI), 28 Okt 2026:</p>
+    <table class="urls">
+      <tr><td class="n">★</td><td class="name"><b>yotarpaulin.com</b> — rekomendasi utama</td><td class="u">TERSEDIA (±Rp 150–250 rb/th)</td></tr>
+      <tr><td class="n">✓</td><td class="name">yotarpaulin.co.id</td><td class="u">TERSEDIA (±Rp 150–300 rb/th)</td></tr>
+      <tr><td class="n">✓</td><td class="name">yotarpaulin.id</td><td class="u">TERSEDIA (±Rp 250–450 rb/th)</td></tr>
+      <tr><td class="n">✓</td><td class="name">yotarpaulin.net</td><td class="u">TERSEDIA (±Rp 200–300 rb/th)</td></tr>
+      <tr><td class="n">✓</td><td class="name">yotarpaulin.web.id</td><td class="u">TERSEDIA (±Rp 50–150 rb/th)</td></tr>
+    </table>
+    <p class="lead" style="margin-top:3mm;"><b>Domain aktif saat ini:</b> https://yoterpal.com (custom domain, SSL aktif). Ketersediaan bisa berubah kapan saja — domain didaftarkan atas nama YO Tarpaulin, DNS &amp; SSL kami urus sampai tayang.</p>
+
+    <div class="legal">
+      AKSISOFT MEDIA &bull; aksisoft.web.id &bull; WA 0813-3520-6389 &bull; lynk.id/aksisoft — <i>Teknologi untuk kehidupan yang lebih baik</i>
+    </div>
+  </div>
+
+  <!-- PAGE 4 : INVESTASI + TAHUNAN + SYARAT + TTD -->
+  <div class="page">
+    <div class="head">
+      <div class="brand">
+        <h1>AKSISOFT MEDIA</h1>
+        <p>Idea &bull; Build &bull; Solution</p>
+        <div class="web">🌐 aksisoft.web.id</div>
+      </div>
+      <div class="judul">
+        <h2>INVESTASI</h2>
+        <div class="no">Proposal No. 010/AKS-SOFT/X/2026 — Rev. 2</div>
+      </div>
+    </div>
+
+    <h3 class="sec">RINCIAN INVESTASI</h3>
+    <table class="inv">
+      <tr><td>1 &nbsp; Desain &amp; pengembangan website (10 hal. utama + 404)</td><td class="amt">Rp 3.000.000</td></tr>
+      <tr><td>2 &nbsp; Desain aset visual &amp; optimasi gambar WebP</td><td class="amt">Rp 750.000</td></tr>
+      <tr><td>3 &nbsp; Integrasi WhatsApp, SEO &amp; konten awal</td><td class="amt">Rp 750.000</td></tr>
+      <tr><td>4 &nbsp; Deployment online + pendampingan</td><td class="amt">Rp 500.000</td></tr>
+      <tr class="sum"><td>TOTAL</td><td class="amt">Rp 5.000.000</td></tr>
+    </table>
+    <div class="nego">🤝 Harga dapat dinego sesuai ruang lingkup akhir.</div>
+
+    <div class="tahunan">
+      <h4>BIAYA TAHUNAN — Rp 1.500.000</h4>
+      <ul>
+        <li><b>Rp 1.500.000 / tahun</b> — biaya layanan tahunan website.</li>
+        <li>Aktif mulai <b>1 November 2026</b> — masa layanan 1 tahun (s.d. 31 Oktober 2027).</li>
+        <li>Dibayar kembali tahun depan pada <b>1 November 2027</b> sebesar <b>Rp 1.500.000</b>.</li>
+      </ul>
+    </div>
+
+    <div class="cols">
+      <div class="col">
+        <h3 class="sec">SYARAT SINGKAT</h3>
+        <ul class="feats">
+          <li>DP 50%, pelunasan 50% saat serah terima</li>
+          <li>Finalisasi &amp; revisi 3–5 hari kerja</li>
+          <li>Termasuk 2x revisi konten/tampilan</li>
+          <li>Garansi perbaikan bug 30 hari</li>
+          <li>Biaya tahunan ditagihkan tiap 1 November</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3 class="sec">HUBUNGI KAMI</h3>
+        <ul class="feats">
+          <li><b>AKSISOFT MEDIA</b></li>
+          <li>WhatsApp/Telp: 0813-3520-6389</li>
+          <li>Web: aksisoft.web.id</li>
+          <li>Profil: lynk.id/aksisoft</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot">
+      <div class="legal-mini">
+        Proposal ini menggantikan Rev. 1 (28 Okt 2026): daftar halaman diperbarui ke <b>20 halaman live</b> dan
+        ditambahkan ketentuan <b>biaya tahunan Rp 1.500.000</b> aktif mulai 1 November 2026.
+      </div>
+      <div class="ttd">
+        <div class="kota">Surabaya, 30 Oktober 2026</div>
+        <div class="role">Hormat kami,</div>
+        <div class="spasi">
+          <span class="stempel-logo"><img src="assets/images/aksisoft-mark.webp" alt=""></span>
+        </div>
+        <div class="nama">AKSISOFT MEDIA</div>
+      </div>
+    </div>
+
+    <div class="legal">
+      AKSISOFT MEDIA &bull; aksisoft.web.id &bull; WA 0813-3520-6389 &bull; lynk.id/aksisoft — <i>Teknologi untuk kehidupan yang lebih baik</i>
+    </div>
+  </div>
+
+</body>
+</html>

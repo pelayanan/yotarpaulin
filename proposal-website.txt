@@ -8,62 +8,76 @@ _Idea • Build • Solution_
 
 Disiapkan untuk:
 *YO TARPAULIN* _— Solusi Terpal Anda_
-No. 010/AKS-SOFT/X/2026
+No. 010/AKS-SOFT/X/2026 — Rev. 2 (30 Oktober 2026)
 Surabaya, 28 Oktober 2026
 ━━━━━━━━━━━━━━━━━━━━
 
 🔥 *WEBSITE-NYA SUDAH JADI!*
-Bukan mockup, bukan janji — demo live-nya sudah tayang dan bisa langsung dibuka:
+Bukan mockup, bukan janji — website live-nya sudah tayang dan bisa langsung dibuka:
 
 👉 https://yoterpal.com/
 
 ━━━━━━━━━━━━━━━━━━━━
-📄 *DAFTAR HALAMAN LIVE*
+📄 *DAFTAR HALAMAN LIVE* (semua sudah aktif di https://yoterpal.com)
 
-✅ *Beranda* (landing page lengkap)
-https://yoterpal.com/
+— Halaman utama —
+✅ *Beranda* (landing page lengkap) — https://yoterpal.com/
+✅ *Produk* (katalog 11 produk + spesifikasi) — https://yoterpal.com/produk.html
+✅ *Tentang Kami* (Profil + Sambutan Owner + Merek Produksi) — https://yoterpal.com/tentang.html
+✅ *Galeri Pabrik* — https://yoterpal.com/galeri.html
+✅ *Keunggulan & Standar Mutu* — https://yoterpal.com/keunggulan.html
+✅ *Aplikasi & Panduan Pemakaian* — https://yoterpal.com/aplikasi.html
+✅ *Kontak + FAQ + Peta Lokasi* — https://yoterpal.com/kontak.html
+✅ *Halaman 404 kustom* — https://yoterpal.com/404.html
 
-✅ *Produk* (katalog + spesifikasi)
-https://yoterpal.com/produk.html
+— Halaman detail produk (10) —
+✅ Terpal Biru Premium — https://yoterpal.com/produk/terpal-biru-premium.html
+✅ Terpal Navy — https://yoterpal.com/produk/terpal-navy.html
+✅ Terpal Kuning Gold — https://yoterpal.com/produk/terpal-kuning-gold.html
+✅ Terpal Hijau — https://yoterpal.com/produk/terpal-hijau.html
+✅ Terpal Oranye — https://yoterpal.com/produk/terpal-oranye.html
+✅ Terpal PVC Transparan — https://yoterpal.com/produk/terpal-pvc-transparan.html
+✅ Terpal Roll — https://yoterpal.com/produk/terpal-roll.html
+✅ Terpal Biru Muda — https://yoterpal.com/produk/terpal-biru-muda.html
+✅ Paranet Bangunan — https://yoterpal.com/produk/paranet-bangunan.html
+✅ Sarung Tangan Industri — https://yoterpal.com/produk/sarung-tangan-industri.html
 
-✅ *Tentang Kami*
-https://yoterpal.com/tentang.html
-
-✅ *Kontak + FAQ*
-https://yoterpal.com/kontak.html
-
-✅ *Halaman 404 kustom*
-https://yoterpal.com/404.html
-
-🗺️ Sitemap SEO: sitemap.xml
+— Pendukung SEO —
+🗺️ Sitemap SEO — https://yoterpal.com/sitemap.xml
+🤖 Robots — https://yoterpal.com/robots.txt
 💻 Kode sumber: github.com/pelayanan/yotarpaulin
+
+Total: *20 halaman live* + kode sumber terbuka.
 
 ━━━━━━━━━━━━━━━━━━━━
 ⚡ *FITUR TERMASUK*
 
 • Responsif penuh (HP, tablet, desktop)
+• Menu navigasi dengan submenu dropdown produk & informasi
+• Galeri foto & halaman detail tiap produk (banner + varian)
 • Gambar dioptimasi WebP — loading cepat
-• SEO dasar: meta, Open Graph, sitemap
-• Tombol & form pemesanan via WhatsApp
+• SEO dasar: meta, Open Graph, JSON-LD, sitemap
+• Tombol & form pemesanan via WhatsApp (2 saluran)
+• Sambutan Owner, logo merek produksi & peta lokasi (Google Maps)
 • Animasi halus + header menempel
-• Hosting ber-SSL tanpa biaya sewa
+• Hosting ber-SSL tanpa biaya sewa tahun pertama
 
 ━━━━━━━━━━━━━━━━━━━━
 🌐 *REKOMENDASI DOMAIN*
 _Sudah dicek via RDAP resmi (Verisign & PANDI), 28 Okt 2026:_
 
-✅ *yotarpaulin.com* — TERSEDIA ⭐ _rekomendasi utama_ (±Rp 150–250 rb/th)
+✅ yotarpaulin.com — TERSEDIA ⭐ _rekomendasi utama_ (±Rp 150–250 rb/th)
 ✅ yotarpaulin.co.id — TERSEDIA (±Rp 150–300 rb/th)
 ✅ yotarpaulin.id — TERSEDIA (±Rp 250–450 rb/th)
 ✅ yotarpaulin.net — TERSEDIA (±Rp 200–300 rb/th)
 ✅ yotarpaulin.web.id — TERSEDIA (±Rp 50–150 rb/th)
 
-_Ketersediaan bisa berubah kapan saja — segera amankan bila berminat. Domain didaftarkan atas nama YO Tarpaulin, DNS & SSL kami urus sampai tayang._
+🌐 *Domain aktif saat ini:* https://yoterpal.com (custom domain, SSL aktif)
 
 ━━━━━━━━━━━━━━━━━━━━
 💰 *INVESTASI*
 
-1️⃣ Desain & pengembangan website (4 hal + 404) — Rp 3.000.000
+1️⃣ Desain & pengembangan website (10 hal utama + 404) — Rp 3.000.000
 2️⃣ Desain aset visual & optimasi gambar WebP — Rp 750.000
 3️⃣ Integrasi WhatsApp, SEO & konten awal — Rp 750.000
 4️⃣ Deployment online + pendampingan — Rp 500.000
@@ -72,12 +86,20 @@ _Ketersediaan bisa berubah kapan saja — segera amankan bila berminat. Domain d
 🤝 _Harga dapat dinego sesuai ruang lingkup akhir_
 
 ━━━━━━━━━━━━━━━━━━━━
+📆 *BIAYA TAHUNAN*
+
+• *Rp 1.500.000 / tahun* — biaya layanan tahunan website
+• Aktif mulai *1 November 2026* — masa layanan 1 tahun (s/d 31 Oktober 2027)
+• Dibayar kembali tahun depan pada *1 November 2027* sebesar *Rp 1.500.000*
+
+━━━━━━━━━━━━━━━━━━━━
 📌 *SYARAT SINGKAT*
 
 • DP 50%, pelunasan 50% saat serah terima
 • Finalisasi & revisi 3–5 hari kerja
 • Termasuk 2x revisi konten/tampilan
 • Garansi perbaikan bug 30 hari
+• Biaya tahunan tagih tiap 1 November
 
 ━━━━━━━━━━━━━━━━━━━━
 📱 *HUBUNGI KAMI*
