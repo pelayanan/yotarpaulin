@@ -3,7 +3,7 @@
 Website company profile untuk **YO TARPAULIN** — produsen & pemasok terpal dan sarung
 tangan berkualitas tinggi untuk industri pertambangan dan proyek infrastruktur skala besar.
 
-**Live:** https://pelayanan.github.io/yotarpaulin/
+**Live:** https://yoterpal.com/
 
 ## Stack
 

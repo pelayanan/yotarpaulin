@@ -15,25 +15,25 @@ Surabaya, 28 Oktober 2026
 🔥 *WEBSITE-NYA SUDAH JADI!*
 Bukan mockup, bukan janji — demo live-nya sudah tayang dan bisa langsung dibuka:
 
-👉 https://pelayanan.github.io/yotarpaulin/
+👉 https://yoterpal.com/
 
 ━━━━━━━━━━━━━━━━━━━━
 📄 *DAFTAR HALAMAN LIVE*
 
 ✅ *Beranda* (landing page lengkap)
-https://pelayanan.github.io/yotarpaulin/
+https://yoterpal.com/
 
 ✅ *Produk* (katalog + spesifikasi)
-https://pelayanan.github.io/yotarpaulin/produk.html
+https://yoterpal.com/produk.html
 
 ✅ *Tentang Kami*
-https://pelayanan.github.io/yotarpaulin/tentang.html
+https://yoterpal.com/tentang.html
 
 ✅ *Kontak + FAQ*
-https://pelayanan.github.io/yotarpaulin/kontak.html
+https://yoterpal.com/kontak.html
 
 ✅ *Halaman 404 kustom*
-https://pelayanan.github.io/yotarpaulin/404.html
+https://yoterpal.com/404.html
 
 🗺️ Sitemap SEO: sitemap.xml
 💻 Kode sumber: github.com/pelayanan/yotarpaulin

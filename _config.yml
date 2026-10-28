@@ -6,13 +6,13 @@ description: >-
   dan Sarung Tangan berkualitas tinggi untuk kebutuhan industri pertambangan dan
   proyek infrastruktur skala besar.
 
-# GitHub Pages project site -> https://pelayanan.github.io/yotarpaulin/
-url: "https://pelayanan.github.io"
-baseurl: "/yotarpaulin"
+# Custom domain -> https://yoterpal.com (GitHub Pages, CNAME di root repo)
+url: "https://yoterpal.com"
+baseurl: ""
 lang: id
 
 # Used by jekyll-seo-tag for social previews
-logo: "/yotarpaulin/assets/images/logo.webp"
+logo: "/assets/images/logo.webp"
 
 ### Brand & contact ###
 brand: "Yo Tarpaulin"

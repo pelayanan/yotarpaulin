@@ -1,1 +1,1 @@
-Sitemap: https://pelayanan.github.io/yotarpaulin/sitemap.xml
+Sitemap: https://yoterpal.com/sitemap.xml
