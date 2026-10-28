@@ -1084,6 +1084,12 @@ p { margin: 0 0 1em; }
   white-space: nowrap;
 }
 .nav__dd-panel a:hover { background: var(--sky-100); color: var(--blue-700); }
+.nav__dd-all {
+  margin-top: 6px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  color: var(--blue-700) !important;
+}
 
 @media (max-width: 860px) {
   .nav__dd-panel {

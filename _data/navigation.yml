@@ -3,14 +3,26 @@
   link: /
 - name: Tentang
   link: /tentang.html
-- name: Galeri
-  link: /galeri.html
+  children:
+    - name: Profil Perusahaan
+      link: /tentang.html
+    - name: Sambutan Owner
+      link: /tentang.html#owner
+    - name: Galeri Pabrik
+      link: /galeri.html
+    - name: Merek & Logo Produksi
+      link: /tentang.html#merek
 - name: Produk
   link: /produk.html
   dropdown: true
-- name: Keunggulan
+- name: Informasi
   link: /keunggulan.html
-- name: Aplikasi
-  link: /aplikasi.html
+  children:
+    - name: Keunggulan & Standar Mutu
+      link: /keunggulan.html
+    - name: Aplikasi & Panduan
+      link: /aplikasi.html
+    - name: Cara Pemesanan
+      link: /#proses
 - name: Kontak
   link: /kontak.html
