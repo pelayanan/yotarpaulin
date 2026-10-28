@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Company Profile — Yo Tarpaulin</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  :root { --navy:#0a3168; --navy2:#123e7c; --yellow:#f5c542; --ink:#15253f; --muted:#5c6b82; --line:#e3eaf3; }
+  html { overflow: hidden; }
+  body { width: 210mm; font-family: "Segoe UI", Arial, sans-serif; color: var(--ink); background: #fff; overflow: hidden; }
+  .page { padding: 11mm 13mm 12mm; border-top: 1.6mm solid var(--yellow); margin: 0 auto; page-break-after: always; position: relative; min-height: 295.5mm; overflow: hidden; }
+  .page.last { page-break-after: auto; }
+
+  /* shared heads */
+  .head { display: flex; justify-content: space-between; align-items: center; border-bottom: .4mm solid var(--line); padding-bottom: 3mm; margin-bottom: 6mm; }
+  .head .b { display: flex; align-items: center; gap: 3mm; }
+  .head img.lg { width: 11mm; height: auto; }
+  .head .bt { font-size: 11.5pt; font-weight: 800; color: var(--navy); letter-spacing: .04em; }
+  .head .bt small { display: block; font-size: 7pt; color: var(--muted); letter-spacing: .2em; font-weight: 600; }
+  .head .pg { font-size: 8pt; color: var(--muted); font-weight: 700; letter-spacing: .1em; }
+
+  h3.sec { background: var(--navy); color: #fff; font-size: 12.5pt; letter-spacing: .08em; padding: 2mm 4mm; border-radius: 1.2mm; margin-bottom: 4mm; border-left: 2.2mm solid var(--yellow); }
+  .eyebrow { color: var(--navy2); font-size: 8pt; font-weight: 800; letter-spacing: .25em; text-transform: uppercase; }
+  p.lead { font-size: 10pt; color: var(--muted); margin-top: 1.5mm; }
+
+  /* cover */
+  .cover { border-top: none; background: var(--navy); color: #fff; display: flex; flex-direction: column; }
+  .cover .top { display: flex; align-items: center; gap: 5mm; margin-top: 6mm; }
+  .cover .top img { width: 20mm; height: auto; background: #fff; border-radius: 3mm; padding: 2mm; }
+  .cover .top h1 { font-size: 20pt; letter-spacing: .08em; }
+  .cover .top small { display: block; font-size: 9pt; color: var(--yellow); font-weight: 700; letter-spacing: .3em; margin-top: 1mm; }
+  .cover .wt { margin-top: 34mm; }
+  .cover .wt .doc { font-size: 9pt; color: #9fb4d4; letter-spacing: .45em; font-weight: 700; }
+  .cover .wt h2 { font-size: 33pt; line-height: 1.14; margin-top: 4mm; }
+  .cover .wt h2 span { color: var(--yellow); }
+  .cover .wt p { font-size: 11pt; color: #c9d8ee; margin-top: 6mm; max-width: 150mm; line-height: 1.65; }
+  .cover .strip { margin-top: 12mm; }
+  .cover .strip img { width: 100%; height: 62mm; object-fit: cover; border-radius: 3mm; }
+  .cover .covstats { display: grid; grid-template-columns: repeat(4,1fr); gap: 4mm; margin-top: 8mm; }
+  .cover .cs { background: rgba(255,255,255,.07); border: .25mm solid rgba(255,255,255,.15); border-radius: 2mm; padding: 3mm 4mm; text-align: center; }
+  .cover .cs b { font-size: 15pt; color: var(--yellow); display: block; }
+  .cover .cs span { font-size: 8pt; color: #c9d8ee; }
+  .cover .foot { margin-top: auto; border-top: .25mm solid rgba(255,255,255,.2); padding-top: 4mm; font-size: 9pt; color: #c9d8ee; display: flex; justify-content: space-between; }
+
+  /* stats */
+  .statgrid { display: grid; grid-template-columns: repeat(4,1fr); gap: 3.5mm; margin-top: 4mm; }
+  .stat { background: #f2f6fc; border-radius: 2mm; border-top: 1.4mm solid var(--yellow); padding: 3.5mm 3mm; text-align: center; }
+  .stat b { font-size: 17pt; color: var(--navy); display: block; }
+  .stat span { font-size: 8pt; color: var(--muted); font-weight: 700; }
+
+  .two { display: flex; gap: 6mm; margin-top: 5mm; }
+  .two .media { width: 62mm; flex: none; }
+  .two .media img { width: 100%; border-radius: 2mm; border: .3mm solid var(--line); }
+  .two .body { flex: 1; }
+  .two p { font-size: 9.5pt; line-height: 1.7; color: var(--ink); margin-bottom: 2.5mm; }
+
+  .cards3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 4mm; margin-top: 4mm; }
+  .card { background: #f7fafd; border: .25mm solid var(--line); border-radius: 2mm; padding: 4mm; }
+  .card img { width: 11mm; height: 11mm; }
+  .card h4 { font-size: 10pt; color: var(--navy); margin-top: 1.5mm; }
+  .card p { font-size: 8pt; color: var(--muted); line-height: 1.55; margin-top: 1mm; }
+
+  .check { list-style: none; font-size: 9.5pt; line-height: 1.9; }
+  .check li { padding-left: 5mm; position: relative; }
+  .check li::before { content: "✔"; color: var(--yellow); position: absolute; left: 0; font-weight: 800; }
+
+  /* owner page */
+  .owner { display: flex; gap: 6mm; }
+  .owner .ph { width: 40mm; flex: none; text-align: center; }
+  .owner .ph img { width: 100%; max-height: 88mm; object-fit: cover; border-radius: 2mm; }
+  .owner .ph .nm { font-size: 10pt; font-weight: 800; color: var(--navy); margin-top: 2mm; }
+  .owner .ph .rl { font-size: 7.5pt; color: var(--muted); }
+  .owner .tx { flex: 1; }
+  .owner .tx h5 { font-size: 9.5pt; color: var(--navy2); letter-spacing: .12em; text-transform: uppercase; margin: 3.5mm 0 1mm; }
+  .owner .tx p { font-size: 9.5pt; line-height: 1.65; margin-bottom: 1.5mm; }
+  .owner .tx ul { margin: 0 0 2mm 5mm; font-size: 9.5pt; line-height: 1.65; }
+  .owner .tx ul li { margin-bottom: 1.2mm; }
+  .sign { margin-top: 4mm; border-top: .3mm solid var(--line); padding-top: 2.5mm; }
+  .sign b { color: var(--navy); font-size: 10.5pt; }
+  .sign span { display: block; font-size: 8.5pt; color: var(--muted); }
+
+  /* products */
+  .prodgrid { display: grid; grid-template-columns: repeat(2,1fr); gap: 3.5mm; }
+  .prod { border: .3mm solid var(--line); border-radius: 2.5mm; overflow: hidden; display: flex; flex-direction: column; }
+  .prod .im { height: 44mm; background: #fff; }
+  .prod .im img { width: 100%; height: 100%; object-fit: contain; padding: 2.5mm; }
+  .prod .bx { padding: 2.5mm 3.5mm 3mm; border-top: .3mm solid var(--line); background: #fbfdff; flex: 1; }
+  .prod h4 { font-size: 10.5pt; color: var(--navy); }
+  .prod .cat { font-size: 7.5pt; color: var(--muted); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+  .chips { list-style: none; display: flex; flex-wrap: wrap; gap: 1.5mm; margin-top: 1.5mm; }
+  .chips li { border: .25mm solid var(--navy2); color: var(--navy2); font-size: 7.5pt; font-weight: 700; border-radius: 2.5mm; padding: .6mm 2.6mm; }
+  .prod p.d { font-size: 8pt; color: var(--muted); line-height: 1.5; margin-top: 1.8mm; }
+  .prod ul.u { list-style: none; font-size: 7.6pt; color: var(--ink); margin-top: 1.2mm; line-height: 1.55; }
+  .prod ul.u li { padding-left: 4mm; position: relative; }
+  .prod ul.u li::before { content: "✔"; position: absolute; left: 0; color: var(--yellow); font-size: 7pt; }
+  .prodgrid.tight .im { height: 27mm; padding: 1.5mm; }
+  .prodgrid.tight .bx { padding: 2mm 3mm 2.5mm; }
+  .prodgrid.tight p.d { font-size: 7.6pt; }
+  .prodgrid.tight ul.u { font-size: 7.2pt; line-height: 1.45; }
+  .prodgrid.tight { gap: 2.6mm; }
+
+  /* varian table */
+  table.t { width: 100%; border-collapse: collapse; font-size: 9pt; margin-top: 2mm; }
+  table.t th { background: var(--navy); color: #fff; padding: 2.2mm 3mm; text-align: left; font-size: 8.5pt; letter-spacing: .05em; }
+  table.t td { padding: 2mm 3mm; border-bottom: .25mm solid var(--line); color: var(--ink); }
+  .minigrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 3mm; margin-top: 3mm; }
+  .minigrid figure img { width: 100%; height: 34mm; object-fit: cover; border-radius: 2mm; border: .3mm solid var(--line); }
+  .minigrid figcaption { font-size: 7.5pt; color: var(--muted); margin-top: 1mm; text-align: center; }
+
+  /* apps */
+  .apps2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 3.5mm; }
+  .app { display: flex; gap: 3.5mm; border: .3mm solid var(--line); border-radius: 2mm; padding: 3mm; }
+  .app img { width: 34mm; height: 24mm; object-fit: cover; border-radius: 1.5mm; flex: none; }
+  .app h4 { font-size: 10pt; color: var(--navy); }
+  .app p { font-size: 8pt; color: var(--muted); line-height: 1.5; margin-top: .8mm; }
+
+  /* steps */
+  .steps4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 3.5mm; margin-top: 4mm; }
+  .step { background: #f7fafd; border: .3mm solid var(--line); border-radius: 2mm; padding: 4mm 3.5mm; text-align: left; }
+  .step .n { background: var(--yellow); color: var(--navy); font-weight: 800; border-radius: 50%; width: 8mm; height: 8mm; display: flex; align-items: center; justify-content: center; font-size: 10pt; }
+  .step img { width: 10mm; display: block; margin-top: 2mm; }
+  .step h4 { font-size: 10pt; color: var(--navy); margin-top: 1.5mm; }
+  .step p { font-size: 8pt; color: var(--muted); line-height: 1.55; margin-top: 1mm; }
+
+  /* brands */
+  .brgrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 4mm; }
+  .br { border: .3mm solid var(--line); border-radius: 2mm; background: #fff; padding: 4mm; text-align: center; }
+  .br img { height: 17mm; object-fit: contain; }
+  .br b { display: block; font-size: 9.5pt; color: var(--navy); margin-top: 2mm; }
+  .br span { display: block; font-size: 7.5pt; color: var(--muted); margin-top: .8mm; }
+
+  /* contact */
+  .ctgrid { display: grid; grid-template-columns: repeat(2,1fr); gap: 4mm; }
+  .ct { border: .3mm solid var(--line); border-radius: 2.5mm; padding: 4mm; background: #fbfdff; }
+  .ct h4 { font-size: 9pt; color: var(--navy2); letter-spacing: .18em; text-transform: uppercase; }
+  .ct .big { font-size: 12.5pt; font-weight: 800; color: var(--navy); margin-top: 1.5mm; }
+  .ct small { font-size: 8pt; color: var(--muted); display: block; margin-top: .8mm; }
+  .pay img { width: 100%; height: 56mm; object-fit: cover; border-radius: 2mm; margin-top: 5mm; }
+  .rendah { background: var(--navy); color: #fff; border-radius: 2.5mm; padding: 4mm 6mm; margin-top: 4.5mm; display: flex; justify-content: space-between; align-items: center; }
+  .rendah b { font-size: 12.5pt; }
+  .rendah span { font-size: 8.5pt; color: #c9d8ee; }
+  .rendah .yn { background: var(--yellow); color: var(--navy); font-weight: 800; padding: 2.5mm 6mm; border-radius: 2.5mm; font-size: 10.5pt; white-space: nowrap; margin-left: 6mm; }
+  .pagenote { margin-top: 4mm; border-top: .25mm solid var(--line); padding-top: 2.2mm; font-size: 7.5pt; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+
+<!-- 1 COVER -->
+<div class="page cover">
+  <div class="top">
+    <img src="assets/images/logo.webp" alt="">
+    <div><h1>YO TARPAULIN</h1><small>SOLUSI TERPAL ANDA</small></div>
+  </div>
+  <div class="wt">
+    <div class="doc">COMPANY PROFILE &bull; 2026</div>
+    <h2>Terpal &amp; Perlengkapan<br>Kerja untuk <span>Tambang</span> dan<br><span>Proyek Skala Besar</span></h2>
+    <p>Produksi &amp; penyediaan terpal, paranet, dan sarung tangan berkualitas tinggi — kuat, tahan air, tahan UV — harga langsung dari pabrik, kirim ke seluruh Indonesia.</p>
+  </div>
+  <div class="strip"><img src="assets/images/hero-truck.webp" alt=""></div>
+  <div class="covstats">
+    <div class="cs"><b>40+</b><span>Varian &amp; Spesifikasi</span></div>
+    <div class="cs"><b>500+</b><span>Klien &amp; Proyek Terlayani</span></div>
+    <div class="cs"><b>34</b><span>Provinsi Jangkauan</span></div>
+    <div class="cs"><b>100%</b><span>Mutu Terjamin</span></div>
+  </div>
+  <div class="foot">
+    <span>yoterpal.com</span>
+    <span>WA +62 812-2133-2929 &bull; WA 2 +62 822-13-8889</span>
+    <span>CV. Yo Terpal Nusantara Raya</span>
+  </div>
+</div>
+
+<!-- 2 TENTANG -->
+<div class="page">
+  <div class="head">
+    <div class="b"><img class="lg" src="assets/images/logo.webp" alt=""><div class="bt">YO TARPAULIN<small>COMPANY PROFILE</small></div></div>
+    <div class="pg">02 / TENTANG KAMI</div>
+  </div>
+  <h3 class="sec">TENTANG KAMI</h3>
+  <div class="two">
+    <div class="media"><img src="assets/images/pabrik-gudang.webp" alt=""></div>
+    <div class="body">
+      <p><b>YO Tarpaulin</b> merupakan perusahaan yang bergerak di bidang Produksi &amp; Penyediaan Terpal dan Sarung Tangan yang berkualitas tinggi untuk kebutuhan industri pertambangan dan proyek infrastruktur skala besar.</p>
+      <p>Kami memilih untuk fokus: terpal dan sarung tangan. Dengan fokus itu, kami mengenal bahan, proses, dan kegagalannya lebih dalam dari sekadar pedagang. Setiap keluhan lapangan menjadi masukan perbaikan bagi batch produksi berikutnya.</p>
+      <p>Pelanggan kami mencakup perusahaan tambang, kontraktor infrastruktur, distributor terpal, hingga petani dan pelaku perikanan — semua mendapat produk yang sama ketat mutunya.</p>
+    </div>
+  </div>
+  <div class="statgrid">
+    <div class="stat"><b>40+</b><span>Varian &amp; Spesifikasi</span></div>
+    <div class="stat"><b>500+</b><span>Klien &amp; Proyek Terlayani</span></div>
+    <div class="stat"><b>34</b><span>Provinsi Jangkauan Kirim</span></div>
+    <div class="stat"><b>100%</b><span>Kualitas Terjamin</span></div>
+  </div>
+  <h3 class="sec" style="margin-top:6mm;">NILAI KAMI — CARA KAMI BEKERJA</h3>
+  <div class="cards3">
+    <div class="card"><img src="assets/images/ic-sertifikat.webp" alt=""><h4>Mutu Tidak Dinegosiasikan</h4><p>Spesifikasi yang tertulis di label adalah yang Anda terima. Ketebalan, tenunan, dan laminasi dicek per batch.</p></div>
+    <div class="card"><img src="assets/images/ic-konsultasi.webp" alt=""><h4>Jujur Sejak Konsultasi</h4><p>Kami bilang tidak bila produk kami bukan yang terbaik untuk kebutuhan Anda — lalu bantu mencari yang tepat.</p></div>
+    <div class="card"><img src="assets/images/ic-truck.webp" alt=""><h4>Tepat Waktu itu Wajib</h4><p>Proyek tambang tidak bisa menunggu. Jadwal kirim yang disepakati adalah komitmen, bukan perkiraan.</p></div>
+  </div>
+  <h3 class="sec" style="margin-top:6mm;">MUTU TERUJI, BUKAN SEKADAR DI KATALOG</h3>
+  <div class="two">
+    <div class="body">
+      <p>Setiap batch terpal melewati uji ketahanan air, tarik, dan UV sebelum dikirim. Hasilnya: permukaan yang tetap kering, kuat, dan lentur meski dipakai bertahun-tahun di lokasi terbuka.</p>
+      <ul class="check">
+        <li>Uji tetes air &amp; genangan pada setiap batch</li>
+        <li>Uji tarik tenunan dasar dan tepi lipat</li>
+        <li>Ketebalan konsisten sesuai label GSM</li>
+      </ul>
+    </div>
+    <div class="media"><img src="assets/images/quality-water.webp" alt=""></div>
+  </div>
+</div>
+
+<!-- 3 OWNER -->
+<div class="page">
+  <div class="head">
+    <div class="b"><img class="lg" src="assets/images/logo.webp" alt=""><div class="bt">YO TARPAULIN<small>COMPANY PROFILE</small></div></div>
+    <div class="pg">03 / SAMBUTAN OWNER</div>
+  </div>
+  <h3 class="sec">TENTANG KAMI — CV. YO TERPAL NUSANTARA RAYA</h3>
+  <div class="owner">
+    <div class="ph">
+      <img src="assets/images/owner-yoke-albertin.webp" alt="">
+      <div class="nm">Yoke Albertin</div>
+      <div class="rl">Owner &amp; Pendiri</div>
+    </div>
+    <div class="tx">
+      <p>CV. Yo Terpal Nusantara Raya adalah perusahaan manufaktur yang bergerak di bidang produksi terpal, paranet, dan sarung tangan kerja untuk kebutuhan pertambangan dan proyek.</p>
+      <p>Perusahaan ini didirikan oleh Yoke Albertin atas keyakinan bahwa setiap pekerja di sektor tambang dan proyek berhak memperoleh perlengkapan pelindung yang andal.</p>
+      <h5>Produk Kami</h5>
+      <ul>
+        <li><b>Terpal</b> — dirancang tahan terhadap kondisi cuaca ekstrem, termasuk musim hujan, dan tidak mudah robek.</li>
+        <li><b>Paranet</b> — tersedia untuk kebutuhan proyek jangka panjang dengan daya tahan yang terjaga lintas musim.</li>
+        <li><b>Sarung Tangan Kerja</b> — diproduksi agar tetap kokoh, tidak mudah robek atau rusak saat digunakan dalam kondisi kerja yang berat.</li>
+      </ul>
+      <p>Seluruh produk diproduksi langsung oleh pabrik kami dan dijual tanpa perantara, sehingga harga yang ditawarkan transparan dan kompetitif.</p>
+      <h5>Visi</h5>
+      <p>Menjadi produsen dan pemasok perlengkapan pelindung kerja terpercaya di Indonesia, yang dikenal karena kualitas, kejujuran harga, dan layanan yang konsisten.</p>
+      <h5>Misi</h5>
+      <ul>
+        <li>Menjamin mutu produk melalui pemeriksaan kualitas pada setiap batch produksi.</li>
+        <li>Menyediakan harga langsung dari pabrik tanpa rantai distribusi perantara.</li>
+        <li>Memberikan layanan pelanggan yang responsif dan dapat dijangkau sepanjang hari.</li>
+        <li>Mendukung pertumbuhan usaha yang turut memberikan kesejahteraan bagi keluarga di sekitar lingkungan perusahaan.</li>
+      </ul>
+      <h5>Komitmen Kami</h5>
+      <p>Kami berkomitmen menjaga kepercayaan yang diberikan pelanggan. Bagi Anda yang membutuhkan pemasok terpal atau paranet yang dapat diandalkan untuk jangka panjang, tim kami siap melayani kebutuhan proyek Anda.</p>
+      <div class="sign"><b>Yoke Albertin</b><span>Owner — CV. Yo Terpal Nusantara Raya</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- 4 KEUNGGULAN -->
+<div class="page">
+  <div class="head">
+    <div class="b"><img class="lg" src="assets/images/logo.webp" alt=""><div class="bt">YO TARPAULIN<small>COMPANY PROFILE</small></div></div>
+    <div class="pg">04 / KEUNGGULAN</div>
+  </div>
+  <h3 class="sec">KENAPA MEMILIH YO TARPAULIN?</h3>
+  <div class="cards3">
+    <div class="card"><img src="assets/images/ic-waterproof.webp" alt=""><h4>100% Tahan Air</h4><p>Permukaan dilaminasi ganda sehingga hujan deras dan genangan air tidak menembus — barang di bawahnya tetap kering dan aman.</p></div>
+    <div class="card"><img src="assets/images/ic-tear.webp" alt=""><h4>Kuat &amp; Anti Robek</h4><p>Tenunan HDPE rapat dengan tepian lipat ganda, tidak mudah sobek meski sering dipasang, dilepas, dan dipindah.</p></div>
+    <div class="card"><img src="assets/images/ic-uv.webp" alt=""><h4>Tahan UV &amp; Panas</h4><p>Diformulasi dengan UV stabilizer agar tidak cepat rapuh atau pudar meski dipasang di area terbuka yang terik.</p></div>
+    <div class="card"><img src="assets/images/ic-price.webp" alt=""><h4>Harga Pabrik</h4><p>Diproduksi langsung oleh pabrik kami — harga lebih kompetitif untuk order partai besar tanpa menurunkan mutu.</p></div>
+    <div class="card"><img src="assets/images/ic-custom.webp" alt=""><h4>Ukuran Custom</h4><p>Bisa dipesan sesuai kebutuhan: ukuran, warna, ketebalan (GSM), hingga pencetakan logo untuk proyek Anda.</p></div>
+    <div class="card"><img src="assets/images/ic-247.webp" alt=""><h4>Layanan Responsif</h4><p>Tim kami siap melayani konsultasi dan pengiriman mendesak 24/7 — siap mendukung operasional tambang &amp; proyek.</p></div>
+  </div>
+  <h3 class="sec" style="margin-top:6mm;">STRUKTUR &amp; KETEBALAN TERPAL KAMI</h3>
+  <div class="minigrid">
+    <figure><img src="assets/images/banner-struktur.webp" alt=""><figcaption>Lapisan atas tahan UV &amp; panas, inti kain tenun kuat.</figcaption></figure>
+    <figure><img src="assets/images/galeri-laminasi.webp" alt=""><figcaption>Laminasi ganda — permukaan yang dirapikan.</figcaption></figure>
+    <figure><img src="assets/images/galeri-loom-sirkular.webp" alt=""><figcaption>Tenunan HDPE di mesin loom sirkular pabrik.</figcaption></figure>
+  </div>
+  <h3 class="sec" style="margin-top:6mm;">JARINGAN DISTRIBUSI NASIONAL</h3>
+  <div class="two">
+    <div class="media"><img src="assets/images/banner-distribusi.webp" alt=""></div>
+    <div class="body">
+      <p>Pengiriman ke 34+ provinsi oleh agen lokal terpercaya dan armada cepat — aman melalui jalur darat, laut, maupun udara. Stok gudang besar membuat kami siap kirim partai besar mendesak.</p>
+      <ul class="check">
+        <li>Agen lokal &amp; armada sendiri</li>
+        <li>Jalur darat, laut, dan udara</li>
+        <li>Siap kirim mendesak untuk proyek</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 5 KATALOG TERPAL PE -->
+<div class="page">
+  <div class="head">
+    <div class="b"><img class="lg" src="assets/images/logo.webp" alt=""><div class="bt">YO TARPAULIN<small>COMPANY PROFILE</small></div></div>
+    <div class="pg">05 / KATALOG — TERPAL PE</div>
+  </div>
+  <h3 class="sec">KATALOG PRODUK — TERPAL PE LAMINASI</h3>
+  <div class="prodgrid tight">        <div class="prod"><div class="im"><img src="assets/images/prod-biru-premium.webp" alt=""></div><div class="bx"><h4>Terpal Biru Premium</h4><div class="cat">Terpal PE Laminasi</div><ul class="chips"><li>120–200 GSM</li><li>Tahan UV</li><li>Anti Robek</li></ul><p class="d">Terpal PE dua lapis laminasi pilihan utama penutup material tambang &amp; proyek — tenunan, laminasi, dan kekuatan tepi dicek per batch.</p><ul class="u"><li>Penutup material tambang, pasir, split</li><li>Penutup truk &amp; armada logistik</li><li>Kanopi / area konstruksi</li></ul></div></div>        <div class="prod"><div class="im"><img src="assets/images/prod-navy.webp" alt=""></div><div class="bx"><h4>Terpal Navy</h4><div class="cat">Terpal PE Laminasi</div><ul class="chips"><li>150–250 GSM</li><li>Warna Tahan Lama</li><li>Tahan Air</li></ul><p class="d">Pewarnaan tahan terik — tidak cepat pudar walau terpasang berbulan-bulan. Tepi anting + ring untuk pemasangan cepat.</p><ul class="u"><li>Kanopi &amp; tenda event</li><li>Penutup armada logistik</li><li>Penutup material pabrik</li></ul></div></div>        <div class="prod"><div class="im"><img src="assets/images/prod-kuning.webp" alt=""></div><div class="bx"><h4>Terpal Kuning Gold</h4><div class="cat">Terpal PE Laminasi</div><ul class="chips"><li>100–180 GSM</li><li>High Visibility</li><li>Tahan Air</li></ul><p class="d">Memantulkan cahaya dengan baik — penandaan area kerja &amp; zona bahaya jelas terlihat, plus penutup gabah hasil panen.</p><ul class="u"><li>Zona bahaya &amp; jalur alat berat</li><li>Penutup gabah &amp; hasil panen</li><li>Pembatas jalan proyek</li></ul></div></div>        <div class="prod"><div class="im"><img src="assets/images/prod-hijau.webp" alt=""></div><div class="bx"><h4>Terpal Hijau</h4><div class="cat">Terpal PE Laminasi</div><ul class="chips"><li>90–150 GSM</li><li>Multifungsi</li><li>Ekonomis</li></ul><p class="d">Andalan petani dan pekebun: peneduh bibit, penutup rumah tanaman, lapis dasar kolam, hingga penutup silase.</p><ul class="u"><li>Peneduh bibit &amp; rumah tanaman</li><li>Lapis dasar kolam</li><li>Penutup silase &amp; pakan</li></ul></div></div>        <div class="prod"><div class="im"><img src="assets/images/prod-oranye.webp" alt=""></div><div class="bx"><h4>Terpal Oranye</h4><div class="cat">Terpal PE Safety</div><ul class="chips"><li>120–200 GSM</li><li>Safety Color</li><li>Tahan Air</li></ul><p class="d">Andalan tim HSE kontraktor: penutup scaffolding, pembatas area terlarang, pengamanan tepi gedung proyek besar.</p><ul class="u"><li>Scaffolding &amp; selubung bangunan</li><li>Pembatas area berbahaya</li><li>Penutup alat berat</li></ul></div></div>        <div class="prod"><div class="im"><img src="assets/images/prod-biru-muda.webp" alt=""></div><div class="bx"><h4>Terpal Biru Muda</h4><div class="cat">Terpal PE Laminasi — Ekonomis</div><ul class="chips"><li>80–140 GSM</li><li>Ekonomis</li><li>Ringan</li></ul><p class="d">Pilihan hemat pemakaian harian: menutup dagangan, menahan debu gudang, melindungi angkutan jarak dekat.</p><ul class="u"><li>Penutup barang dagangan</li><li>Penahan debu gudang</li><li>Pelindung angkutan dekat</li></ul></div></div>
+  </div>
+</div>
+
+<!-- 6 PVC + ROLL + TAS + SARUNG -->
+<div class="page">
+  <div class="head">
+    <div class="b"><img class="lg" src="assets/images/logo.webp" alt=""><div class="bt">YO TARPAULIN<small>COMPANY PROFILE</small></div></div>
+    <div class="pg">06 / PVC, ROLL, TAS &amp; SARUNG TANGAN</div>
+  </div>
+  <h3 class="sec">TERPAL SPESIAL — PVC PREMIUM &amp; ROLL INDUSTRI</h3>
+  <div class="prodgrid">        <div class="prod"><div class="im" style="height:46mm;"><img src="assets/images/prod-pvc.webp" alt=""></div><div class="bx"><h4>Terpal PVC Transparan</h4><div class="cat">Terpal PVC Premium</div><ul class="chips"><li>250–450 GSM</li><li>Transparan</li><li>Premium</li></ul><p class="d">Bahan premium anti jamur: bening namun kuat, tidak cepat kaku di suhu rendah, dan tahan cuaca lebih lama dari PE. Cahaya tetap masuk, air &amp; debu tertahan.</p><ul class="u"><li>Kanopi transparan (kafe, showroom)</li><li>Greenhouse hidroponik</li><li>Tirai / partisi area kerja</li></ul></div></div>        <div class="prod"><div class="im" style="height:46mm;"><img src="assets/images/rolls-colorful.webp" alt=""></div><div class="bx"><h4>Terpal Roll</h4><div class="cat">Terpal Roll Industri</div><ul class="chips"><li>Lebar 2–6 m</li><li>Panjang 50 m</li><li>Custom Cut</li></ul><p class="d">Format roll untuk area luas: cukup dibentang dan diikat — sambungan minim berarti titik rembes lebih sedikit. Lebar 2, 3, 4, dan 6 meter; bisa dipotong sesuai lebar area.</p><ul class="u"><li>Penutup stockpile tambang</li><li>Penghalang debu lapangan</li><li>Lapis dasar area kerja</li></ul></div></div>
+  </div>
+  <h3 class="sec" style="margin-top:5mm;">TAS SPUNBOND &amp; SARUNG TANGAN INDUSTRI</h3>
+  <div class="two">
+    <div class="media" style="width:56mm;"><img src="assets/images/banner-tas-spunbond.webp" alt=""></div>
+    <div class="body">
+      <p><b>Tas Spunbond</b> — tas belanja &amp; goodie bag non-woven produksi sendiri: ringan, kuat, bisa sablon logo. Warna siap stok (putih, merah, biru); ukuran/model custom untuk seminar kit &amp; hampers. Order partai dengan harga kontrak.</p>
+      <p><b>Sarung Tangan Industri</b> — sarung tangan kerja untuk menunjang keselamatan operasional tambang &amp; proyek: pengamanan tangan operator, penanganan material &amp; log, hingga order rutin bulanan.</p>
+      <ul class="check">
+        <li>Full grip, standar SNI</li>
+        <li>Order partai &amp; harga kontrak</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 7 PARANET -->
+<div class="page">
+  <div class="head">
+    <div class="b"><img class="lg" src="assets/images/logo.webp" alt=""><div class="bt">YO TARPAULIN<small>COMPANY PROFILE</small></div></div>
+    <div class="pg">07 / PARANET</div>
+  </div>
+  <h3 class="sec">PARANET BANGUNAN — HDPE TENUNAN SENDIRI</h3>
+  <div class="minigrid">
+    <figure><img src="assets/images/paranet-loom.webp" alt=""><figcaption>Ditenun langsung di mesin jaring industri</figcaption></figure>
+    <figure><img src="assets/images/paranet-tenun.webp" alt=""><figcaption>Proses tenun benang HDPE + stabilizer UV</figcaption></figure>
+    <figure><img src="assets/images/prod-paranet.webp" alt=""><figcaption>Alum &amp; jahitan tepi rapi</figcaption></figure>
+  </div>
+  <p class="lead" style="margin-top:3mm;">Jaring penggelap cahaya untuk penutup sloof/sproet, pelindung area kerja, dan peneduh tanaman. Berat per lembar 11–28 kg sesuai kerapatan.</p>
+  <table class="t">
+    <tr><th>Tipe Kerapatan</th><th style="width:34mm;">Ukuran</th><th style="width:30mm;">Berat / Lembar</th></tr>
+    <tr><td>K100 — penutup tanpa celah</td><td>2 x 100 m</td><td>28 kg</td></tr>
+    <tr><td>K90</td><td>3 x 100 m</td><td>25 kg</td></tr>
+    <tr><td>K80</td><td>3 x 100 m</td><td>20 kg</td></tr>
+    <tr><td>K70</td><td>3 x 100 m</td><td>16 kg</td></tr>
+    <tr><td>K60</td><td>3 x 100 m</td><td>14 kg</td></tr>
+    <tr><td>K50</td><td>3 x 100 m</td><td>11 kg</td></tr>
+  </table>
+  <h3 class="sec" style="margin-top:5mm;">VARIAN KERAPATAN — FOTO DARI STOK GUDANG</h3>
+  <div class="minigrid">
+    <figure><img src="assets/images/paranet-k100.webp" alt=""><figcaption>K100 — 2×100 m, 28 kg/lembar</figcaption></figure>
+    <figure><img src="assets/images/paranet-k80.webp" alt=""><figcaption>K80 — 3×100 m, 20 kg/lembar</figcaption></figure>
+    <figure><img src="assets/images/paranet-k70.webp" alt=""><figcaption>K70 — 3×100 m, 16 kg/lembar</figcaption></figure>
+    <figure><img src="assets/images/paranet-k60.webp" alt=""><figcaption>K60 — 3×100 m, 14 kg/lembar</figcaption></figure>
+    <figure><img src="assets/images/paranet-k50.webp" alt=""><figcaption>K50 — 3×100 m, 11 kg/lembar</figcaption></figure>
+    <figure><img src="assets/images/paranet-tenun.webp" alt=""><figcaption>Jahitan tepi rapi di setiap lembar</figcaption></figure>
+  </div>
+</div>
+
+<!-- 8 APLIKASI -->
+<div class="page">
+  <div class="head">
+    <div class="b"><img class="lg" src="assets/images/logo.webp" alt=""><div class="bt">YO TARPAULIN<small>COMPANY PROFILE</small></div></div>
+    <div class="pg">08 / APLIKASI</div>
+  </div>
+  <h3 class="sec">COCOK UNTUK BERBAGAI KEBUTUHAN</h3>
+  <div class="apps2">
+    <div class="app"><img src="assets/images/app-pickup.webp" alt=""><div><h4>Armada &amp; Truk</h4><p>Penutup muatan pickup hingga truk trailer yang rapi dan aman selama perjalanan jauh.</p></div></div>
+    <div class="app"><img src="assets/images/app-cement.webp" alt=""><div><h4>Semen &amp; Material</h4><p>Melindungi sak semen, pasir, dan material bangunan dari hujan dan lembap di area proyek.</p></div></div>
+    <div class="app"><img src="assets/images/app-scaffolding.webp" alt=""><div><h4>Konstruksi &amp; Scaffolding</h4><p>Selubung scaffolding dan penutup gedung saat renovasi — aman dari debu dan cipratan.</p></div></div>
+    <div class="app"><img src="assets/images/app-equipment.webp" alt=""><div><h4>Alat Berat &amp; Tambang</h4><p>Penutup alat berat, stockpile, dan area kerja tambang dalam kondisi cuaca ekstrem.</p></div></div>
+    <div class="app"><img src="assets/images/app-fishpond.webp" alt=""><div><h4>Kolam &amp; Perikanan</h4><p>Lapisan kolam budidaya dan penutup keramba yang aman untuk bahan pakan ikan.</p></div></div>
+    <div class="app"><img src="assets/images/app-speedboat.webp" alt=""><div><h4>Perkapalan &amp; Speedboat</h4><p>Penutup hull dan deck kapal saat sandar — antirapuh dari air laut &amp; sinar matahari.</p></div></div>
+    <div class="app"><img src="assets/images/app-hay.webp" alt=""><div><h4>Pertanian &amp; Perkebunan</h4><p>Penutup hay, gabah, dan hasil panen agar tetap kering saat musim hujan.</p></div></div>
+    <div class="app"><img src="assets/images/app-roof.webp" alt=""><div><h4>Atap &amp; Perumahan</h4><p>Penutup atap sementara saat renovasi dan pelindung rumah dari bocor.</p></div></div>
+    <div class="app"><img src="assets/images/app-canopy.webp" alt=""><div><h4>Tenda &amp; Kanopi</h4><p>Tenda serbaguna untuk event, gudang lapangan, dan pos koordinasi proyek.</p></div></div>
+    <div class="app"><img src="assets/images/app-camping.webp" alt=""><div><h4>Outdoor &amp; Camping</h4><p>Flysheet dan shelter outdoor yang ringan, kuat, dan cepat dipasang.</p></div></div>
+  </div>
+</div>
+
+<!-- 9 PROSES -->
+<div class="page">
+  <div class="head">
+    <div class="b"><img class="lg" src="assets/images/logo.webp" alt=""><div class="bt">YO TARPAULIN<small>COMPANY PROFILE</small></div></div>
+    <div class="pg">09 / CARA PEMESANAN</div>
+  </div>
+  <h3 class="sec">EMPAT LANGKAH SAMPAI TERPAL TIBA DI LOKASI</h3>
+  <div class="steps4">
+    <div class="step"><div class="n">1</div><img src="assets/images/ic-konsultasi.webp" alt=""><h4>Konsultasi</h4><p>Ceritakan kebutuhan Anda via WhatsApp atau telepon — tim kami bantu memilih spesifikasi yang tepat.</p></div>
+    <div class="step"><div class="n">2</div><img src="assets/images/ic-custom.webp" alt=""><h4>Spesifikasi &amp; Sample</h4><p>Tentukan ukuran, warna, dan ketebalan. Sample tersedia untuk order partai besar.</p></div>
+    <div class="step"><div class="n">3</div><img src="assets/images/ic-truck.webp" alt=""><h4>Produksi &amp; QC</h4><p>Pesanan diproduksi dan melewati quality control ketat sebelum dikemas dan disiapkan kirim.</p></div>
+    <div class="step"><div class="n">4</div><img src="assets/images/ic-guarantee.webp" alt=""><h4>Kirim &amp; Garansi</h4><p>Pengiriman aman ke seluruh Indonesia, disertai garansi kualitas produk sesuai spesifikasi.</p></div>
+  </div>
+  <h3 class="sec" style="margin-top:6mm;">READY STOCK DI GUDANG PABRIK</h3>
+  <div class="minigrid">
+    <figure><img src="assets/images/pabrik-stok.webp" alt=""><figcaption>Stok lembar &amp; roll siap kirim</figcaption></figure>
+    <figure><img src="assets/images/pabrik-kemasan.webp" alt=""><figcaption>Pengerjaan kemasan — rapi &amp; kulitas terjaga</figcaption></figure>
+    <figure><img src="assets/images/pabrik-muat-kirim.webp" alt=""><figcaption>Proses muat &amp; kirim partai besar</figcaption></figure>
+  </div>
+  <h3 class="sec" style="margin-top:6mm;">UKURAN CUSTOM — PESAN SESUAI KEBUTUHAN</h3>
+  <div class="two">
+    <div class="media"><img src="assets/images/banner-custom.webp" alt=""></div>
+    <div class="body">
+      <p><b>Butuh terpal ukuran custom?</b> Semua bisa diatur dibahan kami: ukuran lembar/roll, warna, ketebalan (GSM), hingga cetak logo proyek Anda. Pengerjaan cepat &amp; rapi langsung di pabrik.</p>
+      <ul class="check">
+        <li>Ukuran &amp; warna custom</li>
+        <li>Pencetakan logo di terpal</li>
+        <li>Pengerjaan cepat &amp; rapi</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 10 MEREK -->
+<div class="page">
+  <div class="head">
+    <div class="b"><img class="lg" src="assets/images/logo.webp" alt=""><div class="bt">YO TARPAULIN<small>COMPANY PROFILE</small></div></div>
+    <div class="pg">10 / MEREK PRODUKSI</div>
+  </div>
+  <h3 class="sec">MEREK KAMI — LOGO YANG TERCETAK DI PRODUK</h3>
+  <p class="lead">Pabrik kami memproduksi dan memasarkan 4 merek terpal &amp; paranet sendiri — inilah tanda yang akan Anda temukan pada produk yang keluar dari gudang kami.</p>
+  <div class="brgrid" style="margin-top:4mm;">
+    <div class="br"><img src="assets/images/brand-yo-terpaulin.png" alt=""><b>YO Terpaulin</b><span>Terpal &amp; Paranet — Super Korean PE + UV</span></div>
+    <div class="br"><img src="assets/images/brand-saffron-a20.png" alt=""><b>Saffron A20</b><span>Tech by Korea + UV</span></div>
+    <div class="br"><img src="assets/images/brand-perkasa-terpal.png" alt=""><b>Perkasa Terpal</b><span>Terpal lembar — ukuran 2×3 s/d 30×30 m</span></div>
+    <div class="br"><img src="assets/images/brand-surya-paranet.png" alt=""><b>Surya Paranet</b><span>Paranet — kualitas premium + UV</span></div>
+    <div class="br"><img src="assets/images/brand-nusantara-net.png" alt=""><b>Nusantara-Net</b><span>Paranet roll — ukuran 3×100 m</span></div>
+    <div class="br"><img src="assets/images/brand-perkasa-paranet.png" alt=""><b>Perkasa Paranet</b><span>Paranet — kerapatan 60–100%</span></div>
+  </div>
+  <h3 class="sec" style="margin-top:6mm;">SIAPA KAMI HUBUNGI — KREDIBILITAS</h3>
+  <div class="two">
+    <div class="media"><img src="assets/images/banner-client.webp" alt=""></div>
+    <div class="body">
+      <p><b>CV. Yo Terpal Nusantara Raya</b> — perusahaan manufaktur berbadan hukum yang dioperasikan di Surabaya, Jawa Timur. Transaksi transparan dan aman: penawaran tertulis, faktur &amp; kwitansi resmi, serta dokumen pengiriman untuk setiap pesanan.</p>
+      <p>Lebih dari 500 klien &amp; proyek terlayani selama operasional — mulai perusahaan tambang, kontraktor, distributor, hingga usaha pertanian &amp; perikanan.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 11 KONTAK -->
+<div class="page last">
+  <div class="head">
+    <div class="b"><img class="lg" src="assets/images/logo.webp" alt=""><div class="bt">YO TARPAULIN<small>COMPANY PROFILE</small></div></div>
+    <div class="pg">11 / KONTAK</div>
+  </div>
+  <h3 class="sec">HUBUNGI KAMI</h3>
+  <div class="ctgrid">
+    <div class="ct"><h4>Sales &amp; Order Utama — WhatsApp 1</h4><div class="big">+62 812-2133-2929</div><small>Respon cepat 24/7 &bull; https://wa.me/6281221332929</small></div>
+    <div class="ct"><h4>Saluran Alternatif — WhatsApp 2</h4><div class="big">+62 822-13-8889</div><small>Respon cepat 24/7 &bull; https://wa.me/62822138889</small></div>
+    <div class="ct"><h4>Instagram</h4><div class="big">@pabrik_plastik_termurah</div><small>Katalog stok &amp; foto produksi harian &bull; instagram.com/pabrik_plastik_termurah</small></div>
+    <div class="ct"><h4>Threads</h4><div class="big">@pabrik_plastik_termurah</div><small>Update stok, promo &amp; info pabrik &bull; threads.com/@pabrik_plastik_termurah</small></div>
+    <div class="ct"><h4>Email</h4><div class="big" style="font-size:10.5pt;">yonusantararaya@gmail.com</div><small>Penawaran &amp; dokumen formal</small></div>
+    <div class="ct"><h4>Alamat Kantor &amp; Gudang</h4><div class="big" style="font-size:9.5pt;line-height:1.5;">Daerah Amesta Living, Jalan Gn Anyar Tambak, Kel. Gunung Anyar Tambak (Cluster Loka CD-25), Gunung Anyar, Kota Surabaya, Jawa Timur 60294</div><small>Google Maps: Amesta Living (pin kantor)</small></div>
+  </div>
+  <div class="pay"><img src="assets/images/banner-payment.webp" alt=""></div>
+  <div class="rendah">
+    <div><b>Butuh terpal untuk proyek Anda?</b><br><span>Konsultasikan sekarang — tim kami siap merespons cepat, 24/7. Kunjungi https://yoterpal.com untuk katalog &amp; spesifikasi lengkap.</span></div>
+    <div class="yn">CHAT WHATSAPP</div>
+  </div>
+  <div class="pagenote">
+    YO TARPAULIN — Solusi Terpal Anda &bull; CV. Yo Terpal Nusantara Raya &bull; yoterpal.com &bull; Company Profile ini dibuat dari konten situs resmi yoterpal.com — katalog, stok, dan informasi terbaru selalu diperbarui online.
+  </div>
+</div>
+
+</body>
+</html>
