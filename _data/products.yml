@@ -141,9 +141,12 @@
     - image: tas-detail-bahan.webp
       caption: "Detail bahan spunbond"
       text: "Tekstur kain non-woven halus dan handle dijahit rapi — siap dipakai berulang kali."
+    - image: tas-warna-sablon.webp
+      caption: "Warna & sablon logo custom"
+      text: "Beige, navy, maroon, dan putih — bisa disablon logo brand usaha Anda, order satuan langsung masuk jadwal produksi."
     - image: tas-stok-gudang.webp
       caption: "Ready stock di gudang"
       text: "Warna dan ukuran populer tersedia ready; order custom langsung masuk jadwal produksi."
     - image: tas-jahit.webp
       caption: "Cutting & jahit sendiri"
-      text: "Dihaluskan dari gulungan kain lalu dipotong dan dijahit di unit produksi kami — QC tiap order."
+      text: "Dipotong dari gulungan kain lalu dijahit di unit produksi kami — QC tiap order."
