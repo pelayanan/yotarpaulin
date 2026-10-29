@@ -14,6 +14,9 @@ lang: id
 # Used by jekyll-seo-tag for social previews
 logo: "/assets/images/logo.webp"
 
+# OG image fallback (jika halaman tidak punya image: di front matter)
+image: "/assets/images/og/og-default.jpg"
+
 ### Brand & contact ###
 brand: "Yo Tarpaulin"
 brand_slogan: "Solusi Terpal Anda"
@@ -55,6 +58,7 @@ exclude:
   - AGENTS.md
   - proposal-website.txt
   - isi-website.md
+  - make_og.py
   - Proposal-Penawaran-Website-YO-Tarpaulin-Aksisoft.pdf
   - resources
   - screenshoot
