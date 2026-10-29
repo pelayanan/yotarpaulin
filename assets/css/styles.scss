@@ -1269,3 +1269,25 @@ body.has-lightbox { overflow: hidden; }
 }
 .contact-soc--wa:hover { background: #e7f8ee; color: #147a3d; border-color: #bfe8d2; }
 .contact-social__handle { margin-top: 12px; font-size: 0.88rem; color: var(--muted); }
+
+/* Strip unduh company profile (beranda & tentang) */
+.compro-dl {
+  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  padding: 20px 22px;
+  background: var(--sky-50);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.compro-dl__badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 52px; height: 52px; flex: none; border-radius: 50%;
+  background: var(--blue-900); color: var(--yellow);
+}
+.compro-dl__badge .ico { width: 24px; height: 24px; }
+.compro-dl__txt { flex: 1; min-width: 230px; }
+.compro-dl__txt h3 { font-size: 1.15rem; color: var(--blue-900); }
+.compro-dl__txt p { color: var(--muted); font-size: 0.95rem; margin-top: 3px; }
+@media (max-width: 640px) {
+  .compro-dl { align-items: flex-start; }
+  .compro-dl .btn { width: 100%; justify-content: center; }
+}
