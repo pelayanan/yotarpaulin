@@ -1,4 +1,4 @@
-/* YO TARPAULIN — interactions */
+/* YO TERPAL NUSANTARA RAYA — interactions */
 (function () {
   "use strict";
 
@@ -69,7 +69,7 @@
       ev.preventDefault();
       var fd = new FormData(form);
       var lines = [
-        "Halo YO TARPAULIN, saya ingin bertanya tentang terpal.",
+        "Halo YO TERPAL NUSANTARA RAYA, saya ingin bertanya tentang terpal.",
         "",
         "Nama: " + (fd.get("nama") || "-"),
         "Kebutuhan: " + (fd.get("kebutuhan") || "-"),

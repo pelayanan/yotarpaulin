@@ -1,6 +1,6 @@
-# Yo Tarpaulin — Company Profile Website
+# YO TERPAL NUSANTARA RAYA — Company Profile Website
 
-Website company profile untuk **YO TARPAULIN** — produsen & pemasok terpal dan paranet
+Website company profile untuk **YO TERPAL NUSANTARA RAYA** — produsen & pemasok terpal dan paranet
 berkualitas tinggi untuk industri pertambangan dan proyek infrastruktur skala besar.
 
 **Live:** https://yoterpal.com/
