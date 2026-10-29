@@ -30,7 +30,7 @@ Bukan mockup, bukan janji — website live-nya sudah tayang dan bisa langsung di
 ✅ *Kontak + FAQ + Peta Lokasi* — https://yoterpal.com/kontak.html
 ✅ *Halaman 404 kustom* — https://yoterpal.com/404.html
 
-— Halaman detail produk (10) —
+— Halaman detail produk (11) —
 ✅ Terpal Biru Premium — https://yoterpal.com/produk/terpal-biru-premium.html
 ✅ Terpal Navy — https://yoterpal.com/produk/terpal-navy.html
 ✅ Terpal Kuning Gold — https://yoterpal.com/produk/terpal-kuning-gold.html
@@ -41,13 +41,14 @@ Bukan mockup, bukan janji — website live-nya sudah tayang dan bisa langsung di
 ✅ Terpal Biru Muda — https://yoterpal.com/produk/terpal-biru-muda.html
 ✅ Paranet Bangunan — https://yoterpal.com/produk/paranet-bangunan.html
 ✅ Sarung Tangan Industri — https://yoterpal.com/produk/sarung-tangan-industri.html
+✅ Tas Spunbond (tambahan) — https://yoterpal.com/produk/tas-spunbond.html
 
 — Pendukung SEO —
 🗺️ Sitemap SEO — https://yoterpal.com/sitemap.xml
 🤖 Robots — https://yoterpal.com/robots.txt
 💻 Kode sumber: github.com/pelayanan/yotarpaulin
 
-Total: *20 halaman live* + kode sumber terbuka.
+Total: *21 halaman live* + kode sumber terbuka.
 
 ━━━━━━━━━━━━━━━━━━━━
 ⚡ *FITUR TERMASUK*
@@ -63,16 +64,11 @@ Total: *20 halaman live* + kode sumber terbuka.
 • Hosting ber-SSL tanpa biaya sewa tahun pertama
 
 ━━━━━━━━━━━━━━━━━━━━
-🌐 *REKOMENDASI DOMAIN*
-_Sudah dicek via RDAP resmi (Verisign & PANDI), 28 Okt 2026:_
+🌐 *DOMAIN & TAYANG*
 
-✅ yotarpaulin.com — TERSEDIA ⭐ _rekomendasi utama_ (±Rp 150–250 rb/th)
-✅ yotarpaulin.co.id — TERSEDIA (±Rp 150–300 rb/th)
-✅ yotarpaulin.id — TERSEDIA (±Rp 250–450 rb/th)
-✅ yotarpaulin.net — TERSEDIA (±Rp 200–300 rb/th)
-✅ yotarpaulin.web.id — TERSEDIA (±Rp 50–150 rb/th)
-
-🌐 *Domain aktif saat ini:* https://yoterpal.com (custom domain, SSL aktif)
+✅ Domain aktif: https://yoterpal.com — custom domain, SSL aktif
+✅ DNS, sertifikat SSL & deployment sudah dikonfigurasi — website tayang langsung
+✅ Tanpa biaya sewa hosting tahun pertama
 
 ━━━━━━━━━━━━━━━━━━━━
 💰 *INVESTASI*
