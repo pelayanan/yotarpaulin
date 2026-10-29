@@ -1249,3 +1249,23 @@ body.has-lightbox { overflow: hidden; }
   .nav__socs { display: flex; gap: 10px; margin: 10px 0 2px; }
   .nav__soc { width: 42px; height: 42px; }
 }
+
+/* Tombol sosial halaman kontak */
+.contact-social { margin: 6px 0 0; }
+.contact-social h3 { font-size: 20px; color: var(--blue-900); margin-bottom: 4px; }
+.contact-social__row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.contact-soc {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 11px 18px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--white);
+  color: var(--blue-700); font-weight: 600; font-size: 0.95rem;
+  transition: transform .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
+}
+.contact-soc .ico { width: 19px; height: 19px; }
+.contact-soc:hover {
+  background: var(--sky-100); color: var(--blue-900);
+  border-color: var(--line);
+  transform: translateY(-2px);
+}
+.contact-soc--wa:hover { background: #e7f8ee; color: #147a3d; border-color: #bfe8d2; }
+.contact-social__handle { margin-top: 12px; font-size: 0.88rem; color: var(--muted); }
