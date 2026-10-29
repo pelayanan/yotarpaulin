@@ -6,16 +6,16 @@
    ========================================================================== */
 
 :root {
-  --blue-950: #061f44;
-  --blue-900: #0a3168;
-  --blue-800: #0d3f85;
-  --blue-700: #1152a8;
-  --blue-600: #1665c4;
-  --blue-500: #1e78dd;
+  --blue-950: #041630;
+  --blue-900: #072a5c;
+  --blue-800: #0a3a7e;
+  --blue-700: #0f4ba3;
+  --blue-600: #135ebf;
+  --blue-500: #2079e0;
   --sky-100: #eaf3fc;
   --sky-50: #f5f9fe;
-  --yellow: #f0651a;
-  --yellow-dark: #c74f0e;
+  --yellow: #ff8a1f;
+  --yellow-dark: #e2670d;
   --ink: #12263f;
   --muted: #51677f;
   --line: #dbe7f3;
@@ -79,16 +79,16 @@ p { margin: 0 0 1em; }
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--yellow-dark);
-  background: rgba(240, 101, 26, 0.10);
-  border: 1px solid rgba(240, 101, 26, 0.35);
+  background: rgba(255, 138, 31, 0.10);
+  border: 1px solid rgba(255, 138, 31, 0.35);
   padding: 5px 14px;
   border-radius: 999px;
   margin-bottom: 14px;
 }
 .eyebrow--light {
   color: var(--yellow);
-  background: rgba(240, 101, 26, 0.12);
-  border-color: rgba(240, 101, 26, 0.4);
+  background: rgba(255, 138, 31, 0.12);
+  border-color: rgba(255, 138, 31, 0.4);
 }
 
 .section { padding: 76px 0; }
@@ -122,7 +122,7 @@ p { margin: 0 0 1em; }
 .btn--yellow {
   background: var(--yellow);
   color: var(--white);
-  box-shadow: 0 8px 20px rgba(240, 101, 26, 0.35);
+  box-shadow: 0 8px 20px rgba(255, 138, 31, 0.35);
 }
 .btn--yellow:hover { background: var(--yellow-dark); color: var(--white); }
 
@@ -234,8 +234,8 @@ p { margin: 0 0 1em; }
   inset: auto 0 -60% 0;
   height: 120%;
   background:
-    radial-gradient(900px 420px at 10% 100%, rgba(240, 101, 26, 0.18), transparent 60%),
-    radial-gradient(700px 380px at 95% 30%, rgba(240, 101, 26, 0.14), transparent 60%);
+    radial-gradient(900px 420px at 10% 100%, rgba(255, 138, 31, 0.18), transparent 60%),
+    radial-gradient(700px 380px at 95% 30%, rgba(255, 138, 31, 0.14), transparent 60%);
   pointer-events: none;
 }
 
@@ -546,7 +546,7 @@ p { margin: 0 0 1em; }
   border-radius: 50%;
   display: grid;
   place-items: center;
-  box-shadow: 0 6px 14px rgba(240, 101, 26, 0.4);
+  box-shadow: 0 6px 14px rgba(255, 138, 31, 0.4);
 }
 .step__icon { width: 62px; height: 62px; margin: 4px 0 10px; }
 .step h3 { font-size: 1.15rem; }
