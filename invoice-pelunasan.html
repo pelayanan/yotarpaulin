@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Invoice Pelunasan 50% — Website YO Tarpaulin</title>
+<style>
+  @page { size: 210mm 297mm; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: "Liberation Sans", "DejaVu Sans", Arial, sans-serif;
+    color: #7a1230; background: #fff;
+    hyphens: none;
+  }
+  .sheet {
+    width: 210mm; height: 297mm;
+    page-break-after: always;
+    padding: 14mm 16mm 12mm;
+    border: 1.1mm solid #800020;
+    position: relative;
+    break-after: page;
+  }
+  .sheet--last { page-break-after: auto; break-after: auto; }
+
+  /* header */
+    .head { display: table; width: 100%; }
+  .brand { display: table-cell; vertical-align: top; width: 55%; }
+  .judul { display: table-cell; vertical-align: top; }
+  .brand h1 { font-size: 15pt; color: #800020; letter-spacing: .06em; }
+  .brand p  { font-size: 8pt; color: #8a6a72; font-style: italic; margin-top: 1pt; }
+  .brand .web { font-style: normal; font-weight: 600; color: #800020; margin-top: 2pt; font-size: 8.5pt; }
+  .judul { text-align: right; }
+  .judul h2 { font-size: 18pt; letter-spacing: .1em; color: #800020; font-weight: 800; }
+  .judul .no { font-size: 9.5pt; font-weight: 700; margin-top: 2pt; }
+  .judul .tag { font-size: 8pt; color: #8a6a72; margin-top: 1pt; }
+
+  /* info dua kolom */
+  .infogrid { display: table; width: 100%; margin-top: 7mm; border-spacing: 0; }
+  .infobox { display: table-cell; vertical-align: top; width: 50%; font-size: 9pt; color: #7a1230; }
+  .infobox + .infobox { padding-left: 8mm; }
+  .infobox h3 { font-size: 8pt; letter-spacing: .14em; text-transform: uppercase; color: #9a4630; border-bottom: .25mm solid #e3c9d1; padding-bottom: 1.2mm; margin-bottom: 2mm; }
+  .infobox .kv { display: flex; margin-bottom: 1.1mm; }
+  .infobox .k { width: 38mm; flex: 0 0 auto; color: #9a4630; font-weight: 600; }
+  .infobox .v { flex: 1; }
+  .infobox .v b { font-size: 10pt; }
+  .infobox .small { font-size: 8pt; color: #8a6a72; }
+
+  /* tabel rincian */
+  table.rincian { width: 100%; border-collapse: collapse; margin-top: 7mm; font-size: 9.5pt; }
+  table.rincian th {
+    background: #800020; color: #fdf6f8; text-align: left;
+    padding: 2.6mm 3mm; font-size: 8.5pt; letter-spacing: .08em; text-transform: uppercase;
+  }
+  table.rincian th:last-child, table.rincian td.last { text-align: right; white-space: nowrap; }
+  table.rincian td { border-bottom: .2mm solid #e3c9d1; padding: 2.4mm 3mm; vertical-align: top; color: #7a1230; }
+  table.rincian td .sub { display: block; font-size: 7.8pt; color: #8a6a72; margin-top: .8mm; }
+  table.rincian tr.total td { background: #f9eef1; font-weight: 800; font-size: 11pt; color: #800020; border-bottom: none; border-top: .3mm solid #800020; }
+  table.rincian tr.pay td { font-size: 9pt; }
+  table.rincian .ok { color: #1d6b3f; font-weight: 700; font-size: 8.2pt; }
+  table.rincian td.nom { font-weight: 700; white-space: nowrap; }
+
+  .terbilang {
+    margin-top: 4mm; border: .3mm solid #800020; background: #f9eef1;
+    padding: 1.8mm 3mm; font-size: 9.5pt; color: #7a1230;
+  }
+  .terbilang b { text-transform: capitalize; }
+
+  /* catatan bayar */
+  .notes { margin-top: 4mm; font-size: 8.3pt; color: #7a1230; display: table; width: 100%; }
+  .notes .col + .col { padding-left: 8mm; margin-left: -5mm; }
+  .notes .col { display: table-cell; vertical-align: top; border: .2mm dashed #c98796; padding: 2.2mm 3mm; }
+  .notes h4 { font-size: 8pt; letter-spacing: .1em; text-transform: uppercase; color: #800020; margin-bottom: 1.2mm; }
+  .notes p { margin-bottom: 1mm; }
+  .notes .muted { color: #8a6a72; }
+
+  /* halaman hasil pekerjaan */
+  .sect-title { margin-top: 7mm; }
+  .sect-title h3 { font-size: 11pt; color: #800020; letter-spacing: .04em; }
+  .sect-title p { font-size: 8.5pt; color: #8a6a72; margin-top: .8mm; }
+
+  .deliver { display: table; width: 100%; margin-top: 4mm; }
+  .deliver .col + .col { padding-left: 8mm; margin-left: -7.4mm; }
+  .deliver .col { display: table-cell; vertical-align: top; width: 33.33%; }
+  .deliver h4 { font-size: 8pt; letter-spacing: .12em; text-transform: uppercase; color: #9a4630; margin-bottom: 1.6mm; border-bottom: .2mm solid #e3c9d1; padding-bottom: 1mm; }
+  .deliver ul { list-style: none; font-size: 8.4pt; color: #7a1230; }
+  .deliver li { margin-bottom: 1.15mm; padding-left: 4mm; text-indent: -4mm; }
+  .deliver li::before { content: "✓"; color: #1d6b3f; font-weight: 800; margin-right: 1.6mm; }
+  .deliver .url { color: #8a6a72; font-size: 7.6pt; }
+
+  .fitur { margin-top: 5mm; border: .25mm solid #e3c9d1; background: #fdf9fa; padding: 2.6mm 3.4mm; }
+  .fitur h4 { font-size: 8pt; letter-spacing: .12em; text-transform: uppercase; color: #800020; margin-bottom: 1.4mm; }
+  .fitur ul { column-count: 3; column-gap: 6mm; list-style: none; font-size: 8pt; color: #7a1230; }
+  .fitur li { margin-bottom: .8mm; padding-left: 3.4mm; text-indent: -3.4mm; }
+  .fitur li::before { content: "•"; color: #800020; margin-right: 1.4mm; }
+
+  /* footer + ttd */
+  .foot {
+    position: absolute; left: 16mm; right: 16mm; bottom: 17mm;
+    display: table; width: calc(100% - 32mm);
+  }
+  .foot > * { display: table-cell; vertical-align: bottom; }
+  .sisa { font-size: 8pt; color: #8a6a72; max-width: 100mm; }
+  .sisa b { color: #7a1230; }
+  .ttd { text-align: center; font-size: 9.5pt; width: 62mm; position: relative; }
+  .ttd .kota { font-weight: 600; }
+  .ttd .role { margin-top: 1pt; }
+  .ttd .spasi { height: 13mm; position: relative; }
+  .ttd .stempel-logo {
+    position: absolute; left: 50%; top: 36%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    opacity: .3; pointer-events: none;
+  }
+  .ttd .stempel-logo img { width: 34mm; height: auto; display: block; }
+  .ttd .nama { font-weight: 800; color: #800020; border-top: .25mm solid #7a1230; padding-top: 1.2mm; letter-spacing: .04em; }
+
+  .stempel {
+    position: absolute;
+    right: 22mm; top: 151mm;
+    transform: rotate(-11deg);
+    border: .8mm double rgba(128, 0, 32, 0.5);
+    color: rgba(128, 0, 32, 0.55);
+    border-radius: 2.5mm;
+    padding: 2.2mm 5mm;
+    font-size: 15pt; font-weight: 800;
+    letter-spacing: .12em; text-transform: uppercase;
+    text-align: center; line-height: 1.25;
+  }
+  .stempel small { display: block; font-size: 9pt; font-weight: 700; letter-spacing: .2em; }
+
+  .legal {
+    position: absolute; left: 16mm; right: 16mm; bottom: 9mm;
+    border-top: .2mm solid #e3c9d1; padding-top: 1.4mm;
+    text-align: center; font-size: 7.2pt; color: #8a6a72; letter-spacing: .02em;
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HALAMAN 1 : INVOICE ================= -->
+<div class="sheet">
+  <div class="head">
+    <div class="brand">
+      <h1>AKSISOFT MEDIA</h1>
+      <p>Idea &bull; Build &bull; Solution</p>
+      <div class="web">Web: aksisoft.web.id</div>
+    </div>
+    <div class="judul">
+      <h2>INVOICE</h2>
+      <div class="no">No. 001/INV/AKS/X/2026</div>
+      <div class="tag">Pelunasan 50% &mdash; Website Company Profile</div>
+    </div>
+  </div>
+
+  <div class="infogrid">
+    <div class="infobox">
+      <h3>Kepada Yth.</h3>
+      <b style="font-size:10.5pt">YO TARPAULIN</b><br>
+      CV. Yo Terpal Nusantara Raya<br>
+      <span class="small">Proyek: Website company profile &amp; katalog produk</span>
+      <span class="small">Kontak: WA +62 812-2133-2929</span>
+    </div>
+    <div class="infobox">
+      <h3>Rincian Invoice</h3>
+      <div class="kv"><div class="k">Nomor</div><div class="v"><b>001/INV/AKS/X/2026</b></div></div>
+      <div class="kv"><div class="k">Tanggal</div><div class="v">Surabaya, 30 Oktober 2026</div></div>
+      <div class="kv"><div class="k">Referensi</div><div class="v">Proposal No. 010/AKS-SOFT/X/2026 (Rev. 2)</div></div>
+      <div class="kv"><div class="k">Proyek</div><div class="v">https://yoterpal.com &mdash; <b>selesai &amp; live</b></div></div>
+      <div class="kv"><div class="k">Metode</div><div class="v">Transfer Bank</div></div>
+    </div>
+  </div>
+
+  <table class="rincian">
+    <thead>
+      <tr><th style="width:8mm">No</th><th>Keterangan Pekerjaan</th><th class="last" style="width:34mm">Nilai (Rp)</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Desain &amp; pengembangan website (9 halaman utama + 404)
+          <span class="sub">Beranda, Produk, Tentang, Galeri, Keunggulan, Aplikasi, Kontak, 404 kustom &mdash; responsif penuh, animasi halus, header menempel</span></td>
+        <td class="last nom">3.000.000</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Desain aset visual &amp; optimasi gambar WebP
+          <span class="sub">Logo, ikon, banner, foto produk/bahan &mdash; semua aset dioptimasi agar muat cepat</span></td>
+        <td class="last nom">750.000</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Integrasi WhatsApp, SEO dasar &amp; pengisian konten awal
+          <span class="sub">Tombol/form pemesanan WA (2 saluran), meta SEO + Open Graph + JSON-LD, sitemap, robots, konten 10 detail produk</span></td>
+        <td class="last nom">750.000</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Deployment online + pendampingan
+          <span class="sub">Live di domain https://yoterpal.com dengan SSL aktif &mdash; tanpa biaya sewa hosting tahun pertama</span></td>
+        <td class="last nom">500.000</td>
+      </tr>
+      <tr class="total">
+        <td></td><td>Nilai Kontrak (Total)</td><td class="last">5.000.000</td>
+      </tr>
+      <tr class="pay">
+        <td></td>
+        <td>Dibayar DP 50% &mdash; transfer bank, 28 Okt 2026
+          <span class="sub">Bukti: Kwitansi No. 001/KWT/AKS/X/2026</span></td>
+        <td class="last nom">&minus;2.500.000</td>
+      </tr>
+      <tr class="pay">
+        <td></td>
+        <td><b>Pelunasan 50% &mdash; transfer bank, 30 Okt 2026</b>
+          <span class="sub">Bukti: Kwitansi No. 002/KWT/AKS/X/2026</span></td>
+        <td class="last nom">&minus;2.500.000</td>
+      </tr>
+      <tr class="total">
+        <td></td>
+        <td><b>Sisa yang harus dibayar</b> &mdash; <span style="letter-spacing:.06em">LUNAS</span></td>
+        <td class="last">0</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="terbilang">
+    Nilai tahap ini: <b>Dua Juta Lima Ratus Ribu Rupiah</b> &mdash; seluruh nilai kontrak Rp 5.000.000 telah diterima penuh.
+  </div>
+
+  <div class="notes">
+    <div class="col">
+      <h4>Ketentuan Pembayaran</h4>
+      <p>Pembayaran dilakukan via transfer bank sebagaimana tahap sebelumnya (bukti kwitansi No. 001 &amp; 002/KWT/AKS/X/2026).</p>
+      <p class="muted">Invoice ini merupakan dokumen administrasi tagihan &mdash; kwitansi No. 001 &amp; 002 merupakan bukti pembayaran yang sah.</p>
+    </div>
+    <div class="col">
+      <h4>Biaya Layanan Tahunan</h4>
+      <p>Rp 1.500.000/tahun &mdash; aktif 1 Nov 2026 s.d. 31 Okt 2027 (pembaruan konten, perawatan, hosting &amp; SSL).</p>
+      <p class="muted">Tagihan berikutnya: 1 November 2027.</p>
+    </div>
+  </div>
+
+  <div class="stempel">Lunas<small>Pelunasan 50%</small></div>
+
+  <div class="foot">
+    <div class="sisa">
+      <b>Serah terima website berjalan normal.</b> Garansi perbaikan bug 30 hari
+      sejak tanggal invoice. Revisi konten/tampilan sesuai ketentuan proposal (2x).
+      Untuk pertanyaan invoice: WA 0813-3520-6389.
+    </div>
+    <div class="ttd">
+      <div class="kota">Surabaya, 30 Oktober 2026</div>
+      <div class="role">Hormat kami,</div>
+      <div class="spasi">
+        <span class="stempel-logo"><img src="assets/images/aksisoft-mark.webp" alt=""></span>
+      </div>
+      <div class="nama">AKSISOFT MEDIA</div>
+    </div>
+  </div>
+
+  <div class="legal">
+    AKSISOFT MEDIA &bull; aksisoft.web.id &bull; WA 0813-3520-6389 &bull; lynk.id/aksisoft &mdash; <i>Teknologi untuk kehidupan yang lebih baik</i>
+  </div>
+</div>
+
+<!-- ================= HALAMAN 2 : HASIL PEKERJAAN ================= -->
+<div class="sheet sheet--last">
+  <div class="head">
+    <div class="brand">
+      <h1>AKSISOFT MEDIA</h1>
+      <p>Idea &bull; Build &bull; Solution</p>
+      <div class="web">Web: aksisoft.web.id</div>
+    </div>
+    <div class="judul">
+      <h2 style="font-size:14pt">HASIL PEKERJAAN</h2>
+      <div class="no">Lampiran Invoice No. 001/INV/AKS/X/2026</div>
+      <div class="tag">Domain aktif: <b>https://yoterpal.com</b></div>
+    </div>
+  </div>
+
+  <div class="sect-title">
+    <h3>Semua halaman berikut SUDAH LIVE di https://yoterpal.com</h3>
+    <p>20 halaman sesuai ruang lingkup risalah + 1 halaman tambahan (Tas Spunbond) yang ditambahkan setelah serah terima &mdash; total 21 halaman aktif.</p>
+  </div>
+
+  <div class="deliver">
+    <div class="col">
+      <h4>Halaman Utama</h4>
+      <ul>
+        <li>Beranda (landing page lengkap)<br><span class="url">yoterpal.com/</span></li>
+        <li>Produk &mdash; katalog 11 produk + tabel spesifikasi<br><span class="url">yoterpal.com/produk.html</span></li>
+        <li>Tentang &mdash; profil, sambutan owner, merek<br><span class="url">yoterpal.com/tentang.html</span></li>
+        <li>Galeri Pabrik<br><span class="url">yoterpal.com/galeri.html</span></li>
+        <li>Keunggulan &amp; Standar Mutu<br><span class="url">yoterpal.com/keunggulan.html</span></li>
+        <li>Aplikasi &amp; Panduan Pemakaian<br><span class="url">yoterpal.com/aplikasi.html</span></li>
+        <li>Kontak + FAQ + peta lokasi<br><span class="url">yoterpal.com/kontak.html</span></li>
+        <li>Halaman 404 kustom<br><span class="url">yoterpal.com/404.html</span></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Detail Produk (11)</h4>
+      <ul>
+        <li>Terpal Biru Premium <span class="url">&hellip;/produk/terpal-biru-premium.html</span></li>
+        <li>Terpal Navy <span class="url">&hellip;/produk/terpal-navy.html</span></li>
+        <li>Terpal Kuning Gold <span class="url">&hellip;/produk/terpal-kuning-gold.html</span></li>
+        <li>Terpal Hijau <span class="url">&hellip;/produk/terpal-hijau.html</span></li>
+        <li>Terpal Oranye <span class="url">&hellip;/produk/terpal-oranye.html</span></li>
+        <li>Terpal PVC Transparan <span class="url">&hellip;/produk/terpal-pvc-transparan.html</span></li>
+        <li>Terpal Roll <span class="url">&hellip;/produk/terpal-roll.html</span></li>
+        <li>Terpal Biru Muda <span class="url">&hellip;/produk/terpal-biru-muda.html</span></li>
+        <li>Paranet Bangunan <span class="url">&hellip;/produk/paranet-bangunan.html</span></li>
+        <li>Sarung Tangan Industri <span class="url">&hellip;/produk/sarung-tangan-industri.html</span></li>
+        <li>Tas Spunbond (tambahan) <span class="url">&hellip;/produk/tas-spunbond.html</span></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Dukungan SEO &amp; File</h4>
+      <ul>
+        <li>Sitemap SEO <span class="url">yoterpal.com/sitemap.xml</span></li>
+        <li>Robots <span class="url">yoterpal.com/robots.txt</span></li>
+        <li>Kode sumber terbuka <span class="url">github.com/pelayanan/yotarpaulin</span></li>
+        <li>Proposal penawaran Rev. 2 <span class="url">yoterpal.com/Proposal-Penawaran-Website-YO-Tarpaulin-Aksisoft-Rev2.pdf</span></li>
+        <li>Company profile 11 hal. <span class="url">yoterpal.com/compro-yoterpal.pdf</span></li>
+        <li>Kwitansi DP 50% <span class="url">yoterpal.com/Kwitansi-DP-50persen-Website-YO-Tarpaulin-Aksisoft.pdf</span></li>
+        <li>Kwitansi pelunasan 50% <span class="url">yoterpal.com/Kwitansi-Pelunasan-50persen-Website-YO-Tarpaulin-Aksisoft.pdf</span></li>
+      </ul>
+      <h4 style="margin-top:3mm">Fitur Termasuk</h4>
+      <ul>
+        <li>Responsif penuh &mdash; HP, tablet, desktop</li>
+        <li>Menu dropdown produk &amp; informasi</li>
+        <li>Form pemesanan WhatsApp 2 saluran</li>
+        <li>Tombol WA mengapung + CTA tiap halaman</li>
+        <li>Sambutan Owner + tanda tangan</li>
+        <li>6 logo merek produksi (terpal &amp; paranet)</li>
+        <li>Google Maps lokasi gudang/kantor</li>
+        <li>Ikon sosial IG, Threads, TikTok, WA</li>
+        <li>Animasi halus + reveal konten</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="fitur">
+    <h4>Standar Teknis yang Diterapkan</h4>
+    <ul>
+      <li>Gambar dioptimasi format WebP &mdash; loading cepat</li>
+      <li>SSL aktif &mdash; domain kustom yoterpal.com</li>
+      <li>Header menempel &amp; navigasi responsif</li>
+      <li>Meta SEO, Open Graph &amp; data terstruktur JSON-LD</li>
+      <li>Sitemap &amp; robots otomatis diperbarui</li>
+      <li>Cache CDN (Cloudflare) + anti-cache build</li>
+      <li>Build otomatis GitHub Pages dari branch main</li>
+      <li>Struktur dataproduk terpusat (YAML) &mdash; mudah dikelola</li>
+      <li>Backup kode di GitHub &mdash; risiko hilang minimal</li>
+    </ul>
+  </div>
+
+  <div class="stempel" style="top:206mm; right:18mm">Serah Terima<small>Website yoterpal.com</small></div>
+
+  <div class="foot">
+    <div class="sisa">
+      <b>Serah terima dilakukan 30 Oktober 2026:</b> transfer akses kode sumber (GitHub), domain, dan kuota layanan
+      1 Nov 2026 &ndash; 31 Okt 2027. Serah terima dinyatakan selesai; kontrak pekerjaan Rp 5.000.000 lunas seluruhnya.
+    </div>
+    <div class="ttd">
+      <div class="kota">Surabaya, 30 Oktober 2026</div>
+      <div class="role">Hormat kami,</div>
+      <div class="spasi">
+        <span class="stempel-logo"><img src="assets/images/aksisoft-mark.webp" alt=""></span>
+      </div>
+      <div class="nama">AKSISOFT MEDIA</div>
+    </div>
+  </div>
+
+  <div class="legal">
+    AKSISOFT MEDIA &bull; aksisoft.web.id &bull; WA 0813-3520-6389 &bull; lynk.id/aksisoft &mdash; <i>Teknologi untuk kehidupan yang lebih baik</i>
+  </div>
+</div>
+
+</body>
+</html>
