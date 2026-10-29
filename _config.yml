@@ -59,6 +59,7 @@ exclude:
   - proposal-website.txt
   - isi-website.md
   - make_og.py
+  - make_og_variants.py
   - invoice-pelunasan.html
   - INVOICE-Pelunasan-50persen-Website-YO-Tarpaulin-Aksisoft.pdf
   - Proposal-Penawaran-Website-YO-Tarpaulin-Aksisoft.pdf
