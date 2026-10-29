@@ -55,7 +55,7 @@ t4a = "Terpal PE & PVC · Paranet"
 d.text((tx, 372), t4a, font=f_sub1, fill=(70, 90, 120))
 
 # chip hotline oranye — lebar mengikuti teks, dipastikan muat
-t5 = "WHATSAPP +62 812-2133-2929"
+t5 = "WHATSAPP +62 822-13-8889"
 w5 = d.textlength(t5, font=f_hotline)
 cw = int(w5) + 56
 ch_top = 452

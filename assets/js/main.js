@@ -77,7 +77,7 @@
         "Lokasi Kirim: " + (fd.get("lokasi") || "-"),
         "Detail: " + (fd.get("pesan") || "-")
       ];
-      var url = "https://wa.me/6281221332929?text=" + encodeURIComponent(lines.join("\n"));
+      var url = "https://wa.me/62822138889?text=" + encodeURIComponent(lines.join("\n"));
       window.open(url, "_blank", "noopener");
     });
   }

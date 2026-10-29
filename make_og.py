@@ -62,7 +62,7 @@ def brand_card(dst):
     d.text((tx, 190), "YO TARPAULIN", font=font(64), fill=(255, 255, 255))
     d.text((tx, 290), "Solusi Terpal Anda", font=font(40, False), fill=(255, 214, 0))
     d.text((tx, 400), "Produsen & Pemasok Terpal Nasional", font=font(28, False), fill=(214, 228, 252))
-    d.text((tx, 450), "Hotline: +62 812-2133-2929   ·   yoterpal.com", font=font(28, False), fill=(214, 228, 252))
+    d.text((tx, 450), "Hotline: +62 822-13-8889   ·   yoterpal.com", font=font(28, False), fill=(214, 228, 252))
     im.save(dst, "JPEG", quality=Q, optimize=True, progressive=True)
     print(dst, os.path.getsize(dst))
 
