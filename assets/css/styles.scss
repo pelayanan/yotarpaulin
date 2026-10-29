@@ -14,8 +14,8 @@
   --blue-500: #1e78dd;
   --sky-100: #eaf3fc;
   --sky-50: #f5f9fe;
-  --yellow: #ffc21f;
-  --yellow-dark: #eaa600;
+  --yellow: #f0651a;
+  --yellow-dark: #c74f0e;
   --ink: #12263f;
   --muted: #51677f;
   --line: #dbe7f3;
@@ -122,9 +122,9 @@ p { margin: 0 0 1em; }
 .btn--yellow {
   background: var(--yellow);
   color: var(--blue-950);
-  box-shadow: 0 8px 20px rgba(234, 166, 0, 0.35);
+  box-shadow: 0 8px 20px rgba(240, 101, 26, 0.35);
 }
-.btn--yellow:hover { background: var(--yellow-dark); color: var(--blue-950); }
+.btn--yellow:hover { background: var(--yellow-dark); color: var(--white); }
 
 .btn--blue {
   background: var(--blue-700);
@@ -234,7 +234,8 @@ p { margin: 0 0 1em; }
   inset: auto 0 -60% 0;
   height: 120%;
   background:
-    radial-gradient(900px 420px at 10% 100%, rgba(255, 194, 31, 0.12), transparent 60%);
+    radial-gradient(900px 420px at 10% 100%, rgba(240, 101, 26, 0.18), transparent 60%),
+    radial-gradient(700px 380px at 95% 30%, rgba(240, 101, 26, 0.14), transparent 60%);
   pointer-events: none;
 }
 
