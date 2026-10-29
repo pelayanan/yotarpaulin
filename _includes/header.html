@@ -47,7 +47,7 @@
           <a class="nav__link nav__link--dd" href="{{ site.baseurl }}{{ item.link }}">{{ item.name }}<span class="nav__caret" aria-hidden="true"></span></a>
           <div class="nav__dd-panel">
             {% for p in site.data.products %}
-            <a href="{{ site.baseurl }}/produk/{{ p.slug }}.html">{{ p.name }}</a>
+            <a href="{{ site.baseurl }}/produk/{{ p.slug }}/">{{ p.name }}</a>
             {% endfor %}
             {% for e in item.extra %}
             <a href="{{ site.baseurl }}{{ e.link }}">{{ e.name }}</a>

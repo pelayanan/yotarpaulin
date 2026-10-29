@@ -1,5 +1,5 @@
 # Katalog produk (foto produk di assets/images)
-# slug dipakai untuk halaman detail /produk/<slug>.html
+# slug dipakai untuk halaman detail /produk/<slug>/
 # detail = paragraf deskripsi; uses = kegunaan utama (checklist)
 # banner/gallery = foto tambahan khusus produk tertentu
 - image: prod-biru-premium.webp

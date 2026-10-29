@@ -2,7 +2,7 @@
 layout: default
 title: "Katalog Produk Terpal & Sarung Tangan"
 description: "Katalog lengkap Yo Tarpaulin: terpal PE premium, terpal roll, terpal PVC transparan, paranet bangunan, dan sarung tangan industri — kini dengan halaman detail per produk."
-permalink: /produk.html
+permalink: /produk/
 ---
 
 <section class="page-hero">
@@ -12,7 +12,7 @@ permalink: /produk.html
     <p>Semua produk diproduksi langsung oleh pabrik kami dengan quality control ketat — tersedia order custom untuk kebutuhan spesifik proyek Anda.</p>
     <div class="hero__actions">
       <a class="btn btn--yellow" href="{{ site.whatsapp }}" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Tanya Stok &amp; Harga</a>
-      <a class="btn btn--ghost" href="{{ site.baseurl }}/kontak.html">Kirim Kebutuhan</a>
+      <a class="btn btn--ghost" href="{{ site.baseurl }}/kontak/">Kirim Kebutuhan</a>
     </div>
   </div>
 </section>
@@ -27,13 +27,13 @@ permalink: /produk.html
           <span class="product__cat">{{ item.category }}</span>
         </div>
         <div class="product__body">
-          <h3><a href="{{ site.baseurl }}/produk/{{ item.slug }}.html">{{ item.name }}</a></h3>
+          <h3><a href="{{ site.baseurl }}/produk/{{ item.slug }}/">{{ item.name }}</a></h3>
           <p>{{ item.desc }}</p>
           <ul class="chips">
             {% for s in item.specs %}<li>{{ s }}</li>{% endfor %}
           </ul>
           <div class="product__links">
-            <a class="product__cta" href="{{ site.baseurl }}/produk/{{ item.slug }}.html">Lihat detail <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="product__cta" href="{{ site.baseurl }}/produk/{{ item.slug }}/">Lihat detail <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
             <a class="product__cta" href="{{ site.whatsapp }}" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Minta penawaran</a>
           </div>
         </div>

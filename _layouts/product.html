@@ -6,13 +6,13 @@ layout: default
 
 <section class="page-hero">
   <div class="container">
-    <nav class="crumb" aria-label="Breadcrumb"><a href="{{ site.baseurl }}/produk.html">Katalog Produk</a> <span>/</span> {{ item.name }}</nav>
+    <nav class="crumb" aria-label="Breadcrumb"><a href="{{ site.baseurl }}/produk/">Katalog Produk</a> <span>/</span> {{ item.name }}</nav>
     <span class="eyebrow eyebrow--light">{{ item.category }}</span>
     <h1>{{ item.name }} <span class="hl">Langsung dari Pabrik</span></h1>
     <p>{{ item.desc }}</p>
     <div class="hero__actions">
       <a class="btn btn--yellow" href="{{ site.whatsapp }}" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Tanya Stok & Harga</a>
-      <a class="btn btn--ghost" href="{{ site.baseurl }}/kontak.html">Kirim Kebutuhan</a>
+      <a class="btn btn--ghost" href="{{ site.baseurl }}/kontak/">Kirim Kebutuhan</a>
     </div>
   </div>
 </section>
@@ -38,7 +38,7 @@ layout: default
       </ul>
       <div class="split__actions">
         <a class="btn btn--yellow" href="{{ site.whatsapp }}" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Tanya Stok & Harga</a>
-        <a class="btn btn--ghost btn--ghost--light" href="{{ site.baseurl }}/kontak.html">Kirim Kebutuhan</a>
+        <a class="btn btn--ghost btn--ghost--light" href="{{ site.baseurl }}/kontak/">Kirim Kebutuhan</a>
       </div>
     </div>
   </div>
@@ -136,10 +136,10 @@ layout: default
               <span class="product__cat">{{ p.category }}</span>
             </div>
             <div class="product__body">
-              <h3><a href="{{ site.baseurl }}/produk/{{ p.slug }}.html">{{ p.name }}</a></h3>
+              <h3><a href="{{ site.baseurl }}/produk/{{ p.slug }}/">{{ p.name }}</a></h3>
               <p>{{ p.desc | truncate: 80 }}</p>
               <div class="product__links">
-                <a class="product__cta" href="{{ site.baseurl }}/produk/{{ p.slug }}.html">Lihat detail <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                <a class="product__cta" href="{{ site.baseurl }}/produk/{{ p.slug }}/">Lihat detail <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
               </div>
             </div>
           </article>

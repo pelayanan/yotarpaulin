@@ -14,13 +14,13 @@
           <span class="product__cat">{{ item.category }}</span>
         </div>
         <div class="product__body">
-          <h3><a href="{{ site.baseurl }}/produk/{{ item.slug }}.html">{{ item.name }}</a></h3>
+          <h3><a href="{{ site.baseurl }}/produk/{{ item.slug }}/">{{ item.name }}</a></h3>
           <p>{{ item.desc }}</p>
           <ul class="chips">
             {% for s in item.specs %}<li>{{ s }}</li>{% endfor %}
           </ul>
           <div class="product__links">
-            <a class="product__cta" href="{{ site.baseurl }}/produk/{{ item.slug }}.html">Lihat detail <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="product__cta" href="{{ site.baseurl }}/produk/{{ item.slug }}/">Lihat detail <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
         </div>
       </article>
@@ -28,7 +28,7 @@
     </div>
 
     <div class="center reveal">
-      <a class="btn btn--blue" href="{{ site.baseurl }}/produk.html">Lihat Semua Produk <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn--blue" href="{{ site.baseurl }}/produk/">Lihat Semua Produk <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
   </div>
 </section>
