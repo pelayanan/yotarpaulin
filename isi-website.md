@@ -97,7 +97,7 @@ Pabrik kami memproduksi beberapa merek sendiri — inilah tanda yang akan Anda t
 
 ---
 
-## 2. TENTANG KAMI (https://yoterpal.com/tentang.html)
+## 2. TENTANG KAMI (https://yoterpal.com/tentang/)
 
 ### Judul Halaman
 
@@ -168,7 +168,7 @@ Keterangan foto gudang (tanpa gambar): stok grosir dengan label jelas (karung be
 
 ---
 
-## 3. GALERI PABRIK (https://yoterpal.com/galeri.html)
+## 3. GALERI PABRIK (https://yoterpal.com/galeri/)
 
 **Judul:** Langsung dari Lantai Produksi
 Semua foto diambil langsung di pabrik kami — dari benang HDPE hingga roll siap kirim ke lokasi proyek Anda.
@@ -199,7 +199,7 @@ Pemuatan harian dengan forklift dan armada sendiri. Varian warna lengkap — ter
 
 ---
 
-## 4. PRODUK — KATALOG (https://yoterpal.com/produk.html)
+## 4. PRODUK — KATALOG (https://yoterpal.com/produk/)
 
 **Judul:** Terpal & Sarung Tangan Berkualitas Tinggi
 Semua produk diproduksi langsung oleh pabrik kami dengan quality control ketat — tersedia order custom untuk kebutuhan spesifik proyek Anda.
@@ -227,7 +227,7 @@ Semua produk diproduksi langsung oleh pabrik kami dengan quality control ketat �
 
 ---
 
-## 5. DETAIL PRODUK (11 PRODUK — halaman tersendiri di /produk/<nama>.html)
+## 5. DETAIL PRODUK (11 PRODUK — halaman tersendiri di /produk/<nama>/)
 
 ### 5.1 Terpal Biru Premium — Terpal PE Laminasi
 
@@ -322,7 +322,7 @@ Keterangan foto varian (tanpa gambar): "Benang HDPE ditenun rapat oleh mesin jar
 
 ---
 
-## 6. KEUNGGULAN (https://yoterpal.com/keunggulan.html)
+## 6. KEUNGGULAN (https://yoterpal.com/keunggulan/)
 
 ### Kenapa Terpal Yo Tarpaulin?
 
@@ -362,7 +362,7 @@ Standar kerja yang membuat mutu konsisten dari order pertama hingga yang kesekia
 
 ---
 
-## 7. APLIKASI (https://yoterpal.com/aplikasi.html)
+## 7. APLIKASI (https://yoterpal.com/aplikasi/)
 
 ### Terpal untuk Setiap Kebutuhan Lapangan
 
@@ -421,7 +421,7 @@ Banner distribusi di halaman ini: "Jaringan distribusi nasional Yo Tarpaulin: 34
 
 ---
 
-## 10. KONTAK (https://yoterpal.com/kontak.html)
+## 10. KONTAK (https://yoterpal.com/kontak/)
 
 ### Hero Kontak
 
@@ -470,13 +470,15 @@ Form di halaman kontak mengirimkan ringkasan pesanan otomatis ke WhatsApp: **Nam
 ### Halaman Aktif (21)
 
 1. https://yoterpal.com/ — Beranda (landing lengkap)
-2. https://yoterpal.com/produk.html — Katalog 11 produk + tabel spesifikasi
-3. https://yoterpal.com/tentang.html — Profil, Profil Owner, Nilai, Fasilitas, Komitmen, Merek
-4. https://yoterpal.com/galeri.html — Galeri Pabrik
-5. https://yoterpal.com/keunggulan.html — Keunggulan & Standar Mutu
-6. https://yoterpal.com/aplikasi.html — Aplikasi & Panduan Pemakaian
-7. https://yoterpal.com/kontak.html — Kontak + FAQ + peta lokasi
+2. https://yoterpal.com/produk/ — Katalog 11 produk + tabel spesifikasi
+3. https://yoterpal.com/tentang/ — Profil, Profil Owner, Nilai, Fasilitas, Komitmen, Merek
+4. https://yoterpal.com/galeri/ — Galeri Pabrik
+5. https://yoterpal.com/keunggulan/ — Keunggulan & Standar Mutu
+6. https://yoterpal.com/aplikasi/ — Aplikasi & Panduan Pemakaian
+7. https://yoterpal.com/kontak/ — Kontak + FAQ + peta lokasi
 8. https://yoterpal.com/404.html — Halaman 404 kustom
+
+> Catatan: semua halaman tampil dengan URL bersih tanpa `.html` — mis. `/tentang/`, `/produk/`, `/produk/terpal-roll/`. Kode 404.html adalah pengecualian teknis (wajib ada di GitHub Pages).
 9–19. Detail produk (11 halaman) — terpal-biru-premium, terpal-navy, terpal-kuning-gold, terpal-hijau, terpal-oranye, terpal-pvc-transparan, terpal-roll, terpal-biru-muda, paranet-bangunan, sarung-tangan-industri, tas-spunbond
 20. https://yoterpal.com/sitemap.xml — Sitemap SEO
 21. https://yoterpal.com/robots.txt — Robots
