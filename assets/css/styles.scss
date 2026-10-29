@@ -1239,6 +1239,8 @@ body.has-lightbox { overflow: hidden; }
   .site-header .brand__text strong { font-size: 1.06rem; }
   .nav { gap: 2px; }
   .nav__link { padding: 9px 7px; font-size: 0.9rem; }
+  .nav__soc { width: 32px; height: 32px; }
+  .nav__soc .ico { width: 15px; height: 15px; }
 }
 @media (min-width: 951px) and (max-width: 1150px) {
   .nav__cta { white-space: nowrap; }
