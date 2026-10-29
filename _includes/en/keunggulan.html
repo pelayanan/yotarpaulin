@@ -1,0 +1,27 @@
+<section class="section section--alt" id="keunggulan">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our Advantages</span>
+      <h2>Why Choose YO TERPAL NUSANTARA RAYA?</h2>
+      <p>The main reasons mines, contractors, and distributors trust their tarpaulin needs to us.</p>
+    </div>
+
+    <div class="cards cards--3">
+      {% for item in site.data.advantages_en %}
+      <article class="card reveal">
+        <img class="card__icon" src="{{ site.baseurl }}/assets/images/{{ item.image }}" alt="" loading="lazy" width="84" height="84">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </article>
+      {% endfor %}
+    </div>
+
+    <figure class="banner-wide reveal">
+      <img src="{{ site.baseurl }}/assets/images/banner-kenapa.webp?v=2" alt="YO TERPAL NUSANTARA RAYA advantages infographic: maximum coverage, waterproof, heat & UV resistant, strong material, tarpaulin & shade net, fast service & delivery" loading="lazy" width="1200" height="332">
+    </figure>
+
+    <div class="center">
+      <a class="btn btn--blue" href="{{ site.baseurl }}/en/advantages/">Our Advantages in Detail <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>

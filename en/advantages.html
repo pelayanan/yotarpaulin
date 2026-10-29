@@ -1,0 +1,106 @@
+---
+layout: default_en
+lang: en
+lang_other: /keunggulan/
+title: "Advantages of YO TERPAL NUSANTARA RAYA Tarpaulins — Waterproof, Strong, Factory Price"
+description: "6 advantages of YO TERPAL NUSANTARA RAYA tarpaulins: 100% waterproof, tear resistant, UV & heat resistant, direct factory price, custom sizes, and 24/7 responsive service for mining and infrastructure projects."
+permalink: /en/advantages/
+image: /assets/images/og/og-keunggulan.jpg
+---
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow eyebrow--light">Our Advantages</span>
+    <h1>Why YO TERPAL <span class="hl">NUSANTARA RAYA?</span></h1>
+    <p>Six main reasons mines, contractors, and distributors trust their tarpaulin needs to us.</p>
+    <div class="hero__actions">
+      <a class="btn btn--yellow" href="{{ site.whatsapp }}" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Ask Stock &amp; Price</a>
+      <a class="btn btn--ghost" href="{{ site.baseurl }}/en/products/">View Product Catalog</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="split__body reveal" style="max-width: 860px; margin: 0 auto 10px;">
+      <span class="eyebrow">About Our Brand</span>
+      <h2>Self-Produced, Quality We Hold Ourselves</h2>
+      <p>YO TERPAL NUSANTARA RAYA is a brand owned by <strong>{{ site.company }}</strong> — a tarpaulin manufacturer focused on serving the mining industry and large-scale infrastructure projects across Indonesia. Because we produce everything ourselves from HDPE yarn to lamination, every claim on this page can be backed up on the production floor — not just reseller talk.</p>
+    </div>
+
+    <div class="cards cards--3">
+      {% for item in site.data.advantages_en %}
+      <article class="card reveal">
+        <img class="card__icon" src="{{ site.baseurl }}/assets/images/{{ item.image }}" alt="" loading="lazy" width="84" height="84">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Behind the Scenes</span>
+      <h2>What We Do Differently</h2>
+      <p>Working standards that keep quality consistent from the first order to the hundredth.</p>
+    </div>
+    <div class="note-grid">
+      <div class="note reveal">
+        <h3>QC per Production Batch</h3>
+        <p>Thickness (GSM), weave density, and lamination results are checked on every batch before goods leave the warehouse. Field complaints feed improvements into the next batch.</p>
+      </div>
+      <div class="note reveal">
+        <h3>Routine Stock Ready to Ship</h3>
+        <p>All popular variants sit in our warehouse so urgent orders can be packed and shipped the same day or next day anywhere in Indonesia.</p>
+      </div>
+      <div class="note reveal">
+        <h3>Documents &amp; Samples for Procurement</h3>
+        <p>Large orders or tenders? Material samples and quality documents are prepared to match your company's procurement process.</p>
+      </div>
+      <div class="note reveal">
+        <h3>Replacement Warranty</h3>
+        <p>Products that do not match the agreed specification will be replaced. Claims are discussed directly with our team so they resolve fast.</p>
+      </div>
+      <div class="note reveal">
+        <h3>Contract Pricing</h3>
+        <p>For the routine monthly orders of mines and projects, we offer contract pricing so your industrial purchasing can be budgeted from the start.</p>
+      </div>
+      <div class="note reveal">
+        <h3>24/7 Emergency Delivery</h3>
+        <p>Operations disrupted by rain? Our team and fleet stand by for urgent 24/7 deliveries until goods reach your site.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>Questions About Quality</h2>
+    </div>
+    <div class="faq">
+      <details class="reveal">
+        <summary>Are YO TERPAL NUSANTARA RAYA tarpaulins really resistant to heavy rain?</summary>
+        <p>Yes. The surface of our tarpaulins is double-laminated so rainwater flows straight to the edges without seeping through — that is why our tarpaulins are the trusted cover for materials at mining sites with high rainfall.</p>
+      </details>
+      <details class="reveal">
+        <summary>What does GSM mean on tarpaulins?</summary>
+        <p>GSM (grams per square meter) is the unit of material weight/thickness. The higher the GSM, the thicker and stronger the tarpaulin. Our team will help you pick the most economical option for your use.</p>
+      </details>
+      <details class="reveal">
+        <summary>Can I order with our company logo?</summary>
+        <p>Yes. Besides custom sizes and colors, logo printing is available for project and tender requirements — also great for merchandise or work-zone boundaries that need clear branding.</p>
+      </details>
+      <details class="reveal">
+        <summary>Is there a product warranty?</summary>
+        <p>There is. Products that do not match the agreed specification will be replaced. Claims are discussed directly with our team so they resolve quickly.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+{% include en/cta.html %}

@@ -68,7 +68,16 @@
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
       var fd = new FormData(form);
-      var lines = [
+      var isEn = document.documentElement.lang === "en";
+      var lines = isEn ? [
+        "Hello YO TERPAL NUSANTARA RAYA, I would like to ask about your tarpaulins.",
+        "",
+        "Name: " + (fd.get("nama") || "-"),
+        "Needs: " + (fd.get("kebutuhan") || "-"),
+        "Quantity: " + (fd.get("jumlah") || "-"),
+        "Deliver To: " + (fd.get("lokasi") || "-"),
+        "Details: " + (fd.get("pesan") || "-")
+      ] : [
         "Halo YO TERPAL NUSANTARA RAYA, saya ingin bertanya tentang terpal.",
         "",
         "Nama: " + (fd.get("nama") || "-"),

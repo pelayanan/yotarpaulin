@@ -1,0 +1,31 @@
+# Tarpaulin applications (EN) — photos shared with applications.yml
+- image: app-pickup.webp
+  title: "Fleets & Trucks"
+  text: "Tidy, secure cargo covers for pickups through trailer trucks on long hauls."
+- image: app-cement.webp
+  title: "Cement & Materials"
+  text: "Protecting cement bags, sand, and building materials from rain and moisture on project sites."
+- image: app-scaffolding.webp
+  title: "Construction & Scaffolding"
+  text: "Scaffolding enclosures and building wraps during renovation — safe from dust and splatter."
+- image: app-equipment.webp
+  title: "Heavy Equipment & Mining"
+  text: "Covers for heavy equipment, stockpiles, and mine work areas in extreme weather."
+- image: app-fishpond.webp
+  title: "Ponds & Aquaculture"
+  text: "Liners for cultured ponds and cage covers — safe to use with fish feed."
+- image: app-speedboat.webp
+  title: "Marine & Speedboats"
+  text: "Hull and deck covers while moored — protection from seawater and sunlight."
+- image: app-hay.webp
+  title: "Agriculture & Plantations"
+  text: "Covers for hay, paddy, and harvest so they stay dry through the rainy season."
+- image: app-roof.webp
+  title: "Roofs & Housing"
+  text: "Temporary roof covers during renovation and leak protection for homes."
+- image: app-canopy.webp
+  title: "Tents & Canopies"
+  text: "Versatile tents for events, open-field storage, and project coordination posts."
+- image: app-camping.webp
+  title: "Outdoor & Camping"
+  text: "Flysheets and outdoor shelters that are light, strong, and quick to set up."

@@ -1,0 +1,97 @@
+---
+layout: default_en
+lang: en
+lang_other: /produk/
+title: "Tarpaulin Product Catalog"
+description: "Complete YO TERPAL NUSANTARA RAYA catalog: premium PE tarpaulins, tarpaulin rolls, transparent PVC tarpaulins, and construction shade nets — each with its own product detail page."
+permalink: /en/products/
+image: /assets/images/og/og-produk.jpg
+---
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow eyebrow--light">Product Catalog</span>
+    <h1><span class="hl">High-Quality</span> Tarpaulins</h1>
+    <p>Every product is produced by our own factory under strict quality control — custom orders available for your project's specific requirements.</p>
+    <div class="hero__actions">
+      <a class="btn btn--yellow" href="{{ site.whatsapp }}" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Ask Stock &amp; Price</a>
+      <a class="btn btn--ghost" href="{{ site.baseurl }}/en/contact/">Send Requirements</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cards cards--3">
+      {% for item in site.data.products_en %}
+      <article class="product reveal">
+        <div class="product__thumb">
+          <img src="{{ site.baseurl }}/assets/images/{{ item.image }}" alt="{{ item.name }} YO TERPAL NUSANTARA RAYA" loading="lazy" width="640" height="640">
+          <span class="product__cat">{{ item.category }}</span>
+        </div>
+        <div class="product__body">
+          <h3><a href="{{ site.baseurl }}/en/products/{{ item.slug }}/">{{ item.name }}</a></h3>
+          <p>{{ item.desc }}</p>
+          <ul class="chips">
+            {% for s in item.specs %}<li>{{ s }}</li>{% endfor %}
+          </ul>
+          <div class="product__links">
+            <a class="product__cta" href="{{ site.baseurl }}/en/products/{{ item.slug }}/">View details <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="product__cta" href="{{ site.whatsapp }}" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Request a quote</a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="spesifikasi">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">General Specification</span>
+      <h2>Choosing the Right Tarpaulin</h2>
+      <p>This table helps you pick the right thickness. Need help? Contact our team.</p>
+    </div>
+
+    <div class="table-wrap reveal">
+      <table class="spec-table">
+        <thead>
+          <tr><th>Product</th><th>Material</th><th>Thickness (GSM)</th><th>Roll Size</th><th>Best For</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Light Blue Tarpaulin</td><td>Laminated PE</td><td>80–140</td><td>2×50 m</td><td>Merchandise covers, warehouses</td></tr>
+          <tr><td>Green Tarpaulin</td><td>Laminated PE</td><td>90–150</td><td>2×50 m</td><td>Plantations, ponds, shading</td></tr>
+          <tr><td>Gold Yellow Tarpaulin</td><td>Laminated PE</td><td>100–180</td><td>2×50 m</td><td>Harvest, high-visibility zones</td></tr>
+          <tr><td>Blue Premium Tarpaulin</td><td>Double-laminated PE</td><td>120–200</td><td>2–6×50 m</td><td>Mining, construction, trucks</td></tr>
+          <tr><td>Orange Tarpaulin</td><td>Safety PE</td><td>120–200</td><td>2–6×50 m</td><td>Scaffolding, safety zones</td></tr>
+          <tr><td>Navy Tarpaulin</td><td>Laminated PE</td><td>150–250</td><td>2–6×50 m</td><td>Canopies, events, logistics</td></tr>
+          <tr><td>Transparent PVC Tarpaulin</td><td>Premium PVC</td><td>250–450</td><td>Custom</td><td>Canopies, greenhouses, partitions</td></tr>
+          <tr><td>Construction Shade Net</td><td>HDPE netting</td><td>—</td><td>2–3×100 m</td><td>Scaffolding, shading, safety net</td></tr>
+          <tr><td>Spunbond Bags</td><td>Non-woven spunbond</td><td>—</td><td>Full custom</td><td>SME packaging, goodie bags</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <figure class="banner-wide reveal">
+      <img src="{{ site.baseurl }}/assets/images/banner-hero.webp?v=2" alt="YO TERPAL NUSANTARA RAYA premium & extra strong tarpaulins — tough material, heat & UV resistant, UV proof, 100% waterproof" loading="lazy" width="1200" height="490">
+    </figure>
+
+    <div class="note-grid">
+      <div class="note reveal">
+        <h3>Custom Colors &amp; Sizes</h3>
+        <p>All variants can be ordered in custom sizes and colors, including your company logo printing for project and tender requirements.</p>
+      </div>
+      <div class="note reveal">
+        <h3>Bulk Orders</h3>
+        <p>For mining and infrastructure projects in large volumes, contact us for contract pricing and scheduled recurring deliveries.</p>
+      </div>
+      <div class="note reveal">
+        <h3>Samples &amp; Documents</h3>
+        <p>Material samples are available for large orders. Quality documents can be provided to match your procurement requirements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include en/cta.html %}

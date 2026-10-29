@@ -1,0 +1,141 @@
+# English product catalog (EN counterparts of products.yml)
+# Slugs are used for detail pages /en/products/<slug>/
+# Images are shared with the Indonesian catalog (same files).
+- image: prod-biru-premium.webp
+  slug: blue-premium-tarpaulin
+  name: "Blue Premium Tarpaulin"
+  category: "Laminated PE Tarpaulin"
+  desc: "Double-layer laminated blue PE tarpaulin — the first choice for covering materials at mines and construction projects."
+  specs: ["120–200 GSM", "UV Resistant", "Tear Resistant"]
+  detail:
+    - "Our blue double-layer laminated PE tarpaulin is produced in-house with per-batch inspection of the weave, lamination coat, and edge strength. The 120–200 GSM thickness gives a long service life under heavy use at mine sites and construction projects."
+    - "The neutral blue color hides dirt well, and the laminated surface sheds rainfall smoothly. Available as sheets, rolls, and custom sizes to match your project needs."
+  uses: ["Covering mining material, sand, and split", "Truck & logistics fleet covers", "Canopies and construction area covers"]
+- image: prod-navy.webp
+  slug: navy-tarpaulin
+  name: "Navy Tarpaulin"
+  category: "Laminated PE Tarpaulin"
+  desc: "Elegant navy color that resists staining — ideal for canopies, event tents, and logistics fleet covers."
+  specs: ["150–250 GSM", "Color That Lasts", "Waterproof"]
+  detail:
+    - "Our navy tarpaulin uses sun-fast coloring that will not fade quickly even after months installed outdoors. At 150–250 GSM, it is strong enough for permanent and semi-permanent canopies."
+    - "Edges are finished with full hems and grommets, so mounting on canopy frames or lashing down on logistics fleets is quick and tidy."
+  uses: ["Canopies & event tents", "Logistics fleet covers", "Coverage for factory yard materials"]
+- image: prod-kuning.webp
+  slug: gold-yellow-tarpaulin
+  name: "Gold Yellow Tarpaulin"
+  category: "Laminated PE Tarpaulin"
+  desc: "A bright yellow color for work zones that need high visibility, plus paddy and harvest covers."
+  specs: ["100–180 GSM", "High Visibility", "Waterproof"]
+  detail:
+    - "Gold yellow reflects light well, making work zone boundaries clearly visible — ideal for hazard zones, heavy-vehicle lanes, and the roadside of project areas."
+    - "Farmers also like yellow tarpaulins for covering paddy and harvest — it reflects heat and is easy to spot from a distance."
+  uses: ["Work area & hazard zone marking", "Paddy and harvest covering", "Project road barriers"]
+- image: prod-hijau.webp
+  slug: green-tarpaulin
+  name: "Green Tarpaulin"
+  category: "Laminated PE Tarpaulin"
+  desc: "A multipurpose green tarpaulin for plantations, ponds, shading, and other agricultural needs."
+  specs: ["90–150 GSM", "Multipurpose", "Economical"]
+  detail:
+    - "Green tarpaulin is the go-to for farmers and growers: seedling shade, greenhouse covers, pond liners, and silage covers. The green color blends into growing areas."
+    - "The 90–150 GSM range is available in tiers — start with the economical grade and step up to heavier thicknesses for long-term commercial use."
+  uses: ["Seedling shade & greenhouses", "Pond liners", "Silage & feed covers"]
+- image: prod-oranye.webp
+  slug: orange-tarpaulin
+  name: "Orange Tarpaulin"
+  category: "Safety PE Tarpaulin"
+  desc: "Safety orange for marking hazardous areas, scaffolding covers, and workplace safety needs."
+  specs: ["120–200 GSM", "Safety Color", "Waterproof"]
+  detail:
+    - "Safety-orange tarpaulin is widely used by contractor HSE teams for scaffolding enclosures, restricted-area barriers, and securing building perimeters on large projects."
+    - "The color stays highly readable under work lights — an important factor for mine and construction site safety."
+  uses: ["Scaffolding & building covers", "Hazard area barriers", "Heavy equipment covers"]
+- image: prod-pvc.webp
+  slug: transparent-pvc-tarpaulin
+  name: "Transparent PVC Tarpaulin"
+  category: "Premium PVC Tarpaulin"
+  desc: "Clear, mold-resistant PVC for canopies, greenhouses, and partitions — light comes in, rain and dust stay out."
+  specs: ["250–450 GSM", "Transparent", "Premium Grade"]
+  detail:
+    - "Our transparent PVC tarpaulin uses premium mold-resistant material: clear yet strong, it stays flexible in low temperatures and withstands the weather longer than PE."
+    - "Commonly used for café canopies, hydroponic greenhouses, work-area partitions, and industrial curtains that need to stay bright."
+  uses: ["Transparent canopies (cafés & showrooms)", "Hydroponic greenhouses", "Industrial curtains & partitions"]
+- image: rolls-colorful.webp
+  slug: industrial-tarpaulin-roll
+  name: "Industrial Tarpaulin Roll"
+  category: "Industrial Roll Tarpaulin"
+  desc: "Wide rolls 2–6 m across and up to 50 m long — an efficient way to cover large areas at mine sites."
+  specs: ["2–6 m Width", "50 m Length", "Custom Cut"]
+  detail:
+    - "Roll format saves installation time on large areas: simply unroll and secure — fewer joints means fewer seepage points."
+    - "Available in 2, 3, 4, and 6 meter widths, 50 meters per roll; we can also cut to your area's width right at our warehouse."
+  uses: ["Mining stockpile covers", "On-site dust barriers", "Base layer for work areas"]
+- image: prod-paranet.webp
+  slug: construction-shade-net
+  name: "Construction Shade Net"
+  category: "Shade Nets & Work Netting"
+  desc: "Light-adjusting shade netting for sloof/sproet covering, work-area protection, and plant shading — HDPE at 50–100% density."
+  specs: ["50–100% Density", "2×100 m & 3×100 m", "Strong Seams"]
+  detail:
+    - "Our shade net is woven in-house from UV-stabilized HDPE yarn: strong under blazing sun, not easily brittle, with neatly finished edges."
+    - "Available in 50%, 60%, 70%, 80%, 90%, and 100% densities in 2 x 100 m and 3 x 100 m sizes — 11–28 kg per sheet depending on density (see the variant table photo below)."
+  uses: ["Scaffolding covers & project netting", "Sun protection for work areas", "Plant shade & car park covers"]
+  banner:
+    image: paranet-loom.webp
+    caption: "Woven directly on our industrial netting loom"
+  gallery:
+    - image: paranet-tenun.webp
+      caption: "Industrial weaving process"
+      text: "HDPE yarn is woven tight on our large industrial looms in-factory."
+    - image: paranet-k100.webp
+      caption: "100% Density"
+      text: "Size 2 x 100 m, 28 kg per sheet."
+    - image: paranet-k90.webp
+      caption: "90% Density"
+      text: "Size 3 x 100 m, 25 kg per sheet."
+    - image: paranet-k80.webp
+      caption: "80% Density"
+      text: "Size 3 x 100 m, 20 kg per sheet."
+    - image: paranet-k70.webp
+      caption: "70% Density"
+      text: "Size 3 x 100 m, 16 kg per sheet."
+    - image: paranet-k60.webp
+      caption: "60% Density"
+      text: "Size 3 x 100 m, 14 kg per sheet."
+    - image: paranet-k50.webp
+      caption: "50% Density"
+      text: "Size 3 x 100 m, 11 kg per sheet."
+- image: prod-biru-muda.webp
+  slug: light-blue-tarpaulin
+  name: "Light Blue Tarpaulin"
+  category: "Laminated PE Tarpaulin"
+  desc: "An economical grade that stays strong — widely used for covering merchandise and warehouses."
+  specs: ["80–140 GSM", "Economical", "Lightweight"]
+  detail:
+    - "Light blue tarpaulin is the budget-friendly choice for everyday use: covering merchandise, holding back warehouse dust, and protecting goods in transit."
+    - "Light and easy to roll, so it goes up and comes down fast, while its laminate still resists seepage."
+  uses: ["Merchandise covers", "Warehouse dust barriers", "Short-haul transport protection"]
+- image: prod-tas-spunbond.webp
+  slug: spunbond-bag
+  name: "Spunbond Bags"
+  category: "Bags & Non-Woven"
+  desc: "Non-woven spunbond bags with custom logo printing — shopping bags, goodie bags, and packaging bags that are strong and reusable."
+  specs: ["Custom Logo Printing", "Fully Custom Sizes", "Single-Piece Orders"]
+  detail:
+    - "Our bags are sewn from spunbond non-woven fabric: light, strong, and not easily torn — an economical alternative to single-use plastic for your business packaging."
+    - "Fully customizable in size, fabric color, style, and logo printing. Types range from simple shopping bags and zipper goodie bags to box bags with a flat base that stands upright."
+  uses: ["SME & retail packaging", "Event & seminar goodie bags", "Industrial product packaging"]
+  gallery:
+    - image: tas-detail-bahan.webp
+      caption: "Spunbond material detail"
+      text: "Fine non-woven fabric texture with neatly sewn handles — ready for repeated use."
+    - image: tas-warna-sablon.webp
+      caption: "Custom colors & logo printing"
+      text: "Beige, navy, maroon, and white — print your brand logo; even single-piece orders go straight into our production schedule."
+    - image: tas-stok-gudang.webp
+      caption: "Ready stock in our warehouse"
+      text: "Popular colors and sizes are ready to ship; custom orders go into the production schedule."
+    - image: tas-jahit.webp
+      caption: "Cut & sewn in-house"
+      text: "Cut from fabric rolls and sewn in our own production unit — QC on every order."

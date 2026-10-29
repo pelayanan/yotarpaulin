@@ -1,0 +1,34 @@
+<section class="section" id="produk">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our Products</span>
+      <h2>A Wide Range of Quality Tarpaulins</h2>
+      <p>Available in many colors, thicknesses, and sizes — including custom orders for your project's specific needs.</p>
+    </div>
+
+    <div class="cards cards--4">
+      {% for item in site.data.products_en limit:8 %}
+      <article class="product reveal">
+        <div class="product__thumb">
+          <img src="{{ site.baseurl }}/assets/images/{{ item.image }}" alt="{{ item.name }} YO TERPAL NUSANTARA RAYA" loading="lazy" width="640" height="640">
+          <span class="product__cat">{{ item.category }}</span>
+        </div>
+        <div class="product__body">
+          <h3><a href="{{ site.baseurl }}/en/products/{{ item.slug }}/">{{ item.name }}</a></h3>
+          <p>{{ item.desc }}</p>
+          <ul class="chips">
+            {% for s in item.specs %}<li>{{ s }}</li>{% endfor %}
+          </ul>
+          <div class="product__links">
+            <a class="product__cta" href="{{ site.baseurl }}/en/products/{{ item.slug }}/">View details <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div class="center reveal">
+      <a class="btn btn--blue" href="{{ site.baseurl }}/en/products/">View All Products <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+# Main navigation (EN) — counterpart of navigation.yml
+- name: Home
+  link: /en/
+- name: About
+  link: /en/about/
+  children:
+    - name: Company Profile
+      link: /en/about/
+    - name: Owner's Welcome
+      link: /en/about/#owner
+    - name: Factory Gallery
+      link: /en/gallery/
+    - name: Production Brands & Logos
+      link: /en/about/#merek
+    - name: Advantages & Quality
+      link: /en/advantages/
+    - name: Applications & Guides
+      link: /en/applications/
+- name: Products
+  link: /en/products/
+  dropdown: true
+  extra:
+    - name: How to Order
+      link: /en/#proses
+- name: Contact
+  link: /en/contact/

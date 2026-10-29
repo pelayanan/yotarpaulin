@@ -1,0 +1,77 @@
+<section class="section" id="kontak">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Contact Us</span>
+      <h2>Ready to Serve Your Needs</h2>
+      <p>Send us your questions or requirements — we respond fast, 24/7.</p>
+    </div>
+
+    <div class="contact">
+      <p class="contact-legal reveal">Operated by <strong>{{ site.company }}</strong>.</p>
+      <div class="contact__cards">
+        <a class="contact-card reveal" href="{{ site.whatsapp }}" target="_blank" rel="noopener">
+          <img src="{{ site.baseurl }}/assets/images/ic-support.webp" alt="" loading="lazy" width="72" height="72">
+          <h3>WhatsApp Hotline</h3>
+          <p>{{ site.phone_display }}</p>
+          <span class="contact-card__cta">Chat now <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a class="contact-card reveal" href="tel:{{ site.phone_raw }}">
+          <img src="{{ site.baseurl }}/assets/images/ic-247.webp" alt="" loading="lazy" width="72" height="72">
+          <h3>Phone / Voice</h3>
+          <p>{{ site.phone_display }}</p>
+          <span class="contact-card__cta">Call directly <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </a>
+        <div class="contact-card contact-card--static reveal">
+          <img src="{{ site.baseurl }}/assets/images/ic-location.webp" alt="" loading="lazy" width="72" height="72">
+          <h3>Coverage</h3>
+          <p>Delivery to 34+ provinces across Indonesia — by land, sea, and air.</p>
+          <span class="contact-card__cta">24/7 for urgent needs</span>
+        </div>
+        <a class="contact-card reveal" href="mailto:{{ site.email }}">
+          <img src="{{ site.baseurl }}/assets/images/ic-mail.webp" alt="" loading="lazy" width="72" height="72">
+          <h3>Official Email</h3>
+          <p>{{ site.email }}</p>
+          <span class="contact-card__cta">Send an email <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a class="contact-card reveal" href="https://www.google.com/maps/search/?api=1&amp;query=Amesta+Living+Jalan+Gunung+Anyar+Tambak+Gunung+Anyar+Surabaya" target="_blank" rel="noopener">
+          <img src="{{ site.baseurl }}/assets/images/ic-address.webp" alt="" loading="lazy" width="72" height="72">
+          <h3>Office Address</h3>
+          <p>{{ site.address }}</p>
+          <span class="contact-card__cta">View on Maps <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </a>
+      </div>
+
+      <form class="contact-form reveal" id="wa-form" autocomplete="off">
+        <h3>Send Your Requirements via WhatsApp</h3>
+        <p>Fill in this form — your message will be neatly composed in our WhatsApp.</p>
+        <div class="form-grid">
+          <label>Name
+            <input type="text" name="nama" placeholder="Your name / company" required>
+          </label>
+          <label>Needs
+            <select name="kebutuhan">
+              <option>Premium Tarpaulin</option>
+              <option>Standard Tarpaulin</option>
+              <option>Roll Tarpaulin</option>
+              <option>Transparent PVC Tarpaulin</option>
+              <option>Construction Shade Net</option>
+              <option>Other / Consultation</option>
+            </select>
+          </label>
+          <label>Estimated Quantity
+            <input type="text" name="jumlah" placeholder="e.g. 50 rolls / 200 sheets">
+          </label>
+          <label>Delivery Location
+            <input type="text" name="lokasi" placeholder="City / project site">
+          </label>
+          <label class="span2">Details
+            <textarea name="pesan" rows="4" placeholder="Specification, size, color, thickness (GSM), etc."></textarea>
+          </label>
+        </div>
+        <button class="btn btn--yellow btn--lg" type="submit">
+          <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Send via WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

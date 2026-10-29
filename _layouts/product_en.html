@@ -1,0 +1,159 @@
+---
+layout: default_en
+---
+{% assign item = site.data.products_en | where: "slug", page.slug | first %}
+{% unless item %}{% assign item = site.data.products_en | first %}{% endunless %}
+
+<section class="page-hero">
+  <div class="container">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="{{ site.baseurl }}/en/products/">Product Catalog</a> <span>/</span> {{ item.name }}</nav>
+    <span class="eyebrow eyebrow--light">{{ item.category }}</span>
+    <h1>{{ item.name }} <span class="hl">Direct from the Factory</span></h1>
+    <p>{{ item.desc }}</p>
+    <div class="hero__actions">
+      <a class="btn btn--yellow" href="{{ site.whatsapp }}" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Ask Stock &amp; Price</a>
+      <a class="btn btn--ghost" href="{{ site.baseurl }}/en/contact/">Send Requirements</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div class="split__media reveal">
+      <img src="{{ site.baseurl }}/assets/images/{{ item.image }}" alt="{{ item.name }} YO TERPAL NUSANTARA RAYA" loading="lazy" width="640" height="640">
+      <div class="exp-badge">
+        <strong>Factory Price</strong>
+        <span>QC per production batch</span>
+      </div>
+    </div>
+    <div class="split__body reveal">
+      <span class="eyebrow">Product Description</span>
+      <h2>{{ item.name }}</h2>
+      {% for p in item.detail %}<p>{{ p }}</p>{% endfor %}
+      <ul class="checklist">
+        {% for u in item.uses %}<li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg> {{ u }}</li>{% endfor %}
+      </ul>
+      <ul class="chips">
+        {% for s in item.specs %}<li>{{ s }}</li>{% endfor %}
+      </ul>
+      <div class="split__actions">
+        <a class="btn btn--yellow" href="{{ site.whatsapp }}" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Ask Stock &amp; Price</a>
+        <a class="btn btn--ghost btn--ghost--light" href="{{ site.baseurl }}/en/contact/">Send Requirements</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if item.banner %}
+<section class="section section--tight">
+  <div class="container">
+    <figure class="banner-wide banner-wide--tight reveal">
+      <img src="{{ site.baseurl }}/assets/images/{{ item.banner.image }}" alt="{{ item.name }} — {{ item.banner.caption }}" loading="lazy" width="1200" height="669">
+    </figure>
+  </div>
+</section>
+{% endif %}
+
+{% if item.gallery %}
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Variants &amp; Photos</span>
+      <h2>Available Variants</h2>
+      <p>{{ item.gallery_note | default: "The labels in these photos were taken directly from our own stock — true density, size, and weight per sheet." }}</p>
+    </div>
+    <div class="apps apps--tall">
+      {% for g in item.gallery %}
+      <figure class="app reveal">
+        <img src="{{ site.baseurl }}/assets/images/{{ g.image }}" alt="{{ item.name }} — {{ g.caption }} YO TERPAL NUSANTARA RAYA" loading="lazy" width="600" height="800">
+        <figcaption><strong>{{ g.caption }}</strong><span>{{ g.text }}</span></figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% assign brand_group = null %}
+{% if item.category contains 'Tarpaulin' %}
+{% assign brand_group = 'tarp' %}
+{% elsif item.category contains 'Shade Net' %}
+{% assign brand_group = 'net' %}
+{% endif %}
+
+{% if brand_group %}
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Production Brands</span>
+      <h2>Logos Printed on This Product</h2>
+      <p>Every line out of our factory carries one of the brands below — mention your preferred brand when ordering, free of charge with every purchase.</p>
+    </div>
+    <div class="brand-grid{% if item.slug == 'construction-shade-net' %} brand-grid--4{% endif %}">
+      {% if brand_group == 'tarp' %}
+      <figure class="brand-card reveal">
+        <img src="{{ site.baseurl }}/assets/images/brand-yo-terpaulin.png" alt="YO Terpaulin logo" loading="lazy">
+        <figcaption><strong>YO Terpaulin</strong><span>Tarpaulin &amp; Shade Net — Super Korean PE + UV</span></figcaption>
+      </figure>
+      <figure class="brand-card reveal">
+        <img src="{{ site.baseurl }}/assets/images/brand-saffron-a20.png" alt="Saffron A20 logo" loading="lazy">
+        <figcaption><strong>Saffron A20</strong><span>Tech by Korea + UV</span></figcaption>
+      </figure>
+      <figure class="brand-card reveal">
+        <img src="{{ site.baseurl }}/assets/images/brand-perkasa-terpal.png" alt="Perkasa Terpal logo" loading="lazy">
+        <figcaption><strong>Perkasa Terpal</strong><span>Sheet tarpaulin — sizes 2×3 up to 30×30 m</span></figcaption>
+      </figure>
+      {% else %}
+      <figure class="brand-card reveal">
+        <img src="{{ site.baseurl }}/assets/images/brand-yo-terpaulin.png" alt="YO Terpaulin logo" loading="lazy">
+        <figcaption><strong>YO Terpaulin</strong><span>Tarpaulin &amp; Shade Net — Super Korean PE + UV</span></figcaption>
+      </figure>
+      <figure class="brand-card reveal">
+        <img src="{{ site.baseurl }}/assets/images/brand-surya-paranet.png" alt="Surya Paranet logo" loading="lazy">
+        <figcaption><strong>Surya Paranet</strong><span>Shade net — premium quality + UV</span></figcaption>
+      </figure>
+      <figure class="brand-card reveal">
+        <img src="{{ site.baseurl }}/assets/images/brand-nusantara-net.png" alt="Nusantara-Net logo" loading="lazy">
+        <figcaption><strong>Nusantara-Net</strong><span>Shade net roll — 3×100 m size</span></figcaption>
+      </figure>
+      <figure class="brand-card reveal">
+        <img src="{{ site.baseurl }}/assets/images/brand-perkasa-paranet.png" alt="Perkasa Paranet logo" loading="lazy">
+        <figcaption><strong>Perkasa Paranet</strong><span>Shade net — 60–100% density</span></figcaption>
+      </figure>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Other Products</span>
+      <h2>Explore the Full Catalog</h2>
+    </div>
+    <div class="cards cards--4">
+      {% assign shown = 0 %}
+      {% for p in site.data.products_en %}
+        {% if p.slug != page.slug and shown < 4 %}
+          {% assign shown = shown | plus: 1 %}
+          <article class="product reveal">
+            <div class="product__thumb">
+              <img src="{{ site.baseurl }}/assets/images/{{ p.image }}" alt="{{ p.name }} YO TERPAL NUSANTARA RAYA" loading="lazy" width="640" height="640">
+              <span class="product__cat">{{ p.category }}</span>
+            </div>
+            <div class="product__body">
+              <h3><a href="{{ site.baseurl }}/en/products/{{ p.slug }}/">{{ p.name }}</a></h3>
+              <p>{{ p.desc | truncate: 80 }}</p>
+              <div class="product__links">
+                <a class="product__cta" href="{{ site.baseurl }}/en/products/{{ p.slug }}/">View details <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              </div>
+            </div>
+          </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include en/cta.html %}

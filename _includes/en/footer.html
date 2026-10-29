@@ -1,0 +1,94 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__col footer__col--wide">
+        <a class="brand brand--footer" href="{{ site.baseurl }}/en/">
+          <img src="{{ site.baseurl }}/assets/images/logo.webp" alt="YO TERPAL NUSANTARA RAYA logo" width="64" height="48">
+          <span class="brand__text">
+            <strong>YO TERPAL NUSANTARA RAYA</strong>
+            <small>{{ site.brand_slogan_en }}</small>
+          </span>
+        </a>
+        <p>YO TERPAL NUSANTARA RAYA produces and supplies high-quality tarpaulins for the mining industry and large-scale infrastructure projects. Operated by <strong>{{ site.company }}</strong>.</p>
+        <div class="footer__social">
+          <a href="{{ site.instagram }}" target="_blank" rel="noopener" aria-label="YO TERPAL NUSANTARA RAYA Instagram — @pabrik_plastik_termurah">
+            <svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg>
+          </a>
+          <a href="{{ site.threads }}" target="_blank" rel="noopener" aria-label="YO TERPAL NUSANTARA RAYA Threads — @pabrik_plastik_termurah">
+            <svg class="ico" aria-hidden="true"><use href="#i-threads"/></svg>
+          </a>
+          <a href="{{ site.tiktok }}" target="_blank" rel="noopener" aria-label="YO TERPAL NUSANTARA RAYA TikTok — @pabrik_plastik_termurah">
+            <svg class="ico" aria-hidden="true"><use href="#i-tiktok"/></svg>
+          </a>
+          <a href="{{ site.whatsapp }}" target="_blank" rel="noopener" aria-label="YO TERPAL NUSANTARA RAYA WhatsApp">
+            <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="{{ site.baseurl }}/en/">Home</a></li>
+          <li><a href="{{ site.baseurl }}/en/about/">About Us</a></li>
+          <li><a href="{{ site.baseurl }}/en/gallery/">Factory Gallery</a></li>
+          <li><a href="{{ site.baseurl }}/en/advantages/">Advantages</a></li>
+          <li><a href="{{ site.baseurl }}/en/applications/">Applications</a></li>
+          <li><a href="{{ site.baseurl }}/en/contact/">Contact</a></li>
+          <li><a href="{{ page.lang_other | default: "/" }}" hreflang="id">🇮🇩 Indonesia</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="{{ site.baseurl }}/en/products/blue-premium-tarpaulin/">Blue Premium Tarpaulin</a></li>
+          <li><a href="{{ site.baseurl }}/en/products/industrial-tarpaulin-roll/">Industrial Tarpaulin Roll</a></li>
+          <li><a href="{{ site.baseurl }}/en/products/transparent-pvc-tarpaulin/">Transparent PVC Tarpaulin</a></li>
+          <li><a href="{{ site.baseurl }}/en/products/construction-shade-net/">Construction Shade Net</a></li>
+          <li><a href="{{ site.baseurl }}/en/products/spunbond-bag/">Spunbond Bags</a></li>
+          <li><a href="{{ site.baseurl }}/en/products/">All Products</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul class="footer__contact">
+          <li>
+            <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+            <a href="{{ site.whatsapp }}" target="_blank" rel="noopener">WhatsApp 1 — {{ site.phone_display }}</a>
+          </li>
+          <li>
+            <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+            <a href="{{ site.whatsapp2 }}" target="_blank" rel="noopener">WhatsApp 2 — {{ site.phone2_display }}</a>
+          </li>
+          <li>
+            <svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>
+            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+          </li>
+          <li>
+            <svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>
+            <span>Service &amp; Delivery 24/7</span>
+          </li>
+          <li>
+            <svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>
+            <span>{{ site.address }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__payment">
+      <img src="{{ site.baseurl }}/assets/images/banner-payment.webp?v=2" alt="Payment methods: bank transfer, QRIS, credit card, and e-wallet" loading="lazy">
+    </div>
+
+    <div class="footer__bottom">
+      <span>&copy; {{ site.time | date: "%Y" }} {{ site.company }}. All Rights Reserved.</span>
+      <span>{{ site.brand_slogan_en }}</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="{{ site.whatsapp }}" target="_blank" rel="noopener" aria-label="WhatsApp chat with YO TERPAL NUSANTARA RAYA">
+  <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+</a>

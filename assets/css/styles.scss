@@ -1293,3 +1293,13 @@ body.has-lightbox { overflow: hidden; }
   .compro-dl { align-items: flex-start; }
   .compro-dl .btn { width: 100%; justify-content: center; }
 }
+
+/* ---------- language switcher ---------- */
+.nav__lang { display: inline-flex; }
+.nav__lang-btn { gap: 6px; font-weight: 600; }
+.nav__lang-panel { left: auto; right: 0; min-width: 190px; }
+.nav__lang-panel a { display: flex; align-items: center; gap: 8px; }
+@media (max-width: 860px) {
+  .nav__lang { width: 100%; }
+  .nav__lang-panel { position: static; display: block; box-shadow: none; border: 0; padding: 0 0 4px 14px; min-width: 0; max-height: none; }
+}

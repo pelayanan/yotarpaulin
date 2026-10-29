@@ -1,0 +1,19 @@
+# Product & service advantages (EN) — icons shared with advantages.yml
+- image: ic-waterproof.webp
+  title: "100% Waterproof"
+  text: "Double-laminated surfaces so heavy rain and standing water cannot get through — whatever is underneath stays dry and safe."
+- image: ic-tear.webp
+  title: "Strong & Tear Resistant"
+  text: "A tight HDPE weave with double-folded edges that resists tearing even when it is repeatedly set up, taken down, and moved."
+- image: ic-uv.webp
+  title: "UV & Heat Resistant"
+  text: "Formulated with UV stabilizers so it will not turn brittle or fade quickly, even when installed in open, sun-exposed areas."
+- image: ic-price.webp
+  title: "Factory-Direct Price"
+  text: "Produced by our own factory — more competitive pricing for bulk orders without compromising quality."
+- image: ic-custom.webp
+  title: "Custom Sizes"
+  text: "Order to your requirements: size, color, thickness (GSM), and even logo printing for your project."
+- image: ic-247.webp
+  title: "Responsive Service"
+  text: "Our team is ready for consultations and urgent deliveries 24/7 — supporting mine and project operations around the clock."

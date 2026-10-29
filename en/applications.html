@@ -1,0 +1,73 @@
+---
+layout: default_en
+lang: en
+lang_other: /aplikasi/
+title: "Tarpaulin Applications & Uses — From Mining to Tents | YO TERPAL NUSANTARA RAYA"
+description: "How YO TERPAL NUSANTARA RAYA tarpaulins are used in the field: fleet & truck covers, cement & materials, scaffolding, heavy equipment & mining, ponds, marine, agriculture, roofs, tents & canopies, and outdoor camping."
+permalink: /en/applications/
+image: /assets/images/og/og-aplikasi.jpg
+---
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow eyebrow--light">Applications</span>
+    <h1>Tarpaulins for Every <span class="hl">Field Need</span></h1>
+    <p>From mining to aquaculture — YO TERPAL NUSANTARA RAYA tarpaulins are proven in the field, in fair weather and extreme conditions.</p>
+    <div class="hero__actions">
+      <a class="btn btn--yellow" href="{{ site.whatsapp }}" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Tell Us Your Needs</a>
+      <a class="btn btn--ghost" href="{{ site.baseurl }}/en/gallery/">See Factory Photos</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="split__body reveal" style="max-width: 860px; margin: 0 auto 10px;">
+      <span class="eyebrow">Proven in the Field</span>
+      <h2>One Material, Many Roles</h2>
+      <p>HDPE weave with double lamination makes YO TERPAL NUSANTARA RAYA tarpaulins flexible yet strong — stretch them over a mining stockpile, fold them into market tents, cut them into scaffolding wraps, or mount them as seedling shade. Our customers include mining companies, infrastructure contractors, tarpaulin distributors, farmers, and fish farmers — everyone gets the same consistent quality.</p>
+    </div>
+
+    <div class="apps">
+      {% for item in site.data.applications_en %}
+      <figure class="app reveal">
+        <img src="{{ site.baseurl }}/assets/images/{{ item.image }}" alt="Tarpaulin for {{ item.title }} — YO TERPAL NUSANTARA RAYA" loading="lazy" width="1200" height="669">
+        <figcaption>
+          <strong>{{ item.title }}</strong>
+          <span>{{ item.text }}</span>
+        </figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Team Recommendations</span>
+      <h2>Choose by Use Case</h2>
+      <p>Three main considerations before ordering — or just ask our team, free of charge.</p>
+    </div>
+    <div class="note-grid">
+      <div class="note reveal">
+        <h3>Match the Thickness (GSM)</h3>
+        <p>Merchandise covers work at 80–140 GSM; canopies and trucks at 120–200 GSM; heavy equipment and mining stockpiles are safer at 150–250 GSM. The right thickness = economical price + maximum service life.</p>
+      </div>
+      <div class="note reveal">
+        <h3>Think About Installation</h3>
+        <p>Need grommets every 1 meter? Wire rings? A seamless sleeve? Tell us your field conditions — we produce to match how your goods are mounted.</p>
+      </div>
+      <div class="note reveal">
+        <h3>Measure the Area</h3>
+        <p>Measure the length and width of the area to cover, then add edge tolerance. For large areas, 2–6 meter wide roll format speeds up installation and minimizes seepage points.</p>
+      </div>
+    </div>
+
+    <div class="center">
+      <a class="btn btn--blue" href="{{ site.baseurl }}/en/contact/">Send Your Requirements <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+{% include en/cta.html %}

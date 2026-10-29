@@ -41,6 +41,20 @@
     <label for="nav-toggle" class="nav-burger" aria-hidden="true"><span></span><span></span><span></span></label>
 
     <nav class="nav" aria-label="Navigasi utama">
+      {% if page.lang == "id" %}
+        {% assign page_url_id = page.url %}{% assign page_url_en = page.lang_other | default: "/en/" %}
+      {% else %}
+        {% assign page_url_id = page.lang_other | default: "/" %}{% assign page_url_en = page.url %}
+      {% endif %}
+
+      <div class="nav__dd nav__lang">
+        <a class="nav__link nav__link--dd nav__lang-btn" href="{{ page_url_id }}" aria-label="Ganti bahasa">🇮🇩 ID<span class="nav__caret" aria-hidden="true"></span></a>
+        <div class="nav__dd-panel nav__lang-panel">
+          <a href="{{ site.baseurl }}{{ page_url_id }}" hreflang="id">🇮🇩 Indonesia (ID)</a>
+          <a href="{{ site.baseurl }}{{ page_url_en }}" hreflang="en">🇺🇸 English (EN)</a>
+        </div>
+      </div>
+
       {% for item in site.data.navigation %}
         {% if item.dropdown %}
         <div class="nav__dd">

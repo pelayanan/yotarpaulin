@@ -1,0 +1,24 @@
+<section class="section" id="proses">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">How to Order</span>
+      <h2>Four Steps Until Your Tarpaulin Arrives On Site</h2>
+      <p>A clear, transparent process — from first consultation to goods arriving at your location.</p>
+    </div>
+
+    <ol class="steps">
+      {% for item in site.data.steps_en %}
+      <li class="step reveal">
+        <span class="step__num">{{ forloop.index }}</span>
+        <img class="step__icon" src="{{ site.baseurl }}/assets/images/{{ item.image }}" alt="" loading="lazy" width="72" height="72">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+
+    <figure class="banner-wide reveal">
+      <img src="{{ site.baseurl }}/assets/images/banner-custom.webp?v=2" alt="Need custom-size tarpaulins? Custom sizes, quality material, fast & tidy workmanship — call us now at 0822 13 8889" loading="lazy" width="1200" height="859">
+    </figure>
+  </div>
+</section>

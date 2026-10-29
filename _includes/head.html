@@ -6,6 +6,17 @@
   {% feed_meta %}
   {% seo %}
 
+  {% if page.lang and page.lang_other %}
+    {% if page.lang == "en" %}
+      {% assign lang_id_href = page.lang_other %}{% assign lang_en_href = page.url %}
+    {% else %}
+      {% assign lang_id_href = page.url %}{% assign lang_en_href = page.lang_other %}
+    {% endif %}
+  <link rel="alternate" hreflang="id" href="{{ lang_id_href | absolute_url }}">
+  <link rel="alternate" hreflang="en" href="{{ lang_en_href | absolute_url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ lang_id_href | absolute_url }}">
+  {% endif %}
+
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/images/favicon.png?v={{ site.time | date: '%Y%m%d%H%M' }}">
   <meta name="theme-color" content="#0a3168">
 

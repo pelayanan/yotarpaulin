@@ -1,0 +1,25 @@
+<section class="section section--alt" id="aplikasi">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Applications</span>
+      <h2>Fit for Many Uses</h2>
+      <p>From mining to aquaculture — YO TERPAL NUSANTARA RAYA tarpaulins are field-proven.</p>
+    </div>
+
+    <div class="apps">
+      {% for item in site.data.applications_en %}
+      <figure class="app reveal">
+        <img src="{{ site.baseurl }}/assets/images/{{ item.image }}" alt="Tarpaulin for {{ item.title }} — YO TERPAL NUSANTARA RAYA" loading="lazy" width="1200" height="669">
+        <figcaption>
+          <strong>{{ item.title }}</strong>
+          <span>{{ item.text }}</span>
+        </figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+
+    <div class="center">
+      <a class="btn btn--blue" href="{{ site.baseurl }}/en/applications/">See All Tarpaulin Applications <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
