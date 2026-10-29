@@ -46,9 +46,8 @@ Bukan mockup, bukan janji — website live-nya sudah tayang dan bisa langsung di
 — Pendukung SEO —
 🗺️ Sitemap SEO — https://yoterpal.com/sitemap.xml
 🤖 Robots — https://yoterpal.com/robots.txt
-💻 Kode sumber: github.com/pelayanan/yotarpaulin
 
-Total: *21 halaman live* + kode sumber terbuka.
+Total: *21 halaman live*.
 
 ━━━━━━━━━━━━━━━━━━━━
 ⚡ *FITUR TERMASUK*
@@ -61,14 +60,12 @@ Total: *21 halaman live* + kode sumber terbuka.
 • Tombol & form pemesanan via WhatsApp (2 saluran)
 • Sambutan Owner, logo merek produksi & peta lokasi (Google Maps)
 • Animasi halus + header menempel
-• Hosting ber-SSL tanpa biaya sewa tahun pertama
 
 ━━━━━━━━━━━━━━━━━━━━
 🌐 *DOMAIN & TAYANG*
 
 ✅ Domain aktif: https://yoterpal.com — custom domain, SSL aktif
 ✅ DNS, sertifikat SSL & deployment sudah dikonfigurasi — website tayang langsung
-✅ Tanpa biaya sewa hosting tahun pertama
 
 ━━━━━━━━━━━━━━━━━━━━
 💰 *INVESTASI*
