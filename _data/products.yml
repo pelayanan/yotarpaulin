@@ -127,3 +127,23 @@
     - "Sarung tangan kerja kami menyediakan beberapa tipe untuk beragam aktivitas operasional: menangani material kasar, alat mesin, dan pengemasan barang."
     - "Tersedia order partai lengkap dengan harga kontrak — hubungi tim kami untuk katalog tipe dan kebutuhan rutin bulanan proyek Anda."
   uses: ["Pengamanan tangan operator", "Penanganan material & log", "Order rutin bulanan proyek"]
+- image: prod-tas-spunbond.webp
+  slug: tas-spunbond
+  name: "Tas Spunbond"
+  category: "Tas & Non-Woven"
+  desc: "Tas non-woven spunbond dengan sablon logo custom — shopping bag, goodie bag, dan tas kemasan yang kuat serta bisa dipakai berulang."
+  specs: ["Sablon Logo Custom", "Ukuran Full Custom", "Order Satuan"]
+  detail:
+    - "Tas kami dijahit dari kain spunbond non-woven: ringan, kuat, dan tidak mudah robek — pilihan hemat yang menggantikan kantong plastik sekali pakai untuk kemasan usaha Anda."
+    - "Bebas custom ukuran, warna kain, model, dan sablon logo lengkap. Tipe tersedia dari shopping bag sederhana, goodie bag zipper, sampai box bag dengan dasar kotak yang berdiri tegak."
+  uses: ["Kemasan UMKM & retail", "Goodie bag event & seminar", "Tas kemasan produk industri"]
+  gallery:
+    - image: tas-detail-bahan.webp
+      caption: "Detail bahan spunbond"
+      text: "Tekstur kain non-woven halus dan handle dijahit rapi — siap dipakai berulang kali."
+    - image: tas-stok-gudang.webp
+      caption: "Ready stock di gudang"
+      text: "Warna dan ukuran populer tersedia ready; order custom langsung masuk jadwal produksi."
+    - image: tas-jahit.webp
+      caption: "Cutting & jahit sendiri"
+      text: "Dihaluskan dari gulungan kain lalu dipotong dan dijahit di unit produksi kami — QC tiap order."
