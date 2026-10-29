@@ -101,7 +101,7 @@ permalink: /invoice-pelunasan/
     display: table; width: calc(100% - 32mm);
   }
   .foot > * { display: table-cell; vertical-align: bottom; }
-  .sisa { font-size: 8pt; color: #8a6a72; max-width: 100mm; }
+  .sisa { font-size: 8pt; color: #8a6a72; max-width: 88mm; }
   .sisa b { color: #7a1230; }
   .ttd { text-align: center; font-size: 9.5pt; width: 62mm; position: relative; }
   .ttd .kota { font-weight: 600; }
@@ -128,6 +128,12 @@ permalink: /invoice-pelunasan/
     text-align: center; line-height: 1.25;
   }
   .stempel small { display: block; font-size: 9pt; font-weight: 700; letter-spacing: .2em; }
+
+  /* pembayaran QRIS — sel tengah .foot */
+  .qris { display: table-cell; vertical-align: bottom; text-align: center; padding: 0 3.5mm 0 4mm; width: 44mm; background: #fff; }
+  .qris img { width: 25mm; height: auto; display: block; margin: 0 auto; border: .2mm solid #e3c9d1; }
+  .qris .qm { font-size: 6.6pt; color: #8a6a72; margin-top: .9mm; line-height: 1.3; }
+  .qris button, .qris .ql { display: none; }
 
   .legal {
     position: absolute; left: 16mm; right: 16mm; bottom: 9mm;
@@ -224,7 +230,7 @@ permalink: /invoice-pelunasan/
   <div class="notes">
     <div class="col">
       <h4>Ketentuan Pembayaran</h4>
-      <p>Pembayaran dilakukan via transfer bank. DP 50% telah diterima &mdash; bukti: <b>Kwitansi No. 001/KWT/AKS/X/2026</b>.</p>
+      <p>Pembayaran dapat dilakukan via <b>transfer bank</b> atau <b>scan QRIS</b> (Aksisoft, NMID ID1026602594420). DP 50% telah diterima &mdash; bukti: <b>Kwitansi No. 001/KWT/AKS/X/2026</b>.</p>
       <p class="muted">Invoice ini merupakan dokumen tagihan pelunasan &mdash; kwitansi (No. 002) diterbitkan sebagai bukti pembayaran yang sah setelah pelunasan diterima.</p>
     </div>
     <div class="col">
@@ -241,6 +247,10 @@ permalink: /invoice-pelunasan/
       <b>Serah terima website berjalan normal.</b> Garansi perbaikan bug 30 hari
       sejak tanggal invoice. Revisi konten/tampilan sesuai ketentuan proposal (2x).
       Untuk pertanyaan invoice: WA 0813-3520-6389.
+    </div>
+    <div class="qris">
+      <img src="assets/images/qris-aksisoft.jpg" alt="QRIS Aksisoft">
+      <div class="qm">Aksisoft &mdash; NMID ID1026602594420<br>satu QRIS untuk semua aplikasi bank &amp; e-wallet</div>
     </div>
     <div class="ttd">
       <div class="kota">Surabaya, 30 Oktober 2026</div>
