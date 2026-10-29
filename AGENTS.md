@@ -126,3 +126,55 @@ Website SUDAH jadi dan live. Struktur folder saat ini:
 - main.js: submit form #wa-form kini bilingual — document.documentElement.lang==="en" → greeting/labels EN, else ID; field name tetap (nama/kebutuhan/...). CSS baru `.nav__lang*` di styles.scss (panel align right; mobile static).
 - GOTCHA: og images EN masih SHARED versi ID (ada teks Indonesia di kartu share EN) — belakangan bisa regen EN-specific kalau owner minta. EN nav dropdown extra "How to Order" → /en/#proses. Jangan lupa: halaman baru EN/ID pasangan HARUS saling diset `lang_other` eksplisit, kalau tidak switcher fallback ke /en/ atau /. compro PDF EN link = file sama (bahasa Inggris? PDF goldukan isi owner — follow up). Verifikasi live: build 374fd4f built, 17 URL /en/ 200, switcher muncul di ID & EN, hreflang 3 di kedua sisi, sitemap EN lengkap.
 - FIX LEAK FM (31 Okt 2026, commit `af266cf`, laporan owner: "ada unwanted text sebelum banner" — screenshot menunjukkan `lang: id lang_other: /en/` tampil di atas hero): ROOT CAUSE — script python penambah front matter (implementasi /en/) menaruh `lang: id`+`lang_other` SETELAH fence `---` penutup karena perhitungan offset s.index("\n---",3)+4 salah (index mengambil posisi fence pembuka, bukan penutup, saat fm ditempal "fm + s[end:]"). Efek: teks itu dianggap konten body oleh Jekyll dan tampil di atas hero di SEMUA 17 halaman ID yang diutak-atik (7 root + 10 stub). FIX: line-based — temukan baris "---" kedua (fence penutup), hapus 2 baris leak setelahnya, insert `lang: id` + `lang_other:` sebelum fence penutup. PELAJARAN: selalu insert front matter dengan operasi LINE-BASED terhadap baris fence penutup (lines.index("---",1)), bukan offset karakter; verifikasi visual halaman live setelah batch edit front matter (cukup curl halaman & grep teks leak). Verifikasi: leak 0 di beranda + semua halaman ID yang dicek, hreflang & switcher & /en/ 200 tetap.
+
+---
+
+# REFERENSI CEPAT (ringkasan kondisi terkini — baca ini dulu, detail kronologis di atas)
+
+## Identitas & kondisi saat ini (31 Okt 2026)
+- Brand: **YO TERPAL NUSANTARA RAYA** (jangan tulis "YO Tarpaulin"). Operated by **CV. Yo Terpal Nusantara Raya**. Owner: **Yoke Albertin Sumayow** (peran cukup "Owner"; kata "Pendiri" dilarang muncul).
+- Live: https://yoterpal.com (GitHub Pages + Cloudflare proxy; CNAME di root; jangan paksa https_enforced). Cache Cloudflare ±10 menit → selalu verifikasi pakai cache-buster.
+- Warna brand: navy (skala --blue-950 #041630 s.d. --blue-500 #2079e0), aksen ORANYE (var CSS bernama `--yellow: #ff8a1f` — nama var memang kuning, nilainya oranye; jangan rename). WA float tetap hijau.
+- Font: Barlow Condensed (display, uppercase) + Plus Jakarta Sans (body) via Google Fonts.
+- Kontak WEBSITE: WhatsApp/telepon UTAMA **+62 822-13-8889** (wa.me/62822138889) di SEMUA CTA; alternatif **+62 812-2133-2929** (wa.me/6281221332929) hanya kartu "WhatsApp Alternatif" kontak + footer WA2. Email yonusantararaya@gmail.com. Sosial IG/Threads/TikTok: @pabrik_plastik_termurah. Alamat: Amesta Living, Jalan Gunung Anyar Tambak, Gunung Anyar, Surabaya (Maps embed di /kontak/).
+
+## Peta URL (semua permalink folder-style, TANPA .html)
+- ID (17): /  /produk/  /tentang/  /galeri/  /keunggulan/  /aplikasi/  /kontak/  /404.html  /produk/<slug>/ ×10  + /compro-yoterpal/ (HTML 11 hal, terpisah dari PDF) + dokumen: /proposal-website/, /kwitansi-dp/, /kwitansi-pelunasan/ (invoice & proposal Rev2 excluded→404).
+- EN (17): /en/  /en/products/  /en/about/  /en/gallery/  /en/advantages/  /en/applications/  /en/contact/  /en/products/<slug-en>/ ×10. Slug EN ↔ ID: blue-premium-tarpaulin↔terpal-biru-premium, navy-tarpaulin↔terpal-navy, gold-yellow-tarpaulin↔terpal-kuning-gold, green-tarpaulin↔terpal-hijau, orange-tarpaulin↔terpal-oranye, transparent-pvc-tarpaulin↔terpal-pvc-transparan, industrial-tarpaulin-roll↔terpal-roll, light-blue-tarpaulin↔terpal-biru-muda, construction-shade-net↔paranet-bangunan, spunbond-bag↔tas-spunbond.
+- TIAP pasangan halaman ID/EN WAJIB saling menunjuk via front matter `lang_other` (eksplisit, bukan mapping otomatis) + `lang: id|en`. hreflang id/en/x-default otomatis dari head.html saat `page.lang && page.lang_other`.
+
+## Struktur data & i18n
+- Katalog: `_data/products.yml` (ID) & `products_en.yml` (EN) — struktur sama, image SHARED, slug EN beda. Halaman produk = stub front matter (layout product / product_en) + layout yang baca data by `page.slug`; konten cukup diedit di data yml.
+- Data EN lain: navigation_en.yml, advantages_en.yml, applications_en.yml, steps_en.yml.
+- Include EN: `_includes/en/*` (14 file; banner-promo di-reuse dari ID). Layout EN: `_layouts/default_en.html` (lang="en"), `_layouts/product_en.html`.
+- Switcher bahasa dropdown berbendera ada di KEDUA header (class nav__lang) + link 🇮🇩/🇺🇸 di kedua footer.
+
+## Tool & script (server agent /root/opencode — HILANG jika server restart, dokumentasi cara rebuild ada di log atas)
+- `build_compro.py` — build compro PDF (WeasyPrint 61.1 + pydyf 0.8.0, wajib set versi; bs4; PIL). CATATAN SAAT INI: compro PDF = file "blue" milik owner (4 hal, md5 d0174f5a…) — script hanya untuk regen versi 11 hal jika diminta.
+- `fix_og_chip.py` — patch chip nomor di og-default (referensi; og-default sekarang desain owner, JANGAN rebuild dari make_og_default.py).
+- `make_og.py` / `make_og_default.py` / `make_og_variants.py` (di repo, excluded): og-default dari make_og*_ DILARANG dijalankan utuh (menimpa desain owner & brand_card menghancurkan og-default). OG cards per-banner regen manual via fungsi cover().
+- Verifikasi visual: Python PIL 11.3 + numpy; Playwright chromium (apt chromium = snap stub rusak — jangan); poppler-utils (pdftoppm/pdfinfo/pdftotext). TIDAK ADA: ruby/jekyll/chrome; JANGAN build lokal.
+
+## Workflow rilis & verifikasi (terbukti)
+1. Edit di working copy ini → 1 commit per topik → `git push origin main`.
+2. Tunggu ±55–75 dtk → `GET /repos/pelayanan/yotarpaulin/pages/builds/latest` (token di remote URL) → status "built" + commit cocok BARU lanjut.
+3. Verifikasi live dengan curl + cache-buster `?v=$(date +%s)`: kode HTTP, grep teks/elemen, ukuran file gambar vs repo. Screenshot kalau perlu via Playwright — cek build sudah "built" SEBELUM screenshot (bisa dapat CSS lama).
+4. Update AGENTS.md SETIAP perubahan (log kronologis + komit hash) → commit terpisah.
+
+## Aturan WAJIB (dari owner, kumulatif)
+- Token GitHub JANGAN pernah disimpan di dalam repo (selalu di luar; ambil dari remote URL).
+- Repo/email commit: pelayanan / yonusantararaya@gmail.com (git config sudah diset).
+- Gambar konversi .webp q80±, TAPI og:image ship JPEG (WhatsApp/FB) — KECUALI og-default.webp yang kini og:image utama (risiko ditoleransi owner + fallback jpg tersedia).
+- Aset yang diganti rasio beda: update atribut `width`/`height` HTML (CSS width:100% tanpa height:auto → stretch kalau attr salah). Gambar tanpa cache-buster otomatis — bila ganti file gambar yang sama nama, naikkan `?v=N` manual di semua refnya (banner kini ?v=2).
+- "merek dagang/gratisan/GitHub" tidak boleh tampil di material customer (cek pdftotext & HTML); file arsip historis dibiarkan.
+- URL situs pakai permalink folder-style; 404.html tetap permalink /404.html.
+- `git rm` multi-pathspec adalah ATOMIK — path salah satu file typo = tidak ada yang terhapus (pernah bikin stub produk lolos live).
+- Edit front matter pakai operasi LINE-BASED pada baris fence penutup (lines.index("---",1)) — kasus offset karakter sudah 2× bikin file rusak (fm hilang / leak ke body).
+
+## Hal terbuka / backlog
+- og:image halaman EN masih share kartu versi ID (teks Indonesia) — bisa regen EN-specific jika owner minta.
+- Halaman HTML /compro-yoterpal/ (11 hal) masih live terpisah dari PDF blue 4 hal milik owner — tunggu keputusan owner disinkron/dihilangkan; PDF blue sendiri masih berisi nama "Yoke Albertin" (bukan Sumayow) — file milik owner.
+- `kwitansi-pelunasan/` (No. 002) masih live padahal pelunasan belum dibayar — menunggu keputusan owner.
+- DNS: `www.yoterpal.com` belum ada record; `http://→https://` belum redirect (aktifkan Always Use HTTPS di Cloudflare bila owner setuju).
+- Kata "Terpaulin" pada caption kartu merek (YO Terpaulin dll.) sengaja tetap — merujuk logo fisik produk; jangan diganti tanpa perintah.
+- Banner & og: banner-payment.webp belum dibawa ke branding baru (masih metode pembayaran lama) — tanyakan owner saat berikutnya.
