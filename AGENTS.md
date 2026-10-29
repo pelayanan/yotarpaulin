@@ -53,6 +53,7 @@ Website SUDAH jadi dan live. Struktur folder saat ini:
   - `screenshoot/` — screenshot JPEG semua halaman live (01-halaman-beranda.jpg s/d 06-tampilan-mobile.jpg) untuk dikirim ke customer.
   - `Proposal-Penawaran-Website-YO-Tarpaulin-Aksisoft.pdf` — proposal penawaran jasa pembuatan website dari Aksisoft Media (aksisoft.web.id, WA 0813-3520-6389), Rp 5.000.000 nego. 12 halaman: cover, tentang, ruang lingkup + daftar URL live, pratinjau, rekomendasi domain (semua cek RDAP: tersedia), investasi & TTD, lampiran A–F screenshot. PEMILIK SADAR & MENGAJINKAN file ini ter-publish di repo publik.
   - `proposal-website.txt` — versi teks proposal (berisi harga & kontak) juga ter-publish, sama seperti di atas.
+  - `isi-website.md` — isi lengkap website tanpa gambar (512 baris) yang dikirim owner via Telegram bridge 31 Okt 2026 (commit `774bc4b`). Masuk exclude di _config.yml — hanya arsip repo, tidak tampil di situs.
   - `AGENTS.md` — file ini.
   - Catatan: file token GitHub TIDAK di dalam repo. Token tetap di `F:/pelayanan-token.txt` (di luar repo, jangan pernah disalin ke dalam repo).
 
