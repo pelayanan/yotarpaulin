@@ -30,14 +30,14 @@
   .cover .top img { width: 20mm; height: auto; background: #fff; border-radius: 3mm; padding: 2mm; }
   .cover .top h1 { font-size: 20pt; letter-spacing: .08em; }
   .cover .top small { display: block; font-size: 9pt; color: var(--yellow); font-weight: 700; letter-spacing: .3em; margin-top: 1mm; }
-  .cover .wt { margin-top: 34mm; }
+  .cover .wt { margin-top: 26mm; }
   .cover .wt .doc { font-size: 9pt; color: #9fb4d4; letter-spacing: .45em; font-weight: 700; }
   .cover .wt h2 { font-size: 33pt; line-height: 1.14; margin-top: 4mm; }
   .cover .wt h2 span { color: var(--yellow); }
   .cover .wt p { font-size: 11pt; color: #c9d8ee; margin-top: 6mm; max-width: 150mm; line-height: 1.65; }
-  .cover .strip { margin-top: 12mm; }
+  .cover .strip { margin-top: 9mm; }
   .cover .strip img { width: 100%; height: 62mm; object-fit: cover; border-radius: 3mm; }
-  .cover .covstats { display: grid; grid-template-columns: repeat(4,1fr); gap: 4mm; margin-top: 8mm; }
+  .cover .covstats { display: grid; grid-template-columns: repeat(4,1fr); gap: 4mm; margin-top: 6mm; }
   .cover .cs { background: rgba(255,255,255,.07); border: .25mm solid rgba(255,255,255,.15); border-radius: 2mm; padding: 3mm 4mm; text-align: center; }
   .cover .cs b { font-size: 15pt; color: var(--yellow); display: block; }
   .cover .cs span { font-size: 8pt; color: #c9d8ee; }
@@ -141,13 +141,27 @@
   .rendah b { font-size: 12.5pt; }
   .rendah span { font-size: 8.5pt; color: #c9d8ee; }
   .rendah .yn { background: var(--yellow); color: var(--navy); font-weight: 800; padding: 2.5mm 6mm; border-radius: 2.5mm; font-size: 10.5pt; white-space: nowrap; margin-left: 6mm; }
+
+  /* toc cover */
+  .toc { margin-top: 7mm; border-top: .25mm solid rgba(255,255,255,.2); padding-top: 3mm; }
+  .toc b { display: block; font-size: 7.5pt; letter-spacing: .3em; color: var(--yellow); margin-bottom: 1.6mm; }
+  .toc span { font-size: 9pt; line-height: 1.9; }
+  .toc a { color: #fff; text-decoration: none; border-bottom: .25mm solid rgba(255,255,255,.4); }
+  .toc a:visited { color: #fff; }
+
+  .page a { text-decoration: none; }
+  .ct .big, .ct small { display: block; }
+  .ct a.big { color: var(--navy); }
+  .ct .big .lnk, a.big, .pglink { color: var(--navy) !important; border-bottom: .3mm solid rgba(10,49,104,.35); }
+  small .pglink { font-size: 8pt; }
+  .rendah a.yn { color: inherit; }
   .pagenote { margin-top: 4mm; border-top: .25mm solid var(--line); padding-top: 2.2mm; font-size: 7.5pt; color: var(--muted); text-align: center; }
 </style>
 </head>
 <body>
 
 <!-- 1 COVER -->
-<div class="page cover">
+<div class="page cover" id="cover">
   <div class="top">
     <img src="assets/images/logo.webp" alt="">
     <div><h1>YO TARPAULIN</h1><small>SOLUSI TERPAL ANDA</small></div>
@@ -164,15 +178,18 @@
     <div class="cs"><b>34</b><span>Provinsi Jangkauan</span></div>
     <div class="cs"><b>100%</b><span>Mutu Terjamin</span></div>
   </div>
-  <div class="foot">
-    <span>yoterpal.com</span>
-    <span>WA +62 812-2133-2929 &bull; WA 2 +62 822-13-8889</span>
+  <div class="toc">
+    <b>DAFTAR ISI &mdash; KLIK UNTUK LOMPAT</b>
+    <span><a href="#pg-tentang">Tentang</a> &bull; <a href="#pg-owner">Sambutan Owner</a> &bull; <a href="#pg-keunggulan">Keunggulan</a> &bull; <a href="#pg-terpal">Terpal PE</a> &bull; <a href="#pg-lainnya">PVC/ Roll/ Tas</a> &bull; <a href="#pg-paranet">Paranet</a> &bull; <a href="#pg-aplikasi">Aplikasi</a> &bull; <a href="#pg-pemesanan">Cara Pemesanan</a> &bull; <a href="#pg-merek">Merek</a> &bull; <a href="#pg-kontak"><b>Kontak</b></a></span>
+  </div>
+  <div class="foot">    <span>yoterpal.com</span>
+    <span>WA <a style="color:#fff" href="https://wa.me/6281221332929">+62 812-2133-2929</a> &bull; WA 2 <a style="color:#fff" href="https://wa.me/62822138889">+62 822-13-8889</a></span>
     <span>CV. Yo Terpal Nusantara Raya</span>
   </div>
 </div>
 
 <!-- 2 TENTANG -->
-<div class="page">
+<div class="page" id="pg-tentang">
   <div class="head">
     <div class="b"><img class="lg" src="assets/images/logo.webp" alt=""><div class="bt">YO TARPAULIN<small>COMPANY PROFILE</small></div></div>
     <div class="pg">02 / TENTANG KAMI</div>
@@ -213,7 +230,7 @@
 </div>
 
 <!-- 3 OWNER -->
-<div class="page">
+<div class="page" id="pg-owner">
   <div class="head">
     <div class="b"><img class="lg" src="assets/images/logo.webp" alt=""><div class="bt">YO TARPAULIN<small>COMPANY PROFILE</small></div></div>
     <div class="pg">03 / SAMBUTAN OWNER</div>
@@ -252,7 +269,7 @@
 </div>
 
 <!-- 4 KEUNGGULAN -->
-<div class="page">
+<div class="page" id="pg-keunggulan">
   <div class="head">
     <div class="b"><img class="lg" src="assets/images/logo.webp" alt=""><div class="bt">YO TARPAULIN<small>COMPANY PROFILE</small></div></div>
     <div class="pg">04 / KEUNGGULAN</div>
@@ -287,7 +304,7 @@
 </div>
 
 <!-- 5 KATALOG TERPAL PE -->
-<div class="page">
+<div class="page" id="pg-terpal">
   <div class="head">
     <div class="b"><img class="lg" src="assets/images/logo.webp" alt=""><div class="bt">YO TARPAULIN<small>COMPANY PROFILE</small></div></div>
     <div class="pg">05 / KATALOG — TERPAL PE</div>
@@ -298,7 +315,7 @@
 </div>
 
 <!-- 6 PVC + ROLL + TAS + SARUNG -->
-<div class="page">
+<div class="page" id="pg-lainnya">
   <div class="head">
     <div class="b"><img class="lg" src="assets/images/logo.webp" alt=""><div class="bt">YO TARPAULIN<small>COMPANY PROFILE</small></div></div>
     <div class="pg">06 / PVC, ROLL, TAS &amp; SARUNG TANGAN</div>
@@ -308,7 +325,7 @@
   </div>
   <h3 class="sec" style="margin-top:5mm;">TAS SPUNBOND &amp; SARUNG TANGAN INDUSTRI</h3>
   <div class="two">
-    <div class="media" style="width:56mm;"><img src="assets/images/banner-tas-spunbond.webp" alt=""></div>
+    <div class="media" style="width:56mm;"><img src="assets/images/tas-warna-sablon.webp" alt=""></div>
     <div class="body">
       <p><b>Tas Spunbond</b> — tas belanja &amp; goodie bag non-woven produksi sendiri: ringan, kuat, bisa sablon logo. Warna siap stok (putih, merah, biru); ukuran/model custom untuk seminar kit &amp; hampers. Order partai dengan harga kontrak.</p>
       <p><b>Sarung Tangan Industri</b> — sarung tangan kerja untuk menunjang keselamatan operasional tambang &amp; proyek: pengamanan tangan operator, penanganan material &amp; log, hingga order rutin bulanan.</p>
@@ -321,7 +338,7 @@
 </div>
 
 <!-- 7 PARANET -->
-<div class="page">
+<div class="page" id="pg-paranet">
   <div class="head">
     <div class="b"><img class="lg" src="assets/images/logo.webp" alt=""><div class="bt">YO TARPAULIN<small>COMPANY PROFILE</small></div></div>
     <div class="pg">07 / PARANET</div>
@@ -354,7 +371,7 @@
 </div>
 
 <!-- 8 APLIKASI -->
-<div class="page">
+<div class="page" id="pg-aplikasi">
   <div class="head">
     <div class="b"><img class="lg" src="assets/images/logo.webp" alt=""><div class="bt">YO TARPAULIN<small>COMPANY PROFILE</small></div></div>
     <div class="pg">08 / APLIKASI</div>
@@ -375,7 +392,7 @@
 </div>
 
 <!-- 9 PROSES -->
-<div class="page">
+<div class="page" id="pg-pemesanan">
   <div class="head">
     <div class="b"><img class="lg" src="assets/images/logo.webp" alt=""><div class="bt">YO TARPAULIN<small>COMPANY PROFILE</small></div></div>
     <div class="pg">09 / CARA PEMESANAN</div>
@@ -408,7 +425,7 @@
 </div>
 
 <!-- 10 MEREK -->
-<div class="page">
+<div class="page" id="pg-merek">
   <div class="head">
     <div class="b"><img class="lg" src="assets/images/logo.webp" alt=""><div class="bt">YO TARPAULIN<small>COMPANY PROFILE</small></div></div>
     <div class="pg">10 / MEREK PRODUKSI</div>
@@ -434,24 +451,24 @@
 </div>
 
 <!-- 11 KONTAK -->
-<div class="page last">
+<div class="page last" id="pg-kontak">
   <div class="head">
     <div class="b"><img class="lg" src="assets/images/logo.webp" alt=""><div class="bt">YO TARPAULIN<small>COMPANY PROFILE</small></div></div>
     <div class="pg">11 / KONTAK</div>
   </div>
   <h3 class="sec">HUBUNGI KAMI</h3>
   <div class="ctgrid">
-    <div class="ct"><h4>Sales &amp; Order Utama — WhatsApp 1</h4><div class="big">+62 812-2133-2929</div><small>Respon cepat 24/7 &bull; https://wa.me/6281221332929</small></div>
-    <div class="ct"><h4>Saluran Alternatif — WhatsApp 2</h4><div class="big">+62 822-13-8889</div><small>Respon cepat 24/7 &bull; https://wa.me/62822138889</small></div>
-    <div class="ct"><h4>Instagram</h4><div class="big">@pabrik_plastik_termurah</div><small>Katalog stok &amp; foto produksi harian &bull; instagram.com/pabrik_plastik_termurah</small></div>
-    <div class="ct"><h4>Threads</h4><div class="big">@pabrik_plastik_termurah</div><small>Update stok, promo &amp; info pabrik &bull; threads.com/@pabrik_plastik_termurah</small></div>
-    <div class="ct"><h4>Email</h4><div class="big" style="font-size:10.5pt;">yonusantararaya@gmail.com</div><small>Penawaran &amp; dokumen formal</small></div>
-    <div class="ct"><h4>Alamat Kantor &amp; Gudang</h4><div class="big" style="font-size:9.5pt;line-height:1.5;">Daerah Amesta Living, Jalan Gn Anyar Tambak, Kel. Gunung Anyar Tambak (Cluster Loka CD-25), Gunung Anyar, Kota Surabaya, Jawa Timur 60294</div><small>Google Maps: Amesta Living (pin kantor)</small></div>
+    <div class="ct"><h4>Sales &amp; Order Utama — WhatsApp 1</h4><div class="big"><a class="pglink" href="https://wa.me/6281221332929">+62 812-2133-2929</a></div><small>Respon cepat 24/7 &bull; <a class="pglink" href="https://wa.me/6281221332929">wa.me/6281221332929</a></small></div>
+    <div class="ct"><h4>Saluran Alternatif — WhatsApp 2</h4><div class="big"><a class="pglink" href="https://wa.me/62822138889">+62 822-13-8889</a></div><small>Respon cepat 24/7 &bull; <a class="pglink" href="https://wa.me/62822138889">wa.me/62822138889</a></small></div>
+    <div class="ct"><h4>Instagram</h4><div class="big"><a class="pglink" href="https://www.instagram.com/pabrik_plastik_termurah">@pabrik_plastik_termurah</a></div><small>Katalog stok &amp; foto produksi harian &bull; <a class="pglink" href="https://www.instagram.com/pabrik_plastik_termurah">instagram.com/pabrik_plastik_termurah</a></small></div>
+    <div class="ct"><h4>Threads</h4><div class="big"><a class="pglink" href="https://www.threads.com/@pabrik_plastik_termurah">@pabrik_plastik_termurah</a></div><small>Update stok, promo &amp; info pabrik &bull; <a class="pglink" href="https://www.threads.com/@pabrik_plastik_termurah">threads.com/@pabrik_plastik_termurah</a></small></div>
+    <div class="ct"><h4>Email</h4><div class="big" style="font-size:10.5pt;"><a class="pglink" href="mailto:yonusantararaya@gmail.com">yonusantararaya@gmail.com</a></div><small>Penawaran &amp; dokumen formal</small></div>
+    <div class="ct"><h4>Alamat Kantor &amp; Gudang</h4><div class="big" style="font-size:9.5pt;line-height:1.5;">Daerah Amesta Living, Jalan Gn Anyar Tambak, Kel. Gunung Anyar Tambak (Cluster Loka CD-25), Gunung Anyar, Kota Surabaya, Jawa Timur 60294</div><small><a class="pglink" href="https://www.google.com/maps/search/?api=1&amp;query=Amesta+Living+Jalan+Gunung+Anyar+Tambak+Gunung+Anyar+Surabaya">Buka di Google Maps: Amesta Living (pin kantor)</a></small></div>
   </div>
   <div class="pay"><img src="assets/images/banner-payment.webp" alt=""></div>
   <div class="rendah">
-    <div><b>Butuh terpal untuk proyek Anda?</b><br><span>Konsultasikan sekarang — tim kami siap merespons cepat, 24/7. Kunjungi https://yoterpal.com untuk katalog &amp; spesifikasi lengkap.</span></div>
-    <div class="yn">CHAT WHATSAPP</div>
+    <div><b>Butuh terpal untuk proyek Anda?</b><br><span>Konsultasikan sekarang — tim kami siap merespons cepat, 24/7. Kunjungi <a class="pglink" href="https://yoterpal.com/">yoterpal.com</a> untuk katalog &amp; spesifikasi lengkap.</span></div>
+    <div class="yn"><a class="yn" href="https://wa.me/6281221332929">CHAT WHATSAPP</a></div>
   </div>
   <div class="pagenote">
     YO TARPAULIN — Solusi Terpal Anda &bull; CV. Yo Terpal Nusantara Raya &bull; yoterpal.com &bull; Company Profile ini dibuat dari konten situs resmi yoterpal.com — katalog, stok, dan informasi terbaru selalu diperbarui online.
