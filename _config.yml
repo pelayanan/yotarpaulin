@@ -54,6 +54,7 @@ exclude:
   - Makefile
   - AGENTS.md
   - proposal-website.txt
+  - isi-website.md
   - Proposal-Penawaran-Website-YO-Tarpaulin-Aksisoft.pdf
   - resources
   - screenshoot
