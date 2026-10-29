@@ -52,9 +52,7 @@ d.rectangle([tx, 300, tx + min(w2, W - tx - 40), 306], fill=ORANGE)
 t3 = "Produsen & Pemasok Terpal Nasional"
 d.text((tx, 330), t3, font=f_sub0, fill=(70, 90, 120))
 t4a = "Terpal PE & PVC · Paranet"
-t4b = "Sarung Tangan Kerja"
 d.text((tx, 372), t4a, font=f_sub1, fill=(70, 90, 120))
-d.text((tx, 408), t4b, font=f_sub1, fill=(70, 90, 120))
 
 # chip hotline oranye — lebar mengikuti teks, dipastikan muat
 t5 = "WHATSAPP +62 812-2133-2929"

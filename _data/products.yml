@@ -117,16 +117,6 @@
     - "Terpal biru muda adalah pilihan hemat untuk pemakaian harian: menutup dagangan, menahan debu gudang, dan melindungi barang saat diangkut."
     - "Ringan dan mudah digulung sehingga cepat dipasang dan disingkirkan, sementara laminasinya tetap tahan rembes."
   uses: ["Penutup barang dagangan", "Penahan debu gudang", "Pelindung angkutan jarak dekat"]
-- image: ic-guarantee.webp
-  slug: sarung-tangan-industri
-  name: "Sarung Tangan Industri"
-  category: "Sarung Tangan Kerja"
-  desc: "Sarung tangan kerja untuk menunjang keselamatan operasional tambang dan proyek. Hubungi kami untuk katalog lengkap."
-  specs: ["Full Grip", "Standar SNI", "Order Partai"]
-  detail:
-    - "Sarung tangan kerja kami menyediakan beberapa tipe untuk beragam aktivitas operasional: menangani material kasar, alat mesin, dan pengemasan barang."
-    - "Tersedia order partai lengkap dengan harga kontrak — hubungi tim kami untuk katalog tipe dan kebutuhan rutin bulanan proyek Anda."
-  uses: ["Pengamanan tangan operator", "Penanganan material & log", "Order rutin bulanan proyek"]
 - image: prod-tas-spunbond.webp
   slug: tas-spunbond
   name: "Tas Spunbond"

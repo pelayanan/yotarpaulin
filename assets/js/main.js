@@ -69,7 +69,7 @@
       ev.preventDefault();
       var fd = new FormData(form);
       var lines = [
-        "Halo YO TARPAULIN, saya ingin bertanya tentang terpal/sarung tangan.",
+        "Halo YO TARPAULIN, saya ingin bertanya tentang terpal.",
         "",
         "Nama: " + (fd.get("nama") || "-"),
         "Kebutuhan: " + (fd.get("kebutuhan") || "-"),

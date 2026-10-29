@@ -1,7 +1,7 @@
 # Yo Tarpaulin — Company Profile Website
 
-Website company profile untuk **YO TARPAULIN** — produsen & pemasok terpal dan sarung
-tangan berkualitas tinggi untuk industri pertambangan dan proyek infrastruktur skala besar.
+Website company profile untuk **YO TARPAULIN** — produsen & pemasok terpal dan paranet
+berkualitas tinggi untuk industri pertambangan dan proyek infrastruktur skala besar.
 
 **Live:** https://yoterpal.com/
 

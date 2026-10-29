@@ -22,32 +22,31 @@ Bukan mockup, bukan janji — website live-nya sudah tayang dan bisa langsung di
 
 — Halaman utama —
 ✅ *Beranda* (landing page lengkap) — https://yoterpal.com/
-✅ *Produk* (katalog 11 produk + spesifikasi) — https://yoterpal.com/produk.html
-✅ *Tentang Kami* (Profil + Sambutan Owner + Merek Produksi) — https://yoterpal.com/tentang.html
-✅ *Galeri Pabrik* — https://yoterpal.com/galeri.html
-✅ *Keunggulan & Standar Mutu* — https://yoterpal.com/keunggulan.html
-✅ *Aplikasi & Panduan Pemakaian* — https://yoterpal.com/aplikasi.html
-✅ *Kontak + FAQ + Peta Lokasi* — https://yoterpal.com/kontak.html
+✅ *Produk* (katalog 10 produk + spesifikasi) — https://yoterpal.com/produk/
+✅ *Tentang Kami* (Profil + Sambutan Owner + Merek Produksi) — https://yoterpal.com/tentang/
+✅ *Galeri Pabrik* — https://yoterpal.com/galeri/
+✅ *Keunggulan & Standar Mutu* — https://yoterpal.com/keunggulan/
+✅ *Aplikasi & Panduan Pemakaian* — https://yoterpal.com/aplikasi/
+✅ *Kontak + FAQ + Peta Lokasi* — https://yoterpal.com/kontak/
 ✅ *Halaman 404 kustom* — https://yoterpal.com/404.html
 
-— Halaman detail produk (11) —
-✅ Terpal Biru Premium — https://yoterpal.com/produk/terpal-biru-premium.html
-✅ Terpal Navy — https://yoterpal.com/produk/terpal-navy.html
-✅ Terpal Kuning Gold — https://yoterpal.com/produk/terpal-kuning-gold.html
-✅ Terpal Hijau — https://yoterpal.com/produk/terpal-hijau.html
-✅ Terpal Oranye — https://yoterpal.com/produk/terpal-oranye.html
-✅ Terpal PVC Transparan — https://yoterpal.com/produk/terpal-pvc-transparan.html
-✅ Terpal Roll — https://yoterpal.com/produk/terpal-roll.html
-✅ Terpal Biru Muda — https://yoterpal.com/produk/terpal-biru-muda.html
-✅ Paranet Bangunan — https://yoterpal.com/produk/paranet-bangunan.html
-✅ Sarung Tangan Industri — https://yoterpal.com/produk/sarung-tangan-industri.html
-✅ Tas Spunbond (tambahan) — https://yoterpal.com/produk/tas-spunbond.html
+— Halaman detail produk (10) —
+✅ Terpal Biru Premium — https://yoterpal.com/produk/terpal-biru-premium/
+✅ Terpal Navy — https://yoterpal.com/produk/terpal-navy/
+✅ Terpal Kuning Gold — https://yoterpal.com/produk/terpal-kuning-gold/
+✅ Terpal Hijau — https://yoterpal.com/produk/terpal-hijau/
+✅ Terpal Oranye — https://yoterpal.com/produk/terpal-oranye/
+✅ Terpal PVC Transparan — https://yoterpal.com/produk/terpal-pvc-transparan/
+✅ Terpal Roll — https://yoterpal.com/produk/terpal-roll/
+✅ Terpal Biru Muda — https://yoterpal.com/produk/terpal-biru-muda/
+✅ Paranet Bangunan — https://yoterpal.com/produk/paranet-bangunan/
+✅ Tas Spunbond (tambahan) — https://yoterpal.com/produk/tas-spunbond/
 
 — Pendukung SEO —
 🗺️ Sitemap SEO — https://yoterpal.com/sitemap.xml
 🤖 Robots — https://yoterpal.com/robots.txt
 
-Total: *21 halaman live*.
+Total: *20 halaman live*.
 
 ━━━━━━━━━━━━━━━━━━━━
 ⚡ *FITUR TERMASUK*
