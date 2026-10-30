@@ -45,6 +45,7 @@ Live: https://yoterpal.com (GitHub Pages + Cloudflare proxy, CNAME di root). **J
 
 ---
 # LOG PERUBAHAN (ringkas, terbaru dulu)
+- 30 Okt: blok "Ikuti Kami / Follow Us" (contact-social) ditambah di seksi Hubungi Kami beranda (ID+EN, include kontak.html / en/kontak.html) — konten identik dengan halaman /kontak/, sudah center mengikuti CSS d928… (d09324a).
 - 30 Okt: blok "Ikuti Kami / Follow Us" (contact-social) di-center (heading, chips row, caption) — hanya halaman kontak ID+EN; chip nav tidak diubah (perintah owner).
 - 30 Okt: Footer pakai varian logo putih (logo-white.webp, fill putih alpha-identical dari logo-a20) — logo biru #0036A9 hampir tak terlihat di footer navy #041630 (catatan owner + screenshot); footer ID+EN ref logo-white.webp?v=1. Compro tidak diubah — cover compro memakai chip putih, halaman dalam background putih.
 - 30 Okt: Sosmed Facebook ditambah (profile.php?id=61595981014209, dinormalisasi www.facebook.com) — site.facebook + sameAs di _config.yml, symbol #i-facebook, chip nav (header ID+EN), ikon footer (ID+EN), kartu contact-soc /kontak/ + /en/contact/ + caption handle.
