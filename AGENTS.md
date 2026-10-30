@@ -46,6 +46,7 @@ Live: https://yoterpal.com (GitHub Pages + Cloudflare proxy, CNAME di root). **J
 
 ---
 # LOG PERUBAHAN (ringkas, terbaru dulu)
+- 30 Okt `2944af0`: FIX lightbox /aplikasi/ (dan include aplikasi homepage) — figcaption overlay ternyata menutupi klik gambar (pointer intersep, "tidak bisa diklik"); CSS pointer-events:none pada .app figcaption -> klik di seluruh kartu tembus ke img + lightbox terbuka (zoom roda/dblklik, panah kiri/kanan, ESC — sudah ada dari awal di main.js). Terverifikasi Playwright.
 - 30 Okt `57f00a5`: banner-hero.webp ganti desain baru owner ("Terpal Berkualitas Premium & Extra Kuat", truk terpal biru di pelabuhan, mock navbar) — native 1280x523 (rasio beda dari lama 1200x490), ?v=3 di 2 ref (produk.html, en/products.html), 147 KB; catatan: Pages build "built" tapi CDN deploy sempat delay ±2 mnt (file lama dilayani sesaat) — cek ulang dengan cache-buster sebelum simpulan gagal.
 - 30 Okt `a0eb438`: banner-client.webp ganti desain baru owner ("Apa Kata Mereka?", testimoni 5 bintang Pak Budi Pengusaha Logistik, wajah customer biru-oranye, chip WA 0822138889) — native 1280x831 (rasio beda dari lama 1200x779), ?v=3 di 5 ref (index, en/index, kontak, en/contact, compro), 147 KB; terverifikasi built + render live.
 - 30 Okt `c3dce35`: banner-struktur.webp ganti desain baru owner ("Struktur & Ketebalan Terpal Berkualitas", diagram 5 lapisan multi-layer, jangka sorong) — native 1280x720 (16:9, align dari 1200x676), ?v=3 di 3 ref (includes distribusi ID+EN, compro), 154 KB; terverifikasi built + render live.
