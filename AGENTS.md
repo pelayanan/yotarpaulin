@@ -42,10 +42,10 @@ Live: https://yoterpal.com (GitHub Pages + Cloudflare proxy, CNAME di root). **J
 - /kwitansi-pelunasan/ (No. 002) masih live padahal pelunasan belum dibayar.
 - DNS: www.yoterpal.com belum ada record; http→https belum redirect (Always Use HTTPS di Cloudflare kalau owner setuju).
 - Caption "YO Terpaulin" sengaja tetap (merujuk logo fisik produk) — jangan diganti tanpa perintah.
-- banner-payment.webp belum di-branding baru — tanyakan owner.
 
 ---
 # LOG PERUBAHAN (ringkas, terbaru dulu)
+- 30 Okt `366f6ff`: banner-payment.webp ganti desain baru owner (3 kolom: metode pembayaran BCA/mandiri/BNI/BRI/visa/mastercard/gopay/ShopeePay, mitra kirim JNE/J&T/Sicepat/POS/GoSend/GrabExpress/comewhere/AnterAja/Wahana, jaminan) — native 1280x714, ?v=3 di 3 ref (footer ID+EN translate, compro); backlog banner-payment SELESAI. NOTE: baris "© 2025 Yo Tarpaulin. All rights reserved." di desain masih pakai nama lama & tahun lama — tanyakan owner mau teks apa (brand kini YO TERPAL NUSANTARA RAYA).
 - 30 Okt `2944af0`: FIX lightbox /aplikasi/ (dan include aplikasi homepage) — figcaption overlay ternyata menutupi klik gambar (pointer intersep, "tidak bisa diklik"); CSS pointer-events:none pada .app figcaption -> klik di seluruh kartu tembus ke img + lightbox terbuka (zoom roda/dblklik, panah kiri/kanan, ESC — sudah ada dari awal di main.js). Terverifikasi Playwright.
 - 30 Okt `57f00a5`: banner-hero.webp ganti desain baru owner ("Terpal Berkualitas Premium & Extra Kuat", truk terpal biru di pelabuhan, mock navbar) — native 1280x523 (rasio beda dari lama 1200x490), ?v=3 di 2 ref (produk.html, en/products.html), 147 KB; catatan: Pages build "built" tapi CDN deploy sempat delay ±2 mnt (file lama dilayani sesaat) — cek ulang dengan cache-buster sebelum simpulan gagal.
 - 30 Okt `a0eb438`: banner-client.webp ganti desain baru owner ("Apa Kata Mereka?", testimoni 5 bintang Pak Budi Pengusaha Logistik, wajah customer biru-oranye, chip WA 0822138889) — native 1280x831 (rasio beda dari lama 1200x779), ?v=3 di 5 ref (index, en/index, kontak, en/contact, compro), 147 KB; terverifikasi built + render live.
