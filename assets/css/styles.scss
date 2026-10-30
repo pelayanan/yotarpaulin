@@ -1272,6 +1272,8 @@ body.has-lightbox { overflow: hidden; }
 }
 .contact-soc--wa:hover { background: #e7f8ee; color: #147a3d; border-color: #bfe8d2; }
 .contact-social__handle { margin-top: 12px; font-size: 0.88rem; color: var(--muted); }
+.contact-social { text-align: center; }
+.contact-social__row { justify-content: center; }
 
 /* Strip unduh company profile (beranda & tentang) */
 .compro-dl {
