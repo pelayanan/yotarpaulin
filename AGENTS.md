@@ -46,6 +46,7 @@ Live: https://yoterpal.com (GitHub Pages + Cloudflare proxy, CNAME di root). **J
 
 ---
 # LOG PERUBAHAN (ringkas, terbaru dulu)
+- 30 Okt `f243eeb`: banner-kenapa.webp ganti desain baru owner (6 kartu keunggulan, navy+oranye, chip WA 0822138889) — native 1280x426 (rasio beda dari lama 1200x332, width/height semua 4 ref di-update), ?v=3, 89,8 KB; terverifikasi built + render live tanpa stretch.
 - 31 Okt `af266cf`+`686a03b`: FIX leak front matter (`lang: id lang_other: /en/` tampil di body 17 hal ID — offset script salah; line-based fix).
 - 31 Okt `374fd4f`+`2f78e75`: SITUS EN /en/ penuh (17 hal, data _en, includes en/, layout default_en/product_en, switcher berbendera, hreflang, form WA bilingual, brand_slogan_en).
 - 31 Okt `6752d2a`(foto galeri-hero di seksi Tentang beranda) `6235bac`(banner ?v=2 + fix width/height dimensi) `b91f512`(7 banner rebrand dari koleksi owner + og-produk/tentang/keunggulan regen + compro rebuild) `0d37a38`(og-default webp 76KB + fallback jpg) `6305729`(swap nomor utama/alternatif di config/js/include/compro) `0e3db8f`(compro PDF = versi blue owner 4 hal, teks ±3,4 MB) `880bb42`(nama owner Sumayow + role Owner, guard .exp-badge).
