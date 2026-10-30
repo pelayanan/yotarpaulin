@@ -6,7 +6,7 @@ Live: https://yoterpal.com (GitHub Pages + Cloudflare proxy, CNAME di root). **J
 
 ## Identitas & kontak (state kini)
 - Brand teks: **YO TERPAL NUSANTARA RAYA** (bukan "YO Tarpaulin"). Dioperasikan CV. Yo Terpal Nusantara Raya. Owner: **Yoke Albertin Sumayow**, peran hanya "Owner" — kata "Pendiri" tidak boleh muncul.
-- WA/telepon UTAMA (semua CTA): **+62 822-13-8889** (wa.me/62822138889); alternatif (kontak saja): +62 812-2133-2929. Email yonusantararaya@gmail.com. IG/Threads/TikTok @pabrik_plastik_termurah. Alamat: Amesta Living, Gunung Anyar Tambak, Surabaya.
+- WA/telepon UTAMA (semua CTA): **+62 822-13-8889** (wa.me/62822138889); alternatif (kontak saja): +62 812-2133-2929. Email yonusantararaya@gmail.com. IG/Threads/TikTok @pabrik_plastik_termurah + FB profile.php?id=61595981014209. Alamat: Amesta Living, Gunung Anyar Tambak, Surabaya.
 - Warna: navy --blue-950 #041630 … --blue-500 #2079e0; aksen ORANYE (`--yellow: #ff8a1f` — nama var memang kuning, JANGAN rename). Font: Barlow Condensed + Plus Jakarta Sans (Google Fonts).
 - customer-facing material tidak boleh menyebut "merek dagang / gratisan / GitHub".
 
@@ -45,6 +45,7 @@ Live: https://yoterpal.com (GitHub Pages + Cloudflare proxy, CNAME di root). **J
 
 ---
 # LOG PERUBAHAN (ringkas, terbaru dulu)
+- 30 Okt: Sosmed Facebook ditambah (profile.php?id=61595981014209, dinormalisasi www.facebook.com) — site.facebook + sameAs di _config.yml, symbol #i-facebook, chip nav (header ID+EN), ikon footer (ID+EN), kartu contact-soc /kontak/ + /en/contact/ + caption handle.
 - 30 Okt `48b1dde`: logo.webp ganti logo baru owner (Yo TERPAULINE A20 SUPER KOREAN PE + UV) — bg putih JPG foto → transparan (alpha luminance), warna diselaraskan ke biru logo lama #0036A9 (sample logo lama RGB 0,54,169); trim 1050x800 dari 1280x960, ?v=1 di 15 ref (header/footer ID+EN width 56x43, footer 64x49, compro 11x), compro .lg & .brand img pakai height:auto → aman rasio. Live terverifikasi (md5, ref ?v=1). PNG hasil untuk user: /root/output/logo-yo-terpauline-a20.png. NOTE: logo sekarang bertuliskan TERPAULINE A20 sementara brand text situs tetap YO TERPAL NUSANTARA RAYA (desain owner, tidak diubah).
 - 30 Okt `4df62ce`: app-scaffolding.webp ganti foto baru owner (terpal kuning roll melindungi bangunan scaffolding proyek) — resize konsisten 1200x669 (rasio sama dengan kartu apps lain, atribut template tetap valid); dipakai /aplikasi/ /en/applications/ homepage ID/EN + compro (ref via applications*.yml, tanpa ?v — cache settle otomatis). Live terverifikasi (md5 = repo).
 - 30 Okt `bc11c29`: app-cement.webp ganti foto baru owner (terpal oranye menutup palet sak semen di proyek) — resize konsisten 1200x669 (rasio sama dengan kartu apps lain, atribut template tetap valid); dipakai /aplikasi/ /en/applications/ homepage ID/EN + compro; render live terverifikasi. Refs tanpa cache-buster (?v tidak ada di template apps) — cache Cloudflare settle otomatis ±10 mnt.
