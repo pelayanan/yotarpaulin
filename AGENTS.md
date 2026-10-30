@@ -46,6 +46,7 @@ Live: https://yoterpal.com (GitHub Pages + Cloudflare proxy, CNAME di root). **J
 
 ---
 # LOG PERUBAHAN (ringkas, terbaru dulu)
+- 30 Okt `fecc298`: banner-distribusi.webp ganti desain baru owner ("Jaringan Distribusi Nasional", peta Indonesia bergaya digital, 3 badge 34+ provinsi/ratusan mitra/armada) — native 1280x477 (dimensi align, rasio NYARIS sama dengan lama 1200x447), ?v=3 di 5 ref (includes distribusi ID+EN, tentang, en/about, compro), 115 KB; terverifikasi built + render live.
 - 30 Okt `cab1ae6`: banner-custom.webp ganti desain baru owner ("Butuh Terpal dengan Ukuran Custom?", roll terpal warna, ikon 3 benefit, CTA kuning) — native 1280x915 (rasio beda dari lama 1200x859, width/height 2 ref include proses ID+EN di-update), ?v=3 di 3 ref (termasuk compro-yoterpal.html), 178 KB; tampil di / dan /en/; terverifikasi built + render live.
 - 30 Okt `dbf3053`: banner-promo.webp ganti desain baru owner (promo diskon s.d. 30% terpal heavy duty, truk terpal biru, chip WA 0822138889) — native 1280x426 (rasio beda dari lama 1200x387, width/height 1 ref include banner-promo di-update), ?v=3, 119 KB; tampil di / dan /en/; terverifikasi built + render live.
 - 30 Okt `f243eeb`: banner-kenapa.webp ganti desain baru owner (6 kartu keunggulan, navy+oranye, chip WA 0822138889) — native 1280x426 (rasio beda dari lama 1200x332, width/height semua 4 ref di-update), ?v=3, 89,8 KB; terverifikasi built + render live tanpa stretch.
