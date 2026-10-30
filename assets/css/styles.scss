@@ -501,6 +501,7 @@ p { margin: 0 0 1em; }
 }
 .app:hover img { transform: scale(1.06); opacity: 0.82; }
 .app figcaption {
+  pointer-events: none; /* overlay caption jangan menutupi klik gambar -> lightbox */
   position: absolute;
   inset: auto 0 0 0;
   padding: 34px 14px 12px;
