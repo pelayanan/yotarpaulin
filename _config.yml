@@ -2,9 +2,8 @@
 title: YO TERPAL NUSANTARA RAYA
 tagline: Solusi Terpal Anda
 description: >-
-  YO TERPAL NUSANTARA RAYA merupakan perusahaan yang bergerak di bidang Produksi & Penyediaan Terpal
-  berkualitas tinggi untuk kebutuhan industri pertambangan dan
-  proyek infrastruktur skala besar.
+  Produksi & penyediaan terpal kuat & tahan UV untuk pertambangan, proyek &
+  logistik — harga pabrik, kirim ke seluruh Indonesia.
 
 # Custom domain -> https://yoterpal.com (GitHub Pages, CNAME di root repo)
 url: "https://yoterpal.com"
@@ -51,6 +50,14 @@ plugins:
   - jekyll-seo-tag
 
 markdown: kramdown
+
+# SEO audit: isi seo.name utk semua halaman (JSON-LD WebPage butuh "name")
+defaults:
+  - scope:
+      path: ""
+    values:
+      seo:
+        name: "YO TERPAL NUSANTARA RAYA"
 
 exclude:
   - Gemfile

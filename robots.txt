@@ -1,1 +1,3 @@
 Sitemap: https://yoterpal.com/sitemap.xml
+User-agent: *
+Allow: /
