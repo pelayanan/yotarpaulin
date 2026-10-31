@@ -10,11 +10,33 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  /* Close mobile nav when a link is clicked */
+  /* Close mobile nav when a link is clicked; dd parent = toggle sub-panel di mobile */
   var toggle = document.getElementById("nav-toggle");
+  var mqNav = window.matchMedia("(max-width: 860px)");
   if (toggle) {
     document.querySelectorAll(".nav a").forEach(function (a) {
-      a.addEventListener("click", function () { toggle.checked = false; });
+      a.addEventListener("click", function () {
+        if (a.classList.contains("nav__link--dd") && mqNav.matches &&
+            !a.parentElement.classList.contains("is-open")) {
+          return; // pertama: hanya buka sub-panel (handler dd di bawah)
+        }
+        toggle.checked = false;
+      });
+    });
+    document.querySelectorAll(".nav__dd > .nav__link--dd").forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        if (!mqNav.matches) return; // desktop: hover tetap
+        var dd = link.parentElement;
+        if (!dd.classList.contains("is-open")) {
+          e.preventDefault();
+          document.querySelectorAll(".nav__dd.is-open").forEach(function (o) {
+            if (o !== dd) o.classList.remove("is-open");
+          });
+          dd.classList.add("is-open");
+          return;
+        }
+        if ((link.getAttribute("href") || "#").indexOf("#") === 0) e.preventDefault();
+      });
     });
   }
 
